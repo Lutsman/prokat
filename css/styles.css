@@ -1,0 +1,260 @@
+@font-face {
+  font-family: 'PF DIN Display Pro';
+  src: url("fonts/pfdindisplaypro-med.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'PF DIN Display Pro Light';
+  src: url("fonts/pfdindisplaypro-light.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'PF DIN Display Pro Bold';
+  src: url("fonts/pfdindisplaypro-bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+/* Webfont: Lato-Light */
+@font-face {
+  font-family: 'LatoWebLight';
+  src: url("fonts/Lato-Light.eot");
+  /* IE9 Compat Modes */
+  src: url("fonts/Lato-Light.eot?#iefix") format("embedded-opentype"), url("fonts/Lato-Light.woff2") format("woff2"), url("fonts/Lato-Light.woff") format("woff"), url("fonts/Lato-Light.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+/* Webfont: Lato-Regular */
+@font-face {
+  font-family: 'LatoWeb';
+  src: url("fonts/Lato-Regular.eot");
+  /* IE9 Compat Modes */
+  src: url("fonts/Lato-Regular.eot?#iefix") format("embedded-opentype"), url("fonts/Lato-Regular.woff2") format("woff2"), url("fonts/Lato-Regular.woff") format("woff"), url("fonts/Lato-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+/* Webfont: Lato-Semibold */
+@font-face {
+  font-family: 'LatoWebSemibold';
+  src: url("fonts/Lato-Semibold.eot");
+  /* IE9 Compat Modes */
+  src: url("fonts/Lato-Semibold.eot?#iefix") format("embedded-opentype"), url("fonts/Lato-Semibold.woff2") format("woff2"), url("fonts/Lato-Semibold.woff") format("woff"), url("fonts/Lato-Semibold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+/* Webfont: Lato-Bold */
+@font-face {
+  font-family: 'LatoWebBold';
+  src: url("fonts/Lato-Bold.eot");
+  /* IE9 Compat Modes */
+  src: url("fonts/Lato-Bold.eot?#iefix") format("embedded-opentype"), url("fonts/Lato-Bold.woff2") format("woff2"), url("fonts/Lato-Bold.woff") format("woff"), url("fonts/Lato-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+/* Webfont: Lato-Heavy */
+@font-face {
+  font-family: 'LatoWebHeavy';
+  src: url("fonts/Lato-Heavy.eot");
+  /* IE9 Compat Modes */
+  src: url("fonts/Lato-Heavy.eot?#iefix") format("embedded-opentype"), url("fonts/Lato-Heavy.woff2") format("woff2"), url("fonts/Lato-Heavy.woff") format("woff"), url("fonts/Lato-Heavy.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+/* ----------------------------------------------
+ Reset
+ ---------------------------------------------- */
+* {
+  padding: 0;
+  margin: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* ----------------------------------------------
+ Main
+ ---------------------------------------------- */
+html, body, section, header, footer {
+  width: 100%; }
+
+body {
+  min-width: 320px;
+  font: 16px "LatoWeb";
+  color: #000;
+  background-color: #f4f4f4; }
+
+header::after, footer::after, div::after, nav::after, ul::after {
+  content: '';
+  display: table;
+  clear: both; }
+
+section, .container {
+  position: relative;
+  z-index: 2; }
+
+.container {
+  width: 1220px;
+  margin: 0 auto; }
+
+/* ----------------------------------------------
+ Fonts Paragrahps
+ ---------------------------------------------- */
+h1 {
+  font: 38px "LatoWebHeavy"; }
+
+h2 {
+  font: 25px "LatoWebBold"; }
+
+h3 {
+  font: 22px "LatoWebSemibold"; }
+
+/* ----------------------------------------------
+ Links Img
+ ---------------------------------------------- */
+a {
+  color: inherit;
+  text-decoration: none;
+  outline: 0; }
+
+li {
+  list-style: none; }
+
+img {
+  width: 100%;
+  vertical-align: bottom; }
+
+/* ----------------------------------------------
+ Form Buttons Inputs
+ ---------------------------------------------- */
+button, input, textarea {
+  outline: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+
+/* ---------------------------------------------- /*
+ Transition elsements
+/* ---------------------------------------------- */
+a, button {
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out; }
+
+/* ----------------------------------------------
+ Header
+ ---------------------------------------------- */
+#maket {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1920px;
+  background: url(../img/main_page_1920.jpg) no-repeat top center;
+  height: 3643px;
+  opacity: 0.5;
+  z-index: 1; }
+
+/* ----------------------------------------------
+ Header
+ ---------------------------------------------- */
+header {
+  color: #fff; }
+  header > div:first-of-type {
+    height: 41px;
+    /* background-color: rgba(88, 103, 116, 0.93);*/ }
+  header > div:last-of-type {
+    height: 90px;
+    /*  background-color: rgba(56, 72, 86, 0.93);*/
+    -moz-box-shadow: 0 0 9.5px 1.5px rgba(81, 81, 81, 0.6);
+    -webkit-box-shadow: 0 0 9.5px 1.5px rgba(81, 81, 81, 0.6);
+    box-shadow: 0 0 9.5px 1.5px rgba(81, 81, 81, 0.6); }
+
+nav a {
+  float: left;
+  margin: 0 10px; }
+
+.top-menu-1 {
+  float: left;
+  padding-top: 12px;
+  margin-left: 248px;
+  font-size: 14px;
+  letter-spacing: 0.2px; }
+
+.top-menu-2 {
+  float: left;
+  padding-top: 39px;
+  font-family: "LatoWebLight"; }
+  .top-menu-2 a {
+    position: relative;
+    z-index: 2; }
+    .top-menu-2 a::after {
+      content: '';
+      display: block;
+      position: absolute;
+      z-index: 2;
+      bottom: -36px;
+      left: 0;
+      visibility: hidden;
+      opacity: 0;
+      width: 100%;
+      height: 3px;
+      background-color: #c45a5f;
+      -webkit-transition: all 0.2s ease-in-out;
+      -moz-transition: all 0.2s ease-in-out;
+      -o-transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out; }
+    .top-menu-2 a:hover::after {
+      visibility: visible;
+      opacity: 1; }
+
+.user-data {
+  float: right;
+  margin-top: 11px;
+  font-size: 14px;
+  letter-spacing: 0.2px; }
+  .user-data span, .user-data a {
+    position: relative;
+    z-index: 2; }
+    .user-data span::before, .user-data a::before {
+      content: '';
+      display: block;
+      position: absolute;
+      z-index: 2;
+      top: 0;
+      background-image: url(../img/sprite.png); }
+  .user-data span::before {
+    left: -20px;
+    width: 15px;
+    height: 14px;
+    background-position: 0 0; }
+  .user-data a {
+    margin-left: 28px; }
+    .user-data a::before {
+      left: -19px;
+      width: 14px;
+      height: 14px;
+      background-position: -64px 0; }
+
+.pageheader {
+  /*background-image: url(../../img/bg_header.jpg);*/
+  background-size: cover; }
+
+/* ----------------------------------------------
+ Footer
+ ---------------------------------------------- */
+/* ----------------------------------------------
+ Sections
+ ---------------------------------------------- */
+/* ----------------------------------------------
+ Colors Backgrounds
+ ---------------------------------------------- */
+/* ----------------------------------------------
+Pop up
+---------------------------------------------- */
+/*.pop-up-bg {
+  position: fixed;
+  display: none;
+  width:100%;
+  min-height:100%;
+  height: 100%;
+  top:0;
+  background-color: rgba(0,0,0,0.8);
+  overflow:hidden;
+  z-index: 99;
+}*/
+
+/*# sourceMappingURL=styles.css.map */

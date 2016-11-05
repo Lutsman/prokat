@@ -1,0 +1,21 @@
+{
+    "sass.enabled": "false",
+    "sass.compiler": "ruby",
+    "path": {
+        "css/sass/*.scss": {
+            "sass.enabled": true,
+            "sass.options": {
+                "outputDir": "../",
+                "includePaths": [],
+                "imagePath": null,
+                "sourceComments": false,
+                "outputStyle": "nested"
+            },
+            "linting.collapsed": true,
+            "linting.SCSS Lint.collapsed": true,
+            "linting.SCSS.collapsed": true,
+            "useTabChar": true,
+            "linting.enabled": true
+        }
+    }
+}
