@@ -79,7 +79,11 @@ img {
 
 button, input, textarea {
     outline: none;
+    border: none;
     @include box-shadow(none);
+}
+button {
+    cursor: pointer;
 }
 
 /* ---------------------------------------------- /*
