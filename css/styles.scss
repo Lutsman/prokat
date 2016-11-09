@@ -25,6 +25,16 @@
     opacity: 0.5;
     z-index: 1;
 }
+#maket3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1920px;
+    background: url(../img/add_page_1920.jpg) no-repeat top center;
+    height: 3643px;
+    opacity: 0.5;
+    z-index: 1;
+}
 
 /* ----------------------------------------------
  Form Buttons Inputs
@@ -910,7 +920,7 @@ footer {
     &:nth-of-type(5n+4) {
         background-color: #ffc96e;
     }
-    h4 {
+    h5 {
         margin: 12px 0 6px;
     }
     p {
@@ -1095,6 +1105,160 @@ footer {
         letter-spacing: 0.4px;
     }
 }
+
+.add-offer-content {
+    padding: 28px 0;
+    h2 {
+        float: left;
+    }
+}
+.xml-download {
+    float: right;
+    margin-top: 12px;
+    line-height: 25px;
+    border-bottom: 1px dashed #000;
+    &:hover {
+        border-bottom-color: transparent;
+    }
+}
+.new-offer-form {
+    padding: 0;
+    border: 1px solid #d1d1d1;
+    @include border-radius(3px);
+    h4 {
+        margin-bottom: 20px;
+    }
+    .title {
+        float: left;
+        width: 100px;
+        margin-right: 20px;
+        line-height: 29px;
+    }
+    ul {
+        float: right;
+        width: 720px;
+    }
+    li {
+        margin: 0 5px 5px;
+        + li {
+            margin-left: 5px;
+        }
+    }
+    > div {
+        padding: 0 30px 5px;
+        border-bottom: 1px solid #d1d1d1;
+        &:last-of-type {
+            border-bottom: none;
+        }
+    }
+    .title-block {
+        padding-top: 30px;
+        border-bottom: none;
+        h4 {
+            float: left;
+            + a {
+                float: right;
+                font-size: 13px;
+                color: #f15c60;
+            }
+        }
+    }
+    input {
+        height: 29px;
+        padding: 0 10px;
+        color: #000;
+    }
+    .map-block {
+        padding-bottom: 30px;
+        > input {
+            width: 100%;
+        }
+        label {
+            display: block;
+            font-size: 13px;
+            color: #656565;
+            line-height: 25px;
+        }
+        > div > div {
+            float: left;
+            margin-right: 10px;
+        }
+        div {
+            input[type="text"] {
+                width: 204px;
+            }
+            input[type="time"] {
+                width: 90px;
+            }
+        }
+    }
+    .way {
+        float: left;
+        width: 136px;
+        margin: 25px 0 0;
+        li {
+            margin: 0;
+        }
+        a {
+            display: block;
+            position: relative;
+            z-index: 2;
+            width: 136px;
+            height: 29px;
+            padding: 0 30px 0 10px;
+            color: #000 !important;
+            line-height: 27px;
+            background-color: #fff !important;
+            border: 1px solid #b5b5b5;
+            @include border-radius(3px);
+            &::after {
+                content: '';
+                display: block;
+                position: absolute;
+                z-index: 2;
+                top: 8px;
+                right: 12px;
+                width: 6px;
+                height: 6px;
+                border-top: 1px solid #000;
+                border-right: 1px solid #000;
+                @include transform(rotate(135deg));
+            }
+        }
+    }
+    .about {
+        padding-bottom: 30px;
+        label {
+            display: inline-block;
+            width: 120px;
+            letter-spacing: normal;
+        }
+        input {
+            width: 85px;
+        }
+        input[name="name"] {
+            width: 457px;
+        }
+        input[name="color"] {
+            width: 136px;
+        }
+        input[name="manufacturer"] {
+            width: 205px;
+        }
+        > div {
+            float: none;
+            margin-bottom: 10px;
+        }
+    }
+}
+.map {
+    width: 853px;
+    height: 370px;
+    margin: 15px 0;
+    background-image: url("../img/map_bg.jpg");
+}
+
+
 
 /* ----------------------------------------------
  Colors Backgrounds
