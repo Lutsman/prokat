@@ -173,7 +173,7 @@ a, button {
 
 #maket2 {
   position: absolute;
-  top: 0;
+  top: 10px;
   left: 0;
   width: 1920px;
   background: url(../img/category_ads_page_1920.jpg) no-repeat top center;
@@ -187,6 +187,20 @@ a, button {
 .btn {
   display: inline-block;
   border: 1px solid #000;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px; }
+
+.booking-btn {
+  display: block;
+  width: 203px;
+  height: 26px;
+  font-size: 14px;
+  color: #fff;
+  line-height: 22px;
+  text-align: center;
+  background-color: #008adf;
+  border: 2px solid #008adf;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px; }
@@ -604,6 +618,8 @@ footer {
       border-bottom: 2px solid transparent; }
       .goods-menu li a:hover {
         border-bottom-color: rgba(211, 92, 96, 0.9); }
+  .goods-menu .active a {
+    border-bottom-color: rgba(211, 92, 96, 0.9); }
 
 .link-box {
   margin-bottom: 45px;
@@ -729,7 +745,7 @@ footer {
 
 .search-conditions {
   padding: 38px 0 0;
-  /*background-color: #fff;*/ }
+  background-color: #fff; }
   .search-conditions h2 {
     margin-bottom: 10px;
     letter-spacing: 0.5px; }
@@ -749,7 +765,7 @@ footer {
   padding: 19px 0;
   color: #656565;
   letter-spacing: 0.5px;
-  /*background-color: #fff;*/
+  background-color: #fff;
   border-top: 1px solid #f4f4f4; }
   .category-form > div ul, .category-form > div > div {
     float: left; }
@@ -882,7 +898,8 @@ footer {
     margin-left: 10px; }
   .choose-price p {
     float: left;
-    margin-right: 3px; }
+    margin-right: 3px;
+    line-height: 29px; }
 
 .number-offers span {
   display: inline-block;
@@ -892,6 +909,202 @@ footer {
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px; }
+
+.top-line {
+  margin: 17px 0 20px;
+  letter-spacing: 0.5px; }
+  .top-line span {
+    margin-right: 5px;
+    font-family: "LatoWebBold"; }
+  .top-line a {
+    float: right;
+    margin-left: 20px;
+    border-bottom: 2px solid transparent; }
+    .top-line a:hover {
+      border-bottom-color: rgba(211, 92, 96, 0.9); }
+  .top-line .active {
+    border-bottom-color: rgba(211, 92, 96, 0.9); }
+
+.goods-info {
+  height: 242px;
+  margin-bottom: 11px;
+  font: 14px "LatoWebThin";
+  letter-spacing: 0.4px;
+  background-color: #fff;
+  border: 1px solid #ffb000;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px; }
+  .goods-info:first-of-type {
+    border-color: #d1d1d1; }
+  .goods-info:nth-of-type(5n+2) {
+    background-color: #effdff; }
+  .goods-info:nth-of-type(5n+3) {
+    background-color: #fed493; }
+  .goods-info:nth-of-type(5n+4) {
+    background-color: #ffc96e; }
+  .goods-info h4 {
+    margin: 12px 0 6px; }
+  .goods-info p {
+    margin-bottom: 17px; }
+  .goods-info a {
+    font: 16px "LatoWeb"; }
+  .goods-info > img {
+    float: left;
+    max-width: 350px;
+    margin-right: 40px; }
+  .goods-info > div {
+    float: left;
+    width: 590px; }
+    .goods-info > div:last-of-type {
+      width: 203px;
+      margin-left: 15px; }
+    .goods-info > div img {
+      display: block;
+      width: auto;
+      margin: 39px auto; }
+  .goods-info .adress {
+    margin-bottom: 10px;
+    font-family: "LatoWebLight"; }
+  .goods-info .price {
+    margin-bottom: 15px;
+    font: 16px "LatoWebSemibold"; }
+  .goods-info .more {
+    margin: 0 10px;
+    color: #2b87db; }
+  .goods-info .bookmarks {
+    position: relative;
+    z-index: 2;
+    padding-left: 20px;
+    margin: 0 10px;
+    color: #ce4a4e; }
+    .goods-info .bookmarks::before {
+      content: '';
+      display: block;
+      position: absolute;
+      z-index: 2;
+      top: 0;
+      left: 0;
+      width: 15px;
+      height: 14px;
+      background-image: url("../img/sprite.png");
+      background-position: -384px 0; }
+  .goods-info .booking-btn {
+    margin: 18px 0 5px;
+    font-size: 14px;
+    line-height: 22px; }
+    .goods-info .booking-btn + p {
+      font: 13px "LatoWebLight";
+      color: #010101;
+      text-align: center; }
+      .goods-info .booking-btn + p a {
+        font: 13px "LatoWebLight";
+        border-bottom: 1px dashed #000; }
+        .goods-info .booking-btn + p a:hover {
+          border-bottom-color: transparent; }
+  .goods-info .add-time {
+    position: relative;
+    z-index: 2;
+    font: 12px "LatoWebLight";
+    text-align: right;
+    letter-spacing: 0.5px; }
+    .goods-info .add-time::before, .goods-info .add-time::after {
+      content: '';
+      display: block;
+      position: absolute;
+      z-index: 2;
+      background-image: url("../img/sprite.png"); }
+    .goods-info .add-time::before {
+      width: 29px;
+      height: 22px;
+      top: -3px;
+      left: -40px;
+      background-position: -512px 0; }
+    .goods-info .add-time::after {
+      width: 19px;
+      height: 27px;
+      top: -8px;
+      left: 8px;
+      background-position: -448px 0; }
+
+.banner {
+  height: 402px;
+  margin: 12px 0;
+  border: 1px solid #f4f4f4; }
+
+.pages-list {
+  height: 122px;
+  padding: 17px 0;
+  margin: 25px 0 55px;
+  font-family: "LatoWebLight";
+  color: #a4a4a4;
+  background-color: #fff;
+  border: 1px solid #d1d1d1;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px; }
+  .pages-list ul {
+    position: relative;
+    z-index: 2;
+    padding-left: 42px;
+    margin-bottom: 39px; }
+    .pages-list ul::before {
+      content: '';
+      display: block;
+      position: absolute;
+      z-index: 2;
+      bottom: -2px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: #d1d1d1; }
+  .pages-list span {
+    color: #000; }
+  .pages-list li {
+    position: relative;
+    z-index: 2;
+    float: left;
+    margin-right: 12px; }
+    .pages-list li a {
+      position: relative;
+      z-index: 2; }
+      .pages-list li a::before {
+        content: '';
+        display: block;
+        position: absolute;
+        z-index: 2;
+        bottom: -4px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: transparent;
+        -webkit-transition: all 0.2s ease-in-out;
+        -moz-transition: all 0.2s ease-in-out;
+        -o-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out; }
+      .pages-list li a:hover::before {
+        background-color: rgba(211, 92, 96, 0.9); }
+  .pages-list .active::before {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: 2;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: rgba(211, 92, 96, 0.9);
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out; }
+  .pages-list .btn {
+    padding: 0 3px;
+    margin-left: 42px;
+    font-size: 14px;
+    color: #000;
+    line-height: 24px;
+    letter-spacing: 0.4px; }
 
 /* ----------------------------------------------
  Colors Backgrounds
