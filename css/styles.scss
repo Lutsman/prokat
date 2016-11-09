@@ -15,12 +15,34 @@
     opacity: 0.5;
     z-index: 1;
 }
+#maket2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1920px;
+    background: url(../img/category_ads_page_1920.jpg) no-repeat top center;
+    height: 3643px;
+    opacity: 0.5;
+    z-index: 1;
+}
+
+/* ----------------------------------------------
+ Form Buttons Inputs
+ ---------------------------------------------- */
+
+.btn {
+    display: inline-block;
+    border: 1px solid #000;
+    @include border-radius(3px);
+}
+
 
 /* ----------------------------------------------
  Header
  ---------------------------------------------- */
 
 header {
+    color: #fff;
     > div {
         &:first-of-type {
             height: 41px;
@@ -194,6 +216,7 @@ nav a {
         @include border-radius(0 3px 3px 0);
     }
 }
+
 
 /* ----------------------------------------------
  Footer
@@ -636,21 +659,201 @@ footer {
         padding-top: 25px;
         margin-bottom: 7px;
     }
+    .btn {
+        padding: 3px 7px;
+        margin-top: 15px;
+        color: #485663;
+        border: 2px solid #485663;
+    }
+    .diamond-icon .btn {
+        color: #c54349;
+        border-color: #f15c60;
+    }
 }
 
-.buy-premium-btn, .add-proposal-btn, .find-on-map-btn {
-    display: inline-block;
-    padding: 3px 7px;
-    margin-top: 15px;
-    color: #485663;
-    border: 2px solid #485663;
-    @include border-radius(3px);
+.search-conditions {
+    padding: 38px 0 0;
+    /*background-color: #fff;*/
+    h2 {
+        margin-bottom: 10px;
+        letter-spacing: 0.5px;
+    }
+    .btn {
+        padding: 6px 5px;
+        color: #56697a;
+        letter-spacing: 0.5px;
+        border-color: #4c697c;
+        + .btn {
+            margin-left: 10px;
+        }
+    }
+    .container > div:first-of-type {
+        padding-bottom: 20px;
+    }
 }
 
-.buy-premium-btn {
-    color: #c54349;
-    border-color: #f15c60;
+.category-form {
+    position: relative;
+    z-index: 2;
+    padding: 19px 0;
+    color: #656565;
+    letter-spacing: 0.5px;
+    /*background-color: #fff;*/
+     border-top: 1px solid #f4f4f4;
+    > div {
+        ul, > div {
+            float: left;
+        }
+    }
+    input {
+        padding: 5px;
+        color: #c9c9c9;
+        border: 1px solid #b5b5b5;
+        @include border-radius(3px);
+    }
+    ul {
+        margin-bottom: 22px;
+    }
+    li {
+        float: left;
+        + li {
+            margin-left: 10px;
+        }
+        a {
+            display: inline-block;
+            padding: 5px 22px;
+            @include border-radius(3px);
+            span {
+                border-bottom: 1px dashed #b5b5b5;
+            }
+            &:hover {
+                color: #fff;
+                background-color: #f15c60;
+                span {
+                    border-bottom-color: transparent;
+                }
+            }
+        }
+    }
+    button {
+        float: left;
+        width: 257px;
+        height: 32px;
+        border: 1px solid #f15c60;
+        @include border-radius(3px);
+    }
+    button[type="submit"] {
+        color: #fff;
+        background-color: #f15c60;
+    }
+    button[type="reset"] {
+        margin-left: 12px;
+        color: #d35c60;
+        background-color: #fff;
+    }
+    .active a {
+        color: #fff;
+        background-color: #f15c60;
+        span {
+            border-bottom-color: transparent;
+        }
+    }
+    .number-offers {
+        float: right;
+    }
+    .adress {
+        width: 488px;
+        height: 41px;
+        padding: 10px;
+        margin-bottom: 32px;
+        color: #c8c8c8;
+    }
+    .search-criterion {
+        float: right;
+        padding: 10px 5px 10px 0;
+        p {
+            float: left;
+            margin-right: 15px;
+        }
+    }
+    input[type="radio"] {
+        display: none;
+        &:checked + .radio-label::after {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+    .radio-label {
+        display: inline-block;
+        position: relative;
+        z-index: 2;
+        padding-left: 33px;
+        margin-left: 10px;
+        line-height: 21px;
+        cursor: pointer;
+        &::before, &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 21px;
+            height: 21px;
+            @include border-radius(50%);
+            @include box-sizing(border-box);
+        }
+        &::before {
+            background-color: #fff;
+            border: 1px solid #b5b5b5;
+        }
+        &::after {
+            background-color: #f15c60;
+            border: 1px solid #f15c60;
+            opacity: 0;
+            visibility: hidden;
+            @include transition(all 0.2s ease-in-out 0s);
+        }
+    }
+    .close {
+        display: block;
+        position: absolute;
+        z-index: 2;
+        bottom: -27px;
+        left: 50%;
+        width: 140px;
+        height: 27px;
+        padding-top: 3px;
+        color: #fff;
+        text-align: center;
+        background-color: #898989;
+        @include border-radius(0 0 3px 3px);
+        @include transform(translate3d(-50%, 0, 0));
+    }
 }
+
+.choose-price {
+    margin-left: 155px;
+    input {
+        width: 135px;
+        height: 29px;
+        padding: 3px 5px;
+        margin-left: 10px;
+    }
+    p {
+        float: left;
+        margin-right: 3px;
+    }
+}
+.number-offers {
+    span {
+        display: inline-block;
+        padding: 4px 38px;
+        margin-left: 10px;
+        border: 1px solid #b5b5b5;
+        @include border-radius(3px);
+    }
+}
+
 
 
 /* ----------------------------------------------

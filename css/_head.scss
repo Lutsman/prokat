@@ -23,7 +23,7 @@ body {
     color: #000;
     background-color: #f4f4f4;
 }
-header, footer, div, nav, ul {
+header, footer, div, nav, ul, form {
      &::after {
         content: '';
         display: table;
@@ -52,6 +52,9 @@ h2 {
 }
 h3 {
     font: 22px $lato-semibold;
+}
+h4 {
+    font: 17px $lato-semibold;
 }
 
 /* ----------------------------------------------
