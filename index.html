@@ -182,7 +182,7 @@
 	<div class="container">
 		<div class="content__block">
 			<h2>Самое популярное</h2>
-
+			<!--
 			<div class="goods-nav">
 				<p>ПРОКАТ</p>
 				<ul class="goods-menu">
@@ -239,8 +239,8 @@
 						</p>
 					</a>
 				</div>
-			</div>
-
+			</div>-->
+			<goods-block></goods-block>
 			<div class="goods-nav">
 				<p>ПРОДАЖА</p>
 				<ul class="goods-menu">
@@ -653,7 +653,63 @@
 			}
 		})
 		.component('goodsBlock', {
-			template: ``,
+			template: `<div class="goods-nav">
+							<p>ПРОКАТ</p>
+							<ul class="goods-menu">
+								<li><a href="#">Велосипеды</a></li>
+								<li><a href="#">Гироскутеры</a></li>
+								<li><a href="#">Самокаты</a></li>
+								<li><a href="#">Аксессуары</a></li>
+							</ul>
+							<a href="#">Как сюда попасть?</a>
+						</div>
+						<div class="link-box">
+							<div>
+								<a href="#">
+									<img src="img/goods_photo_1.jpg" alt="img">
+									<p class="price">400 &#8381;</p>
+									<p>Велосипед двухподвес GT FURY</p>
+									<p class="place">ул. Пушкинская, 2а</p>
+									<p>
+										<span class="look">199</span>
+										<span class="comment">15</span>
+										<span class="company-logo">
+												<img src="img/trader_logo_1.png" alt="company-logo">
+											</span>
+									</p>
+								</a>
+							</div>
+							<div>
+								<a href="#">
+									<img src="img/goods_photo_2.jpg" alt="img">
+									<p class="price">150 &#8381;</p>
+									<p>Детский велокат COMMENCAL EL CAMINO</p>
+									<p class="place">пр-т Шолохова, 112</p>
+									<p>
+										<span class="look">199</span>
+										<span class="comment">15</span>
+										<span class="company-logo">
+												<img src="img/trader_logo_2.png" alt="company-logo">
+											</span>
+									</p>
+								</a>
+							</div>
+							<div>
+								<a href="#">
+									<img src="img/goods_photo_3.jpg" alt="img">
+									<p class="price">350 &#8381;</p>
+									<p>Велосипед двухподвес TREK REMENDY</p>
+									<p class="place">пр-т Шолохова, 112</p>
+									<p>
+										<span class="look">199</span>
+										<span class="comment">15</span>
+										<span class="company-logo">
+												<img src="img/trader_logo_1.png" alt="company-logo">
+											</span>
+									</p>
+								</a>
+							</div>
+						</div>`,
 			controller: function (goodsData) {
 				
 			}
