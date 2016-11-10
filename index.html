@@ -597,6 +597,15 @@
 				}
 			];
 		})
+		.service('goodsData', function () {
+
+		})
+		.component('mainPage', {
+			template: '',
+			controller: function (searchFormData, goodsData) {
+
+			}
+		})
 		.component('searchForm', {
 			template: `<form class="search-form">
 							<ul>
@@ -614,36 +623,16 @@
 						</form>`,
 			controller: function(searchFormData) {
 				this.selects = searchFormData.selectsData;
-				this.selectedArr = this.selects.map(function (item) {
+				this.selectedArr = this.selects.map((item) => {
 					return item.options[0];
 				});
 				this.searchKeyword = '';
 				this.searchSelected = false;
 				this.searchPotentialFields = searchFormData.searchData;
-				this.searchFilter = (item) => {
-					//console.log(name);
-					let name = item.name.toLowerCase();
-					let search = this.searchKeyword.toLowerCase();
-					let result = ~name.indexOf(search);
-
-					console.log(result);
-
-					return !!result;
-				};
 				this.setSearch = (name) => {
 					this.searchKeyword = name;
 					this.searchSelected = true;
 				};
-
-
-				/*this.selectedDeal = this.selects[0].nameArr[0];
-				this.selectedCat = this.selects[1].nameArr[0];
-				this.selectedType = this.selects[2].nameArr[0];*/
-
-				/*let arr = this.selects.map(function (item) {
-					return item.options[0]
-				});*/
-				//console.dir(this.selectedArr);
 			}
 		})
 		.component('customSelect', {
@@ -661,6 +650,12 @@
 					this.selectedOption = newSelect;
 					this.isOpen = false;
 				};
+			}
+		})
+		.component('goodsBlock', {
+			template: ``,
+			controller: function (goodsData) {
+				
 			}
 		});
 
