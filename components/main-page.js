@@ -232,10 +232,47 @@ angular.module('mainPage', [])
             ]
         };
     })
+    .service('selectData', function () {
+        this.langSelectData = [
+            {
+                name: 'Русский',
+                id: 1
+            },
+            {
+                name: 'English',
+                id: 2
+            },
+            {
+                name: 'Espaniol',
+                id: 3
+            }
+        ];
+        this.currencySelectData = [
+            {
+                name: 'RUB',
+                id: 1
+            },
+            {
+                name: 'USD',
+                id: 2
+            },
+            {
+                name: 'INR',
+                id: 3
+            }
+        ]
+    })
     .component('mainPage', {
         templateUrl: 'tmpl/main-page-tmpl.html',
-        controller: function (searchFormData, goodsData) {
+        controller: function (selectData) {
+            this.langSelects = selectData.langSelectData;
+            this.langSelected = this.langSelects[0];
+            this.currencySelects = selectData.currencySelectData;
+            this.currencySelected = this.currencySelects[0];
             
+            //console.log(this.langSelects);
+            //console.log(this.currencySelects);
+            //console.log(this.langSelected);
         }
     })
     .component('searchForm', {
@@ -256,7 +293,7 @@ angular.module('mainPage', [])
     })
     .component('customSelect', {
         bindings: {
-            selectData: '<',
+            options: '<',
             selectedOption: "="
         },
         templateUrl: 'tmpl/custom-select-tmpl.html',
@@ -266,6 +303,8 @@ angular.module('mainPage', [])
                 this.selectedOption = newSelect;
                 this.isOpen = false;
             };
+            
+            //console.dir(this.options);
         }
     })
     .component('goodsBlock', {

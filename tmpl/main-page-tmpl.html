@@ -41,7 +41,8 @@
 
 	<div class="container">
 		<h1>Поиск прогулочной техники в прокат по всему миру</h1>
-		<search-form></search-form>
+
+		<search-form></search-form> <!--Search-form component-->
 	</div><!--container-->
 </section>
 
@@ -137,65 +138,8 @@
 	<div class="container">
 		<div class="content__block">
 			<h2>Самое популярное</h2>
-			<!--
-			<div class="goods-nav">
-				<p>ПРОКАТ</p>
-				<ul class="goods-menu">
-					<li><a href="#">Велосипеды</a></li>
-					<li><a href="#">Гироскутеры</a></li>
-					<li><a href="#">Самокаты</a></li>
-					<li><a href="#">Аксессуары</a></li>
-				</ul>
-				<a href="#">Как сюда попасть?</a>
-			</div>
-			<div class="link-box">
-				<div>
-					<a href="#">
-						<img src="img/goods_photo_1.jpg" alt="img">
-						<p class="price">400 &#8381;</p>
-						<p>Велосипед двухподвес GT FURY</p>
-						<p class="place">ул. Пушкинская, 2а</p>
-						<p>
-							<span class="look">199</span>
-							<span class="comment">15</span>
-							<span class="company-logo">
-                                    <img src="img/trader_logo_1.png" alt="company-logo">
-                                </span>
-						</p>
-					</a>
-				</div>
-				<div>
-					<a href="#">
-						<img src="img/goods_photo_2.jpg" alt="img">
-						<p class="price">150 &#8381;</p>
-						<p>Детский велокат COMMENCAL EL CAMINO</p>
-						<p class="place">пр-т Шолохова, 112</p>
-						<p>
-							<span class="look">199</span>
-							<span class="comment">15</span>
-							<span class="company-logo">
-                                    <img src="img/trader_logo_2.png" alt="company-logo">
-                                </span>
-						</p>
-					</a>
-				</div>
-				<div>
-					<a href="#">
-						<img src="img/goods_photo_3.jpg" alt="img">
-						<p class="price">350 &#8381;</p>
-						<p>Велосипед двухподвес TREK REMENDY</p>
-						<p class="place">пр-т Шолохова, 112</p>
-						<p>
-							<span class="look">199</span>
-							<span class="comment">15</span>
-							<span class="company-logo">
-                                    <img src="img/trader_logo_1.png" alt="company-logo">
-                                </span>
-						</p>
-					</a>
-				</div>
-			</div>-->
-			<goods-block></goods-block>
+
+			<goods-block></goods-block> <!--Goods block component-->
 
 			<div class="goods-nav">
 				<p>ПРОДАЖА</p>
@@ -460,14 +404,16 @@
 		<div class="container">
 			<p>© 2016 onProkat - Поиск прогулочной техники в прокат во всем мире</p>
 			<div>
-				<ul class="choose-lang">
+				<custom-select options="$ctrl.langSelects" selected-option="$ctrl.langSelected"></custom-select>
+				<custom-select options="$ctrl.currencySelects" selected-option="$ctrl.currencySelected"></custom-select>
+				<!--<ul class="choose-lang">
 					<li class="active"><a href="#">Русский</a></li>
 					<li><a href="#">English</a></li>
 				</ul>
 				<ul class="coose-currency">
 					<li class="active"><a href="#">RUB</a></li>
 					<li><a href="#">USD</a></li>
-				</ul>
+				</ul>-->
 			</div>
 		</div><!--container-->
 	</footer>
