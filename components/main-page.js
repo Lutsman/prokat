@@ -481,7 +481,7 @@ angular.module('mainPage', [])
         }
     })
     .component('navbar', {
-        template: ``,
+        templateUrl: 'tmpl/navbar-tmpl.html',
         controller: function () {
             
         }
