@@ -30,7 +30,7 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-<div id="maket3"></div>
+<!--<div id="maket3"></div>-->
 
 <header>
     <div>
@@ -79,7 +79,7 @@
             </div>
 
             <form class="category-form new-offer-form" method="get" action="/">
-                <div>
+                <div id="type-offer">
                     <div class="title-block">
                         <h4>Тип предложения</h4>
                         <a href="#">Правила размещения</a>
@@ -117,7 +117,7 @@
                     </div>
                 </div>
 
-                <div>
+                <div id="adress">
                     <div class="title-block">
                         <h4>Адрес</h4>
                         <a href="#">Проблема с вводом адреса?</a>
@@ -141,7 +141,7 @@
                     </div>
                 </div>
 
-                <div>
+                <div id="about">
                     <h4>О товаре</h4>
                     <div class="about">
                         <div>
@@ -175,7 +175,7 @@
                     </div>
                 </div>
 
-                <div>
+                <div id="photo">
                     <h4>Фотографии</h4>
                     <div class="photo">
                         <p>
@@ -195,7 +195,7 @@
                     </div>
                 </div>
 
-                <div>
+                <div id="price-conditions">
                     <div class="title-block">
                         <h4>Цена и условия</h4>
                         <a href="#">Правила заполнения</a>
@@ -215,36 +215,71 @@
                     </div>
                 </div>
 
-                <div>
+                <div id="contact">
                     <h4>Контактная информация</h4>
-                    <p>
-                        Основной
-                        <span>+7 (989) 536-00-35</span>
-                    </p>
                     <div class="add-phone">
+                        <p>
+                            Основной
+                            <span>+7 (989) 536-00-35</span>
+                        </p>
                         <p>Добавить телефон</p>
                         <ul class="dropdown">
                             <li><a href="#">+7, Россия</a></li>
                         </ul>
-                        <input type="tel" name="phone" placeholder="989" required>
-                        <input type="tel" name="phone" placeholder="536-00-35" required>
+                        <input type="tel" name="phone-part-1" placeholder="989" required>
+                        <input type="tel" name="phone-part-2" placeholder="536-00-35" required>
                         <button type="submit">Добавить</button>
                     </div>
                 </div>
-                
-                
 
-
-
-
-
-                <button type="submit">Добавить предложение</button>
+                <div id="rate">
+                    <h4>Выберите тариф</h4>
+                    <div class="choose-rate">
+                        <div>
+                            <p class="title-rate currency-icon">бесплатно</p>
+                            <p>Вы можете опубликовать объявления на некоммерческом тарифном плане. Для этого вам
+                                необходимо подтвердить мобильный телефон и пройти идентификацию в личном кабинете.</p>
+                            <a href="#" class="btn">Выбрать</a>
+                        </div>
+                        <div>
+                            <p class="title-rate diamond-big-icon">премиум</p>
+                            <p>Ваше предложение вызывает больше доверия клиентов и показывает серьёзность ваших намерений.
+                                Ускоряет продажу и сдачу в прокат в среднем в 1,5‑2 раза.</p>
+                            <a href="#" class="btn">Выбрать</a>
+                        </div>
+                        <div>
+                            <p class="title-rate top3-icon">топ-3</p>
+                            <p>Ваше предложение увидят одним из первых! Вы получаете в 5 раз больше звонков, а значит,
+                                многократно увеличиваете скорость сделки.</p>
+                            <a href="#" class="btn">Выбрать</a>
+                        </div>
+                    </div>
+                    <button class="submit-all" type="submit">Добавить предложение</button>
+                </div>
 
             </form>
 
         </div>
 
         <aside class="sidebar">
+            <ul class="sidebar-menu">
+                <li class="active"><a href="#type-offer">Тип предложения</a></li>
+                <li><a href="#adress">Адрес</a></li>
+                <li><a href="#about">О товаре</a></li>
+                <li><a href="#photo">Фотографии</a></li>
+                <li><a href="#price-conditions">Описание</a></li>
+                <li><a href="#">Цена и условия</a></li>
+                <li><a href="#contact">Контактная информация</a></li>
+                <li><a href="#rate">Тариф</a></li>
+            </ul>
+
+            <div class="support-links">
+                <span class="reset">очистить форму</span>
+                <a href="#">Онлайн-поддержка</a>
+                <a href="#">Условия размещения</a>
+            </div>
+
+
 
         </aside>
     </div><!--container-->

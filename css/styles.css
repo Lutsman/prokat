@@ -610,6 +610,53 @@ footer {
     font: 13px "LatoWebSemibold";
     color: #d35c60; }
 
+.sidebar-menu {
+  margin-top: 30px;
+  font-family: "LatoWebSemibold"; }
+  .sidebar-menu a {
+    display: inline;
+    margin: 0;
+    line-height: 25px;
+    border-bottom: 2px solid transparent; }
+    .sidebar-menu a:hover {
+      border-bottom-color: rgba(211, 92, 96, 0.9); }
+  .sidebar-menu .active a {
+    border-bottom-color: rgba(211, 92, 96, 0.9); }
+
+.support-links {
+  margin-top: 280px !important; }
+  .support-links a {
+    display: inline;
+    margin: 0;
+    font-family: "LatoWebSemibold";
+    line-height: 25px;
+    border-bottom: 2px solid transparent; }
+    .support-links a:hover {
+      border-bottom-color: rgba(211, 92, 96, 0.9); }
+  .support-links .reset {
+    display: block;
+    width: 182px;
+    height: 29px;
+    margin-bottom: 10px;
+    font: 16px "LatoWeb";
+    color: #fff;
+    line-height: 27px;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: #656565;
+    border: 1px solid #656565;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer; }
+    .support-links .reset:hover {
+      color: #656565;
+      background-color: #fff; }
+
 .goods-nav {
   margin-bottom: 15px;
   font: 14px "LatoWebBold"; }
@@ -779,7 +826,7 @@ footer {
   padding: 19px 0;
   color: #656565;
   letter-spacing: 0.5px;
-  /* background-color: #fff;*/
+  background-color: #fff;
   border-top: 1px solid #f4f4f4; }
   .category-form > div .category-list, .category-form > div .choose-price {
     float: left; }
@@ -1122,7 +1169,7 @@ footer {
     letter-spacing: 0.4px; }
 
 .add-offer-content {
-  padding: 28px 0; }
+  padding: 28px 0 0; }
   .add-offer-content h2 {
     float: left; }
 
@@ -1141,7 +1188,8 @@ footer {
   -webkit-border-radius: 3px;
   border-radius: 3px; }
   .new-offer-form h4 {
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    color: #000; }
   .new-offer-form .title {
     float: left;
     width: 100px;
@@ -1287,12 +1335,97 @@ footer {
       -moz-border-radius: 0 3px 3px 0;
       -webkit-border-radius: 0 3px 3px 0;
       border-radius: 0 3px 3px 0; }
+  .new-offer-form button.submit-all {
+    float: right;
+    width: 248px;
+    margin-bottom: 10px;
+    color: #f15c60;
+    background-color: #fff; }
+    .new-offer-form button.submit-all:hover {
+      color: #fff;
+      background-color: #f15c60; }
 
 .map {
   width: 853px;
   height: 370px;
   margin: 15px 0;
   background-image: url("../img/map_bg.jpg"); }
+
+.add-phone p {
+  margin-bottom: 5px; }
+  .add-phone p:first-of-type {
+    margin-bottom: 20px; }
+.add-phone span {
+  display: block;
+  font: 18px "LatoWebLight";
+  color: #000; }
+.add-phone input {
+  padding: 0 5px;
+  margin-left: 5px;
+  border-color: #d1d1d1; }
+.add-phone input[name="phone-part-1"] {
+  width: 43px; }
+.add-phone input[name="phone-part-2"] {
+  width: 97px; }
+.add-phone button {
+  float: none;
+  width: 102px;
+  margin-left: 5px; }
+.add-phone .dropdown {
+  float: left;
+  margin-right: 5px; }
+
+.choose-rate {
+  margin: 30px 0 70px;
+  font-size: 12px;
+  color: #000;
+  line-height: 17px;
+  letter-spacing: normal; }
+  .choose-rate > div {
+    position: relative;
+    z-index: 2;
+    float: left;
+    width: 32%;
+    height: 240px;
+    padding: 15px;
+    border: 1px solid #b5b5b5;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out; }
+    .choose-rate > div + div {
+      margin-left: 2%; }
+    .choose-rate > div:hover {
+      -moz-box-shadow: 0 0 9.5px 1.5px rgba(80, 80, 80, 0.6);
+      -webkit-box-shadow: 0 0 9.5px 1.5px rgba(80, 80, 80, 0.6);
+      box-shadow: 0 0 9.5px 1.5px rgba(80, 80, 80, 0.6); }
+  .choose-rate .title-rate {
+    position: relative;
+    z-index: 2;
+    padding: 20px 30px 30px 95px;
+    font: 18px "LatoWebSemibold";
+    line-height: 25px;
+    text-transform: uppercase;
+    text-align: right; }
+  .choose-rate .btn {
+    position: absolute;
+    z-index: 2;
+    left: 15px;
+    bottom: 18px;
+    width: 102px;
+    height: 29px;
+    font-size: 16px;
+    color: #fff;
+    line-height: 29px;
+    text-align: center;
+    background-color: #f15c60;
+    border-color: #f15c60; }
+    .choose-rate .btn:hover {
+      color: #f15c60;
+      background-color: #fff; }
 
 /* ----------------------------------------------
  Colors Backgrounds
@@ -1339,7 +1472,7 @@ footer {
 .list-icon {
   background-position: -64px -64px; }
 
-.diamond-icon::before, .page-icon::before, .point-icon::before {
+.diamond-icon::before, .page-icon::before, .point-icon::before, .currency-icon::before, .diamond-big-icon::before, .top3-icon::before {
   content: '';
   display: block;
   position: absolute;
@@ -1364,6 +1497,24 @@ footer {
   width: 50px;
   height: 70px;
   background-position: -256px -128px; }
+
+.currency-icon::before {
+  left: 0;
+  width: 52px;
+  height: 65px;
+  background-position: 0 -256px; }
+
+.diamond-big-icon::before {
+  left: 0;
+  width: 85px;
+  height: 65px;
+  background-position: -128px -256px; }
+
+.top3-icon::before {
+  left: 0;
+  width: 66px;
+  height: 66px;
+  background-position: -256px -256px; }
 
 /* ----------------------------------------------
 Pop up
