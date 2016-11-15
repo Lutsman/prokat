@@ -1,3 +1,5 @@
+'use strict';
+
 angular.module('mainPage', [])
     .service('searchFormData', function() {
         this.selectsData = [
@@ -482,6 +484,57 @@ angular.module('mainPage', [])
     })
     .component('navbar', {
         templateUrl: 'tmpl/navbar-tmpl.html',
+        controller: function ($window, $element, $scope) {
+            this.isHidden = false;
+            this.scrollFunc = () => {
+                let prevScrollPos = 0;
+                
+                return () => {
+                    /*console.log(scrollPos++);
+                    console.log(this);*/
+                    
+                    let currScrollPos = $window.scrollY;
+                    let scrollDiff = currScrollPos - prevScrollPos;
+                    let scrollDirection = 0;
+                    
+                    prevScrollPos = currScrollPos;
+                    
+                    //console.log(prevScrollPos);
+                    //console.log(currScrollPos);
+                    
+                    
+                    if (scrollDiff > 0) {
+                        scrollDirection = 1;
+                        this.isHidden = true;
+                        //console.log($element[0].offsetHeight);
+                    } else if (scrollDiff < 0) {
+                        scrollDirection = -1;
+                        this.isHidden = false;
+                        //console.log($element[0].offsetHeight);
+                    }
+                    
+                    //console.log(scrollDirection);
+                    
+                    if (scrollDirection) {
+                        $scope.$apply();
+                        console.log($element[0].offsetHeight);
+                    }
+                }
+                
+            };
+            
+            angular.element($window).on('scroll', this.scrollFunc());
+            
+            
+            /*console.dir($window);
+            console.dir($element);
+            console.log($element[0].offsetHeight);
+            console.dir(this);
+            console.dir($scope);*/
+        }
+    })
+    .component('pagefooter', {
+        templateUrl: 'tmpl/pagefooter-tmpl.html',
         controller: function () {
             
         }
