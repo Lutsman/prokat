@@ -463,8 +463,6 @@ footer {
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
     border-radius: 3px; }
-    footer ul li {
-      display: none; }
     footer ul .active {
       display: block; }
       footer ul .active a::before {

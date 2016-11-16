@@ -318,7 +318,7 @@ footer {
         background-color: #56697a;
         @include border-radius(3px);
         li {
-            display: none;
+            //display: none;
         }
         .active {
             display: block;
