@@ -171,6 +171,16 @@ a, button {
 .hidden {
   display: none; }
 
+custom-select .active-add,
+custom-select .ng-move,
+custom-select .ng-enter,
+custom-select .ng-leave {
+  transition: all linear 0.2s;
+  color: red; }
+
+.active-add {
+  color: red !important; }
+
 #maket {
   position: absolute;
   top: 0;

@@ -8,3 +8,17 @@
 .hidden {
     display: none;
 }
+
+custom-select {
+    .active-add,
+    .ng-move,
+    .ng-enter,
+    .ng-leave {
+        transition:all linear 0.2s;
+        color: red;
+    }
+}
+
+.active-add {
+    color: red !important;
+}

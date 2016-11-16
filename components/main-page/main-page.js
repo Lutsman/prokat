@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('mainPage', [])
+angular.module('mainPage', ['ngAnimate'])
     .service('searchFormData', function() {
         this.selectsData = [
             {
