@@ -216,14 +216,14 @@ module.exports = function makeWebpackConfig() {
         
         // Copy assets from the resources folder
         // Reference: https://github.com/kevlened/copy-webpack-plugin
-        new CopyWebpackPlugin([{
+        new CopyWebpackPlugin([/*{
           from: __dirname + '/src/img',
-          to: 'img'
-        },
+          to: 'resources/img'
+        }*//*,
           {
             from: __dirname + '/src/tmpl',
-            to: 'tmpl'
-          }
+            to: 'resources/tmpl'
+          }*/
         ])
     )
   }
