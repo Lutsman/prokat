@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" ng-app="categoryPage">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -32,7 +32,13 @@
 <body>
 <!--<div id="maket2"></div>-->
 
-<header>
+<navbar></navbar>
+<search-advance></search-advance>
+<category></category>
+<pagefooter></pagefooter>
+
+
+<!--<header>
     <div>
         <div class="container">
             <nav class="top-menu-1">
@@ -47,7 +53,7 @@
                 <a href="#">Вход</a>
             </div>
 
-        </div><!--container-->
+        </div>&lt;!&ndash;container&ndash;&gt;
     </div>
 
     <div>
@@ -65,7 +71,7 @@
 
             <a href="#" class="add-offer">+ Добавить предложение</a>
 
-        </div><!--container-->
+        </div>&lt;!&ndash;container&ndash;&gt;
     </div>
 
 </header>
@@ -133,7 +139,7 @@
 
         </form>
 
-    </div><!--container-->
+    </div>&lt;!&ndash;container&ndash;&gt;
 </section>
 
 <section class="content">
@@ -312,7 +318,7 @@
             <a href="#" class="btn">Распечатать все предложения</a>
         </div>
 
-    </div><!--container-->
+    </div>&lt;!&ndash;container&ndash;&gt;
 </section>
 
 <section class="pagefooter">
@@ -364,7 +370,7 @@
 
         <p class="info-us">onProkat — база данных о прокате и продаже техники для отдыха. Использование сайта, размещение предложений, означает согласие с <a href="#">Пользовательским соглашением</a> и <a href="#">Политикой конфиденциальности</a> onProkat. Оплачивая услуги на сайте, вы принимаете <a href="#">Лицензионное соглашение</a>.</p>
 
-    </div><!--container-->
+    </div>&lt;!&ndash;container&ndash;&gt;
 
     <div class="footer-nav">
         <div class="container">
@@ -379,7 +385,7 @@
                 <a href="#">Поиск на карте</a>
                 <a href="#">Карта сайта</a>
             </nav>
-        </div><!--container-->
+        </div>&lt;!&ndash;container&ndash;&gt;
     </div>
 
     <footer>
@@ -395,9 +401,12 @@
                     <li><a href="#">USD</a></li>
                 </ul>
             </div>
-        </div><!--container-->
+        </div>&lt;!&ndash;container&ndash;&gt;
     </footer>
-</section>
+</section>-->
 
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-animate.js"></script>
+<script src="components/category/category.js"></script>
 </body>
 </html>

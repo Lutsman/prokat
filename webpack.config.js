@@ -33,7 +33,8 @@ module.exports = function makeWebpackConfig() {
    * Karma will set this when it's a test build
    */
   config.entry = isTest ? {} : {
-    'js/app': './src/components/main-page/main-page',
+    appMain: './src/components/main-page/main-page',
+    appCat: './src/components/category/category'
     //'resources/img/': './src/resources/img/'
     //'css/style': './src/css/app.scss'
   };
@@ -54,7 +55,7 @@ module.exports = function makeWebpackConfig() {
     
     // Filename for entry points
     // Only adds hash in build mode
-    filename: isProd ? '[name].[hash].js' : '[name].bundle.js',
+    filename: isProd ? 'js/[name].[hash].js' : '[name].bundle.js',
     
     // Filename for non-entry points
     // Only adds hash in build mode
@@ -73,6 +74,14 @@ module.exports = function makeWebpackConfig() {
   } else {
     config.devtool = 'eval-source-map';
   }
+  
+  
+  /**
+   * Watch
+     */
+  /*if (!isTest) {
+    config.watch = true;
+  }*/
   
   /**
    * Loaders
@@ -97,7 +106,11 @@ module.exports = function makeWebpackConfig() {
       // Compiles ES6 and ES7 into ES5 code
       test: /\.js$/,
       loader: 'babel',
-      exclude: /node_modules/
+      exclude: /node_modules/,
+      query: {
+        presets: ['es2015'],
+        plugins: ['transform-runtime']
+      }
     }, {
       // CSS LOADER
       // Reference: https://github.com/webpack/css-loader
@@ -188,8 +201,18 @@ module.exports = function makeWebpackConfig() {
     // Render index.html
     config.plugins.push(
         new HtmlWebpackPlugin({
+          title: 'main',
+          chunks: ['appMain'],
           template: './src/index.html',
-          inject: 'body'
+          inject: 'body',
+          filename: 'index.html'
+        }),
+        new HtmlWebpackPlugin({
+          title: 'category',
+          chunks: ['appCat'],
+          template: './src/category.html',
+          inject: 'body',
+          filename: 'category.html'
         }),
         
         // Reference: https://github.com/webpack/extract-text-webpack-plugin
@@ -243,11 +266,11 @@ module.exports = function makeWebpackConfig() {
     stats: 'minimal'
   };
   
-  config.eslint = {
+  /*config.eslint = {
     configFile: './.eslintrc',
     failOnWarning: false,
-    failOnError: true
-  };
+    failOnError: false
+  };*/
   
   return config;
 }();

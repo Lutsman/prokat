@@ -566,12 +566,12 @@ angular.module('mainPage', ['ngAnimate'])
             this.currencySelected = this.currencySelects[0];
             
             this.onChooseLang = () => {
-                /*console.log('lang choosed');
-                console.log(this);*/
+                console.log('lang choosed');
+                console.log(this);
             };
             this.onChooseCurrency = () => {
-                /*console.log('currency choosed');
-                console.log(this);*/
+                console.log('currency choosed');
+                console.log(this);
             };
         }
     });
