@@ -106,11 +106,7 @@ module.exports = function makeWebpackConfig() {
       // Compiles ES6 and ES7 into ES5 code
       test: /\.js$/,
       loader: 'babel',
-      exclude: /node_modules/,
-      query: {
-        presets: ['es2015'],
-        plugins: ['transform-runtime']
-      }
+      exclude: /node_modules/
     }, {
       // CSS LOADER
       // Reference: https://github.com/webpack/css-loader
@@ -266,11 +262,11 @@ module.exports = function makeWebpackConfig() {
     stats: 'minimal'
   };
   
-  /*config.eslint = {
+  config.eslint = {
     configFile: './.eslintrc',
     failOnWarning: false,
     failOnError: false
-  };*/
+  };
   
   return config;
 }();
