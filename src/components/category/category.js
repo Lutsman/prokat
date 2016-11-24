@@ -1,9 +1,9 @@
 'use strict';
 
-//import angular from 'angular';
-//import 'angular-animate';
-//import './../../css/normalize.css';
-//import './../../css/styles.scss';
+import angular from 'angular';
+import 'angular-animate';
+import './../../css/normalize.css';
+import './../../css/styles.scss';
 
 angular.module('categoryPage', ['ngAnimate'])
     .service('selectData', function () {
@@ -52,18 +52,67 @@ angular.module('categoryPage', ['ngAnimate'])
     })
     .component('searchAdvance', {
         templateUrl: 'tmpl/search-advance-tmpl.html',
+        bindings: {
+            trackByOutput: '=?'
+        },
         controller: function (searchAdvanceData) {
             this.fieldsData = searchAdvanceData.fieldsData;
             this.showSearch = false;
-            this.minPrice;
-            this.maxPrice;
-            this.numPattern = '[0-9]';
-            this.activeCat1 = {};
-            this.activeCat2 = {};
-            this.activeCat3 = {};
+            this.init = () => {
+                this.initCat();
+                this.trackByOutput = this.trackByOutputCached ? this.trackByOutputCached : 3;
+                this.trackByOutputCached = this.trackByOutputCached ? this.trackByOutputCached : this.trackByOutput;
+                this.minPrice = undefined;
+                this.maxPrice = undefined;
+                this.adress = undefined;
+                this.searchAreaName = 'Прокат велосипедов в Ростове-на-Дону';
+                this.goodsCount = 1546;
+            };
+            this.resetForm = () => {
+                this.init();
+            };
+            this.setActiveCat = (currCat, activeCatLink, toggle) => {
+                if (toggle) {
+                    activeCatLink = activeCatLink === currCat ? {} : currCat;
+                } else {
+                    activeCatLink = currCat;
+                }
+            };
+            this.initCat = () => {
+                this.activeCat1 = this.getActiveCat(this.fieldsData);
+                this.activeCat2 = this.getActiveCat(this.activeCat1);
+                this.activeCat3 = this.getActiveCat(this.activeCat2);
+            };
+            this.getActiveCat = (obj) => {
+                let result = false;
+                
+                if (typeof obj === 'object' && !Array.isArray(obj) && obj !== null) {
+                    for (let key in obj) {
+                        if (!obj[key].acive) continue;
+                        
+                        result = obj[key];
+                        break;
+                    }
+                } else if (Array.isArray(obj)){
+                    for (let i = 0; i < obj.length; i++) {
+                        if (!obj[i].active) continue;
+                        
+                        result = obj[i];
+                        break;
+                    }
+                }
+                
+                return result;
+            };
+            this.searchRender = () => {
+                
+            };
             
-            
+            this.init();
         }
+    })
+    .component('categoryGoodsBlock', {
+        
     })
     .component('navbar', {
         templateUrl: 'tmpl/navbar-tmpl.html',
