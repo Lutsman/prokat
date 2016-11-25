@@ -1,0 +1,10 @@
+<div class="pages-list">
+	<ul>
+		<li ng-if="$ctrl.startPos > $ctrl.data.goodsPerPage" ng-click="$ctrl.prev()"><a href="javascript:void(0)">...</a></li>
+		<li ng-repeat="page in $ctrl.repeater track by $index" ng-class="{'active': $index === $ctrl.data.currPage}"><span>{{page}}</span></li>
+		<li ng-if="$ctrl.startPos !== $ctrl.data.goodsCount" ng-click="$ctrl.next()"><a href="javascript:void(0)">...</a></li>
+	</ul>
+	<a href="#" class="btn">Распечатать все предложения</a>
+
+	<p>start: {{$ctrl.startPos}}</p>
+</div>

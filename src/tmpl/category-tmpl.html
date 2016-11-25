@@ -1,39 +1,24 @@
 <section class="content">
 	<div class="container">
 		<p class="top-line">
-			<span>1000</span> предложений
+			<span>{{$ctrl.dataSearch.currGoodsCount}}</span> предложений
 			<a href="#">на карте</a>
 			<a class="active" href="#">список</a>
 		</p>
 
-		<category-goods-info></category-goods-info>
-		<category-goods-info></category-goods-info>
-		<category-goods-info></category-goods-info>
-		<category-goods-info></category-goods-info>
+		<category-goods-info ng-repeat="good in $ctrl.dataGoods
+		|sort :$ctrl.dataSearch.trackByOutput.name :$ctrl.dataSearch.trackByOutput.fromLowToHight
+		|range :$ctrl.goodsRange.start[0] :$ctrl.goodsRange.end[0]"
+							 data="good"></category-goods-info>
 
 		<banner></banner>
 
-		<category-goods-info></category-goods-info>
-		<category-goods-info></category-goods-info>
-		<category-goods-info></category-goods-info>
-		<category-goods-info></category-goods-info>
+		<category-goods-info ng-repeat="good in $ctrl.dataGoods
+		|sort :$ctrl.dataSearch.trackByOutput.name :$ctrl.dataSearch.trackByOutput.fromLowToHight
+		|range :$ctrl.goodsRange.start[1] :$ctrl.goodsRange.end[1]"
+							 data="good"></category-goods-info>
 
-		<div class="pages-list">
-			<ul>
-				<li class="active"><span>1</span></li>
-				<li><a href="#">2</a></li>
-				<li><a href="#">3</a></li>
-				<li><a href="#">4</a></li>
-				<li><a href="#">5</a></li>
-				<li><a href="#">6</a></li>
-				<li><a href="#">7</a></li>
-				<li><a href="#">8</a></li>
-				<li><a href="#">9</a></li>
-				<li><a href="#">10</a></li>
-				<li><a href="#">...</a></li>
-			</ul>
-			<a href="#" class="btn">Распечатать все предложения</a>
-		</div>
+		<pagination></pagination>
 
 	</div><!--container-->
 </section>
