@@ -1,7 +1,7 @@
 <section class="search-conditions">
 	<div class="container">
 		<div>
-			<h2>{{$ctrl.searchAreaName}}</h2>
+			<h2>{{$ctrl.fieldsData.title}}</h2>
 			<a ng-click="$ctrl.showSearch = !$ctrl.showSearch" href="javascript:void(0)" class="btn">Изменить условия поиска</a>
 			<a href="javascript:void(0)" class="btn">Подписаться на предложения</a>
 		</div>
@@ -9,27 +9,27 @@
 		<form ng-show="$ctrl.showSearch" class="category-form" novalidate>
 			<div>
 				<ul class="category-list">
-					<li ng-repeat="cat1 in $ctrl.fieldsData" ng-click="$ctrl.setActiveCat(cat1, $ctrl.activeCat1)">
-						<span ng-class="{'active': $ctrl.activeCat1 === cat1}">{{cat1.name}}</span>
+					<li ng-repeat="cat1 in $ctrl.fieldsData.categories" ng-click="$ctrl.setActiveCat(cat1, $ctrl.activeCat1)">
+						<span ng-class="{'active': $ctrl.activeCat1 === cat1}">{{cat1.title}}</span>
 					</li>
 					<!--<li class="active"><a href="#"><span>В прокат</span></a></li>
 					<li><a href="#"><span>Купить</span></a></li>-->
 				</ul>
 				<div class="choose-price">
 					<p>Цена:</p>
-					<input ng-model="$ctrl.minPrice" ng-pattern="$ctrl.numPattern" name="min-price" type="number" placeholder="от" required="">
-					<input ng-model="$ctrl.maxPrice" name="max-price" type="number" placeholder="до" required="">
+					<input ng-model="$ctrl.minPrice" name="min-price" type="number" placeholder="от">
+					<input ng-model="$ctrl.maxPrice" name="max-price" type="number" placeholder="до">
 				</div>
 				<div class="number-offers">
 					<p>Предложений:
-						<span>{{$ctrl.goodsCount}}</span>
+						<span>{{$ctrl.itemsCount}}</span>
 					</p>
 				</div>
 			</div>
 
 			<ul class="category-list">
 				<li ng-repeat="cat2 in $ctrl.activeCat1" ng-click="$ctrl.setActiveCat(cat2, $ctrl.activeCat2, true)">
-					<span ng-class="{'active': $ctrl.activeCat2 === cat2}">{{cat2.name}}</span>
+					<span ng-class="{'active': $ctrl.activeCat2 === cat2}">{{cat2.title}}</span>
 					<!--<input ng-model="$ctrl.activeCat2" id="{{'form-cat2-index' + $index}}" type="radio" value="{{cat2}}" >
 					<label class="radio-label" for="{{'form-cat2-index' + $index}}">{{cat2.name}}</label>-->
 				</li>
@@ -42,7 +42,7 @@
 			</ul>
 			<ul class="category-list">
 				<li ng-repeat="cat3 in $ctrl.activeCat2" ng-click="$ctrl.setActiveCat(cat3, $ctrl.activeCat3, true)">
-					<span ng-class="{'active': $ctrl.activeCat3 === cat3}">{{cat3.name}}</span>
+					<span ng-class="{'active': $ctrl.activeCat3 === cat3}">{{cat3.title}}</span>
 					<!--<input ng-model="$ctrl.activeCat3" id="{{'form-cat3-index' + $index}}" type="radio" value="{{cat3}}" >
 					<label class="radio-label" for="{{'form-cat3-index' + $index}}">{{cat3.name}}</label>-->
 				</li>
@@ -59,16 +59,20 @@
 			<input ng-model="$ctrl.adress" class="adress" name="adress" placeholder="Город, район, адрес" required="" type="text">
 			<div class="search-criterion">
 				<p>Показать:</p>
-				<input ng-model="$ctrl.trackByOutput" id="form-radio1" name="radio" value="1" type="radio">
+				<input ng-repeat-start="tracker in $ctrl.fieldsData.trackers track by tracker.id" ng-model="$ctrl.tracker" id="{{'form-radio' + $index}}" name="radio" value="{{tracker}}" type="radio">
+				<label  ng-repeat-end class="radio-label" for="{{'form-radio' + $index}}">{{tracker.title}}</label>
+
+
+				<!--<input ng-model="$ctrl.tracker" id="form-radio1" name="radio" value="1" type="radio">
 				<label class="radio-label" for="form-radio1">сначала дешевые</label>
-				<input ng-model="$ctrl.trackByOutput" id="form-radio2" name="radio" value="2" type="radio">
+				<input ng-model="$ctrl.tracker" id="form-radio2" name="radio" value="2" type="radio">
 				<label class="radio-label" for="form-radio2">сначала дорогие</label>
-				<input ng-model="$ctrl.trackByOutput" id="form-radio3" name="radio" value="3" checked="checked" type="radio">
-				<label class="radio-label" for="form-radio3">по-популярности</label>
+				<input ng-model="$ctrl.tracker" id="form-radio3" name="radio" value="3" checked="checked" type="radio">
+				<label class="radio-label" for="form-radio3">по-популярности</label>-->
 			</div>
 
 			<button ng-click="$ctrl.searchRender()" type="submit">Показать {{$ctrl.goodsCount}} предложения</button>
-			<button ng-click="$ctrl.resetForm()" type="reset">Очистить условия поиска</button>
+			<button  type="reset">Очистить условия поиска</button>
 
 			<a ng-click="$ctrl.showSearch = false" href="javascript:void(0)" class="close">скрыть</a>
 

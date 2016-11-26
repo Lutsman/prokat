@@ -1,24 +1,31 @@
+<!--<search-advance items-count="$ctrl.dataPagination.goodsCount"
+				tracker="$ctrl.tracker"
+				get-items="$ctrl.getGoods"
+></search-advance>-->
+
 <section class="content">
 	<div class="container">
 		<p class="top-line">
-			<span>{{$ctrl.dataSearch.currGoodsCount}}</span> предложений
+			<span>{{$ctrl.dataPagination.goodsCount}}</span> предложений
 			<a href="#">на карте</a>
 			<a class="active" href="#">список</a>
 		</p>
 
 		<category-goods-info ng-repeat="good in $ctrl.dataGoods
-		|sort :$ctrl.dataSearch.trackByOutput.name :$ctrl.dataSearch.trackByOutput.fromLowToHight
-		|range :$ctrl.goodsRange.start[0] :$ctrl.goodsRange.end[0]"
+		|sort :$ctrl.tracker.name :$ctrl.tracker.reverse
+		|range :$ctrl.dataPagination.currPage :($ctrl.dataPagination.currPage + 4)"
 							 data="good"></category-goods-info>
 
 		<banner></banner>
 
 		<category-goods-info ng-repeat="good in $ctrl.dataGoods
-		|sort :$ctrl.dataSearch.trackByOutput.name :$ctrl.dataSearch.trackByOutput.fromLowToHight
-		|range :$ctrl.goodsRange.start[1] :$ctrl.goodsRange.end[1]"
+		|sort :$ctrl.tracker.name :$ctrl.tracker.reverse
+		|range :($ctrl.dataPagination.currPage + 4) :($ctrl.dataPagination.currPage + 8)"
 							 data="good"></category-goods-info>
 
-		<pagination></pagination>
+		<!--<pagination-nav curr-page="$ctrl.dataPagination.currPage"
+						page-count="$ctrl.dataPagination.pageCount"
+						page-limit="$ctrl.dataPagination.pageLimit"></pagination-nav>-->
 
 	</div><!--container-->
 </section>

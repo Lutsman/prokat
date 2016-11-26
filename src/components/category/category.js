@@ -40,9 +40,726 @@ angular.module('categoryPage', ['ngAnimate'])
         
     })
     .service('searchAdvanceData', function () {
-        this.fieldsData = [
-            {}
-        ];
+        this.fieldsData = {
+            title: 'Прокат велосипедов в Ростове-на-Дону',
+            maxPrice: undefined,
+            minPrice: undefined,
+            trackers: [
+                {
+                    title: 'сначала дешевые',
+                    name: 'price',
+                    reverse: false,
+                    id: 0,
+                    active: true
+                },
+                {
+                    title: 'сначала дорогие',
+                    name: 'price',
+                    reverse: true,
+                    id: 1,
+                    active: false
+                },
+                {
+                    title: 'по-популярности',
+                    name: 'rate',
+                    reverse: false,
+                    id: 2,
+                    active: false
+                }
+            ],
+            categories: [
+                {
+                    name: '',
+                    title: 'В прокат',
+                    active: true,
+                    id: 0,
+                    subCat: [
+                        {
+                            name: '',
+                            title: 'Велосипед',
+                            active: true,
+                            id: 0,
+                            subCat: [
+                                {
+                                    name: '',
+                                    title: 'Шоссейный-1',
+                                    active: false,
+                                    id: 0
+                                },
+                                {
+                                    name: '',
+                                    title: 'Горный',
+                                    active: true,
+                                    id: 1
+                                },
+                                {
+                                    name: '',
+                                    title: 'Детский',
+                                    active: false,
+                                    id: 2
+                                },
+                                {
+                                    name: '',
+                                    title: 'Хардтейл',
+                                    active: false,
+                                    id: 3
+                                },
+                                {
+                                    name: '',
+                                    title: 'Двухподвес',
+                                    active: false,
+                                    id: 4
+                                },
+                                {
+                                    name: '',
+                                    title: 'Фэтбайк',
+                                    active: false,
+                                    id: 5
+                                },
+                                {
+                                    name: '',
+                                    title: 'Электро',
+                                    active: false,
+                                    id: 6
+                                },
+                                {
+                                    name: '',
+                                    title: 'Компактный',
+                                    active: false,
+                                    id: 7
+                                }
+                            ]
+                        },
+                        {
+                            name: '',
+                            title: 'Гироскутер',
+                            active: false,
+                            id: 1,
+                            subCat: [
+                                {
+                                    name: '',
+                                    title: 'Шоссейный-2',
+                                    active: false,
+                                    id: 0
+                                },
+                                {
+                                    name: '',
+                                    title: 'Горный',
+                                    active: false,
+                                    id: 1
+                                },
+                                {
+                                    name: '',
+                                    title: 'Детский',
+                                    active: false,
+                                    id: 2
+                                },
+                                {
+                                    name: '',
+                                    title: 'Хардтейл',
+                                    active: false,
+                                    id: 3
+                                },
+                                {
+                                    name: '',
+                                    title: 'Двухподвес',
+                                    active: false,
+                                    id: 4
+                                },
+                                {
+                                    name: '',
+                                    title: 'Фэтбайк',
+                                    active: false,
+                                    id: 5
+                                },
+                                {
+                                    name: '',
+                                    title: 'Электро',
+                                    active: false,
+                                    id: 6
+                                },
+                                {
+                                    name: '',
+                                    title: 'Компактный',
+                                    active: false,
+                                    id: 7
+                                }
+                            ]
+                        },
+                        {
+                            name: '',
+                            title: 'Самокат',
+                            active: false,
+                            id: 2,
+                            subCat: [
+                                {
+                                    name: '',
+                                    title: 'Шоссейный-3',
+                                    active: false,
+                                    id: 0
+                                },
+                                {
+                                    name: '',
+                                    title: 'Горный',
+                                    active: false,
+                                    id: 1
+                                },
+                                {
+                                    name: '',
+                                    title: 'Детский',
+                                    active: false,
+                                    id: 2
+                                },
+                                {
+                                    name: '',
+                                    title: 'Хардтейл',
+                                    active: false,
+                                    id: 3
+                                },
+                                {
+                                    name: '',
+                                    title: 'Двухподвес',
+                                    active: false,
+                                    id: 4
+                                },
+                                {
+                                    name: '',
+                                    title: 'Фэтбайк',
+                                    active: false,
+                                    id: 5
+                                },
+                                {
+                                    name: '',
+                                    title: 'Электро',
+                                    active: false,
+                                    id: 6
+                                },
+                                {
+                                    name: '',
+                                    title: 'Компактный',
+                                    active: false,
+                                    id: 7
+                                }
+                            ]
+                        },
+                        {
+                            name: '',
+                            title: 'Роликовые коньки',
+                            active: false,
+                            id: 3,
+                            subCat: [
+                                {
+                                    name: '',
+                                    title: 'Шоссейный-4',
+                                    active: false,
+                                    id: 0
+                                },
+                                {
+                                    name: '',
+                                    title: 'Горный',
+                                    active: false,
+                                    id: 1
+                                },
+                                {
+                                    name: '',
+                                    title: 'Детский',
+                                    active: false,
+                                    id: 2
+                                },
+                                {
+                                    name: '',
+                                    title: 'Хардтейл',
+                                    active: false,
+                                    id: 3
+                                },
+                                {
+                                    name: '',
+                                    title: 'Двухподвес',
+                                    active: false,
+                                    id: 4
+                                },
+                                {
+                                    name: '',
+                                    title: 'Фэтбайк',
+                                    active: false,
+                                    id: 5
+                                },
+                                {
+                                    name: '',
+                                    title: 'Электро',
+                                    active: false,
+                                    id: 6
+                                },
+                                {
+                                    name: '',
+                                    title: 'Компактный',
+                                    active: false,
+                                    id: 7
+                                }
+                            ]
+                        },
+                        {
+                            name: '',
+                            title: 'Аксессуары и оборудование',
+                            active: false,
+                            id: 4,
+                            subCat: [
+                                {
+                                    name: '',
+                                    title: 'Шоссейный-5',
+                                    active: false,
+                                    id: 0
+                                },
+                                {
+                                    name: '',
+                                    title: 'Горный',
+                                    active: false,
+                                    id: 1
+                                },
+                                {
+                                    name: '',
+                                    title: 'Детский',
+                                    active: false,
+                                    id: 2
+                                },
+                                {
+                                    name: '',
+                                    title: 'Хардтейл',
+                                    active: false,
+                                    id: 3
+                                },
+                                {
+                                    name: '',
+                                    title: 'Двухподвес',
+                                    active: false,
+                                    id: 4
+                                },
+                                {
+                                    name: '',
+                                    title: 'Фэтбайк',
+                                    active: false,
+                                    id: 5
+                                },
+                                {
+                                    name: '',
+                                    title: 'Электро',
+                                    active: false,
+                                    id: 6
+                                },
+                                {
+                                    name: '',
+                                    title: 'Компактный',
+                                    active: false,
+                                    id: 7
+                                }
+                            ]
+                        },
+                        {
+                            name: '',
+                            title: 'Зимняя техника',
+                            active: false,
+                            id: 5,
+                            subCat: [
+                                {
+                                    name: '',
+                                    title: 'Шоссейный-6',
+                                    active: false,
+                                    id: 0
+                                },
+                                {
+                                    name: '',
+                                    title: 'Горный',
+                                    active: false,
+                                    id: 1
+                                },
+                                {
+                                    name: '',
+                                    title: 'Детский',
+                                    active: false,
+                                    id: 2
+                                },
+                                {
+                                    name: '',
+                                    title: 'Хардтейл',
+                                    active: false,
+                                    id: 3
+                                },
+                                {
+                                    name: '',
+                                    title: 'Двухподвес',
+                                    active: false,
+                                    id: 4
+                                },
+                                {
+                                    name: '',
+                                    title: 'Фэтбайк',
+                                    active: false,
+                                    id: 5
+                                },
+                                {
+                                    name: '',
+                                    title: 'Электро',
+                                    active: false,
+                                    id: 6
+                                },
+                                {
+                                    name: '',
+                                    title: 'Компактный',
+                                    active: false,
+                                    id: 7
+                                }
+                            ]
+                        }
+                        
+                    ]
+                },
+                {
+                    name: '',
+                    title: 'Купить',
+                    active: false,
+                    id: 1,
+                    subCat: [
+                        {
+                            name: '',
+                            title: 'Велосипед',
+                            active: true,
+                            id: 0,
+                            subCat: [
+                                {
+                                    name: '',
+                                    title: 'Шоссейный-1',
+                                    active: false,
+                                    id: 0
+                                },
+                                {
+                                    name: '',
+                                    title: 'Горный',
+                                    active: true,
+                                    id: 1
+                                },
+                                {
+                                    name: '',
+                                    title: 'Детский',
+                                    active: false,
+                                    id: 2
+                                },
+                                {
+                                    name: '',
+                                    title: 'Хардтейл',
+                                    active: false,
+                                    id: 3
+                                },
+                                {
+                                    name: '',
+                                    title: 'Двухподвес',
+                                    active: false,
+                                    id: 4
+                                },
+                                {
+                                    name: '',
+                                    title: 'Фэтбайк',
+                                    active: false,
+                                    id: 5
+                                },
+                                {
+                                    name: '',
+                                    title: 'Электро',
+                                    active: false,
+                                    id: 6
+                                },
+                                {
+                                    name: '',
+                                    title: 'Компактный',
+                                    active: false,
+                                    id: 7
+                                }
+                            ]
+                        },
+                        {
+                            name: '',
+                            title: 'Гироскутер',
+                            active: false,
+                            id: 1,
+                            subCat: [
+                                {
+                                    name: '',
+                                    title: 'Шоссейный-2',
+                                    active: false,
+                                    id: 0
+                                },
+                                {
+                                    name: '',
+                                    title: 'Горный',
+                                    active: false,
+                                    id: 1
+                                },
+                                {
+                                    name: '',
+                                    title: 'Детский',
+                                    active: false,
+                                    id: 2
+                                },
+                                {
+                                    name: '',
+                                    title: 'Хардтейл',
+                                    active: false,
+                                    id: 3
+                                },
+                                {
+                                    name: '',
+                                    title: 'Двухподвес',
+                                    active: false,
+                                    id: 4
+                                },
+                                {
+                                    name: '',
+                                    title: 'Фэтбайк',
+                                    active: false,
+                                    id: 5
+                                },
+                                {
+                                    name: '',
+                                    title: 'Электро',
+                                    active: false,
+                                    id: 6
+                                },
+                                {
+                                    name: '',
+                                    title: 'Компактный',
+                                    active: false,
+                                    id: 7
+                                }
+                            ]
+                        },
+                        {
+                            name: '',
+                            title: 'Самокат',
+                            active: false,
+                            id: 2,
+                            subCat: [
+                                {
+                                    name: '',
+                                    title: 'Шоссейный-3',
+                                    active: false,
+                                    id: 0
+                                },
+                                {
+                                    name: '',
+                                    title: 'Горный',
+                                    active: false,
+                                    id: 1
+                                },
+                                {
+                                    name: '',
+                                    title: 'Детский',
+                                    active: false,
+                                    id: 2
+                                },
+                                {
+                                    name: '',
+                                    title: 'Хардтейл',
+                                    active: false,
+                                    id: 3
+                                },
+                                {
+                                    name: '',
+                                    title: 'Двухподвес',
+                                    active: false,
+                                    id: 4
+                                },
+                                {
+                                    name: '',
+                                    title: 'Фэтбайк',
+                                    active: false,
+                                    id: 5
+                                },
+                                {
+                                    name: '',
+                                    title: 'Электро',
+                                    active: false,
+                                    id: 6
+                                },
+                                {
+                                    name: '',
+                                    title: 'Компактный',
+                                    active: false,
+                                    id: 7
+                                }
+                            ]
+                        },
+                        {
+                            name: '',
+                            title: 'Роликовые коньки',
+                            active: false,
+                            id: 3,
+                            subCat: [
+                                {
+                                    name: '',
+                                    title: 'Шоссейный-4',
+                                    active: false,
+                                    id: 0
+                                },
+                                {
+                                    name: '',
+                                    title: 'Горный',
+                                    active: false,
+                                    id: 1
+                                },
+                                {
+                                    name: '',
+                                    title: 'Детский',
+                                    active: false,
+                                    id: 2
+                                },
+                                {
+                                    name: '',
+                                    title: 'Хардтейл',
+                                    active: false,
+                                    id: 3
+                                },
+                                {
+                                    name: '',
+                                    title: 'Двухподвес',
+                                    active: false,
+                                    id: 4
+                                },
+                                {
+                                    name: '',
+                                    title: 'Фэтбайк',
+                                    active: false,
+                                    id: 5
+                                },
+                                {
+                                    name: '',
+                                    title: 'Электро',
+                                    active: false,
+                                    id: 6
+                                },
+                                {
+                                    name: '',
+                                    title: 'Компактный',
+                                    active: false,
+                                    id: 7
+                                }
+                            ]
+                        },
+                        {
+                            name: '',
+                            title: 'Аксессуары и оборудование',
+                            active: false,
+                            id: 4,
+                            subCat: [
+                                {
+                                    name: '',
+                                    title: 'Шоссейный-5',
+                                    active: false,
+                                    id: 0
+                                },
+                                {
+                                    name: '',
+                                    title: 'Горный',
+                                    active: false,
+                                    id: 1
+                                },
+                                {
+                                    name: '',
+                                    title: 'Детский',
+                                    active: false,
+                                    id: 2
+                                },
+                                {
+                                    name: '',
+                                    title: 'Хардтейл',
+                                    active: false,
+                                    id: 3
+                                },
+                                {
+                                    name: '',
+                                    title: 'Двухподвес',
+                                    active: false,
+                                    id: 4
+                                },
+                                {
+                                    name: '',
+                                    title: 'Фэтбайк',
+                                    active: false,
+                                    id: 5
+                                },
+                                {
+                                    name: '',
+                                    title: 'Электро',
+                                    active: false,
+                                    id: 6
+                                },
+                                {
+                                    name: '',
+                                    title: 'Компактный',
+                                    active: false,
+                                    id: 7
+                                }
+                            ]
+                        },
+                        {
+                            name: '',
+                            title: 'Зимняя техника',
+                            active: false,
+                            id: 5,
+                            subCat: [
+                                {
+                                    name: '',
+                                    title: 'Шоссейный-6',
+                                    active: false,
+                                    id: 0
+                                },
+                                {
+                                    name: '',
+                                    title: 'Горный',
+                                    active: false,
+                                    id: 1
+                                },
+                                {
+                                    name: '',
+                                    title: 'Детский',
+                                    active: false,
+                                    id: 2
+                                },
+                                {
+                                    name: '',
+                                    title: 'Хардтейл',
+                                    active: false,
+                                    id: 3
+                                },
+                                {
+                                    name: '',
+                                    title: 'Двухподвес',
+                                    active: false,
+                                    id: 4
+                                },
+                                {
+                                    name: '',
+                                    title: 'Фэтбайк',
+                                    active: false,
+                                    id: 5
+                                },
+                                {
+                                    name: '',
+                                    title: 'Электро',
+                                    active: false,
+                                    id: 6
+                                },
+                                {
+                                    name: '',
+                                    title: 'Компактный',
+                                    active: false,
+                                    id: 7
+                                }
+                            ]
+                        }
+    
+                    ]
+                }
+            ]
+        };
     })
     .filter('range', function () {
         return function (input, from, to) {
@@ -71,6 +788,8 @@ angular.module('categoryPage', ['ngAnimate'])
     .component('category', {
         templateUrl: 'tmpl/category-tmpl.html',
         controller: function () {
+            let self = this;
+            
             this.dataGoods = [
                 {
                     img: 'img/goods_catalog_preview_1.jpg',
@@ -203,71 +922,95 @@ angular.module('categoryPage', ['ngAnimate'])
                     rate: 0.1
                 }
             ];
-            this.dataSearch = {
-                currGoodsCount: 1000,
-                trackByOutput: {
-                    name: 'rate',
-                    fromLowToHight: false
+            /*this.tracker = {
+                name: 'rate',
+                reverse: false
+            };*/
+            this.dataPagination = {
+                goodsPerPage: 8,
+                currPage: 0,
+                pageLimit: 10,
+                //testCount: 500,
+                get goodsCount() {
+                    let result = Object.keys(self.dataGoods).length;
+                    //console.log(result);
+                    //self.dataSearch.currGoodsCount;
+                    
+                    return result;//self.dataSearch.currGoodsCount; //result;
+                },
+                /*set goodsCount(input) {
+                    this.testCount;
+                },*/
+                get pageCount() {
+                    return Math.ceil(this.goodsCount / this.goodsPerPage);
                 }
             };
-            this.goodsRange = {
-                start: [0, 4],
-                end: [4, 8],
-                goodsPerPage: 8,
-                currPage: 1,
-                pageCount: 0
+            this.getGoods = () => {
+                console.log('get goods');
+                console.log(this);
             };
-           /* this.setCurrPage = (index) => {
-                
+            /*Object.defineProperties(this, 'goodsCount', {
+                get: function() {
+                    return Object.keys(this.dataGoods).length;
+                }.bind(this)
+            });*/
+            /*this.getPageCount = () => {
+                return Math.ceil(this.dataSearch.currGoodsCount / this.dataPagination.goodsPerPage);
             };*/
+            
+            
+            //this.dataPagination.pageCount = this.getPageCount();
+            //console.log(this.dataPagination.goodsCount);
+            //console.log(this.dataPagination.pageCount);
+            
         }
     })
-    .component('pagination', {
-        templateUrl: 'tmpl/pagination-tmpl.html',
+    .component('paginationNav', {
+        templateUrl: 'tmpl/pagination-nav-tmpl.html',
         bindings: {
+            currPage: '=',
+            pageCount: '<',
+            pageLimit: '<'
             
         },
         controller: function () {
-            this.data = {
-                currPage: 16,
-                goodsPerPage: 10,
-                goodsCount: 50
-            };
-            
             this.setCurrPage = (index) => {
-                this.data.currPage = index;
+                this.currPage = index;
+                this.repeater = this.getRepeaterArr();
             };
             this.getStartPos = () => {
-                return Math.floor(this.data.currPage / this.data.goodsPerPage) * this.data.goodsPerPage;
-            };
-            this.getPageCount = () => {
-                return Math.ceil(this.data.goodsCount / this.data.goodsPerPage);
+                return Math.floor(this.currPage / this.pageLimit) * this.pageLimit;
             };
             this.prev = () => {
-                let start = this.startPos >= this.data.goodsCount ? this.data.goodsCount - this.data.goodsCount % this.data.goodsPerPage : this.startPos;
-                start -= this.data.goodsPerPage*2;
-                this.startPos = start >= 0 ? start : 0;
+                this.startPos -= this.pageLimit;
                 this.repeater = this.getRepeaterArr();
             };
             this.next = () => {
+                this.startPos += this.pageLimit;
                 this.repeater = this.getRepeaterArr();
             };
             this.getRepeaterArr = () => {
+                if (this.startPos >= this.pageCount) {
+                    this.startPos = this.pageCount - this.pageCount % this.pageLimit;
+                } else if (this.startPos < 0) {
+                    this.startPos = 0;
+                }
+                
                 let arr = [];
-                let i = this.startPos >= this.data.goodsCount ? this.data.goodsCount - this.data.goodsCount % this.data.goodsPerPage : this.startPos;
-                let length = i + this.data.goodsPerPage > this.data.goodsCount ? this.data.goodsCount : i + this.data.goodsPerPage;
+                let i = this.startPos;
+                let length = i + this.pageLimit > this.pageCount ? this.pageCount : i + this.pageLimit;
                 
                 for (i; i < length; i++) {
                     arr[i] = i + 1;
                 }
-                this.startPos = i;
+                //this.startPos = i;
                 
                 //console.log(arr);
                 
                 return arr;
             };
             
-            this.pageCount = this.getPageCount();
+            //this.pageCount = this.getPageCount();
             this.startPos = this.getStartPos();
             this.repeater = this.getRepeaterArr();
         }
@@ -275,20 +1018,30 @@ angular.module('categoryPage', ['ngAnimate'])
     .component('searchAdvance', {
         templateUrl: 'tmpl/search-advance-tmpl.html',
         bindings: {
-            trackByOutput: '=?'
+            tracker: '=',
+            itemsCount: '<',
+            getItems: '@'
         },
         controller: function (searchAdvanceData) {
             this.fieldsData = searchAdvanceData.fieldsData;
             this.showSearch = false;
             this.init = () => {
                 this.initCat();
-                this.trackByOutput = this.trackByOutputCached ? this.trackByOutputCached : 3;
-                this.trackByOutputCached = this.trackByOutputCached ? this.trackByOutputCached : this.trackByOutput;
-                this.minPrice = undefined;
-                this.maxPrice = undefined;
+                //this.trackByOutput = this.trackByOutputCached ? this.trackByOutputCached : 3;
+                //this.trackByOutputCached = this.trackByOutputCached ? this.trackByOutputCached : this.trackByOutput;
+                this.minPrice = this.fieldsData.minPrice;
+                this.maxPrice = this.fieldsData.maxPrice;
                 this.adress = undefined;
-                this.searchAreaName = 'Прокат велосипедов в Ростове-на-Дону';
-                this.goodsCount = 1546;
+                //this.title = this.fieldsData.title;
+                //this.trackers = this.fieldsData.trackers;
+                
+                for (let key in this.fieldsData.trackers) {
+                    if (this.fieldsData.trackers[key].active) {
+                        this.tracker = this.fieldsData.trackers[key];
+                    }
+                        
+                }
+                //this.goodsCount = 1546;
             };
             this.resetForm = () => {
                 this.init();
@@ -301,16 +1054,16 @@ angular.module('categoryPage', ['ngAnimate'])
                 }
             };
             this.initCat = () => {
-                this.activeCat1 = this.getActiveCat(this.fieldsData);
-                this.activeCat2 = this.getActiveCat(this.activeCat1);
-                this.activeCat3 = this.getActiveCat(this.activeCat2);
+                this.activeCat1 = this.getActiveCat(this.fieldsData.categories);
+                this.activeCat2 = this.getActiveCat(this.activeCat1.subCat);
+                this.activeCat3 = this.getActiveCat(this.activeCat2.subCat);
             };
             this.getActiveCat = (obj) => {
                 let result = false;
                 
                 if (typeof obj === 'object' && !Array.isArray(obj) && obj !== null) {
                     for (let key in obj) {
-                        if (!obj[key].acive) continue;
+                        if (!obj[key].active) continue;
                         
                         result = obj[key];
                         break;
@@ -327,7 +1080,7 @@ angular.module('categoryPage', ['ngAnimate'])
                 return result;
             };
             this.searchRender = () => {
-                
+                this.getItems();
             };
             
             this.init();
