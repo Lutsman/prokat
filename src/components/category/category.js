@@ -771,6 +771,13 @@ angular.module('categoryPage', ['ngAnimate'])
     .filter('sort', function () {
         return function (input, key, fromLowToHight) {
             if (!input) return [];
+            if (!key || !fromLowToHight) {
+                console.log(key);
+                console.log(fromLowToHight);
+                console.log(input);
+                
+                return input;
+            }
             
             let result = input.sort(function (a, b) {
                 if (fromLowToHight) {
@@ -1038,6 +1045,8 @@ angular.module('categoryPage', ['ngAnimate'])
                 for (let key in this.fieldsData.trackers) {
                     if (this.fieldsData.trackers[key].active) {
                         this.tracker = this.fieldsData.trackers[key];
+                        //console.log(this.fieldsData.trackers[key]);
+                        //console.log(this.tracker);
                     }
                         
                 }
