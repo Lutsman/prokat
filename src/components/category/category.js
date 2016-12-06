@@ -772,9 +772,9 @@ angular.module('categoryPage', ['ngAnimate'])
         return function (input, key, fromLowToHight) {
             if (!input) return [];
             if (!key || !fromLowToHight) {
-                console.log(key);
+                /*console.log(key);
                 console.log(fromLowToHight);
-                console.log(input);
+                console.log(input);*/
                 
                 return input;
             }
@@ -1056,16 +1056,30 @@ angular.module('categoryPage', ['ngAnimate'])
                 this.init();
             };
             this.setActiveCat = (currCat, activeCatLink, toggle) => {
-                if (toggle) {
-                    activeCatLink = activeCatLink === currCat ? {} : currCat;
+                console.log(activeCatLink === currCat);
+                console.dir(activeCatLink);
+                console.dir(currCat);
+                console.log(toggle);
+                /*if (toggle) {
+                    if (activeCatLink === currCat) {
+                        activeCatLink = {};
+                    } else {
+                        activeCatLink = currCat;
+                    }
+                    
+                    //activeCatLink = activeCatLink === currCat ? {} : currCat;
                 } else {
                     activeCatLink = currCat;
-                }
+                    console.log(activeCatLink === currCat);
+                }*/
             };
             this.initCat = () => {
                 this.activeCat1 = this.getActiveCat(this.fieldsData.categories);
+                /*console.dir(this.fieldsData.categories);
+                console.dir(this.activeCat1);*/
                 this.activeCat2 = this.getActiveCat(this.activeCat1.subCat);
                 this.activeCat3 = this.getActiveCat(this.activeCat2.subCat);
+                
             };
             this.getActiveCat = (obj) => {
                 let result = false;
@@ -1089,7 +1103,7 @@ angular.module('categoryPage', ['ngAnimate'])
                 return result;
             };
             this.searchRender = () => {
-                this.getItems();
+                //this.getItems();
             };
             
             this.init();

@@ -28,7 +28,7 @@
 			</div>
 
 			<ul class="category-list">
-				<li ng-repeat="cat2 in $ctrl.activeCat1" ng-click="$ctrl.setActiveCat(cat2, $ctrl.activeCat2, true)">
+				<li ng-repeat="cat2 in $ctrl.activeCat1.subCat" ng-click="$ctrl.setActiveCat(cat2, $ctrl.activeCat2, true)">
 					<span ng-class="{'active': $ctrl.activeCat2 === cat2}">{{cat2.title}}</span>
 					<!--<input ng-model="$ctrl.activeCat2" id="{{'form-cat2-index' + $index}}" type="radio" value="{{cat2}}" >
 					<label class="radio-label" for="{{'form-cat2-index' + $index}}">{{cat2.name}}</label>-->
@@ -41,7 +41,7 @@
 				<li><a href="#"><span>Зимняя техника</span></a></li>-->
 			</ul>
 			<ul class="category-list">
-				<li ng-repeat="cat3 in $ctrl.activeCat2" ng-click="$ctrl.setActiveCat(cat3, $ctrl.activeCat3, true)">
+				<li ng-repeat="cat3 in $ctrl.activeCat2.subCat" ng-click="$ctrl.setActiveCat(cat3, $ctrl.activeCat3, true)">
 					<span ng-class="{'active': $ctrl.activeCat3 === cat3}">{{cat3.title}}</span>
 					<!--<input ng-model="$ctrl.activeCat3" id="{{'form-cat3-index' + $index}}" type="radio" value="{{cat3}}" >
 					<label class="radio-label" for="{{'form-cat3-index' + $index}}">{{cat3.name}}</label>-->
