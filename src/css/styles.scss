@@ -657,19 +657,21 @@ footer {
     letter-spacing: 0.5px;
     li {
         float: left;
+        cursor: pointer;
+        border-bottom: 2px solid transparent;
+        &:hover {
+            border-bottom-color: rgba(211, 92, 96, 0.9);
+        }
+        &.active {
+            border-bottom-color: rgba(211, 92, 96, 0.9);
+        }
         + li {
             margin-left: 6px;
+
         }
-        a {
-            border-bottom: 2px solid transparent;
-            &:hover {
-                border-bottom-color: rgba(211, 92, 96, 0.9);
-            }
-        }
+
     }
-    .active a {
-        border-bottom-color: rgba(211, 92, 96, 0.9);
-    }
+
 }
 
 .link-box {

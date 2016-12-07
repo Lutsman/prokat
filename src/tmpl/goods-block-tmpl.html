@@ -1,8 +1,9 @@
 <div class="goods-nav">
 	<p>{{$ctrl.goodsData.title.toUpperCase()}}</p>
 	<ul class="goods-menu">
-		<li ng-repeat="goodsGroup in $ctrl.goodsData.goodsArr" ng-click="$ctrl.activeGroup = goodsGroup">
-			<a href="javascript:void(0)">{{goodsGroup.groupName}}</a>
+		<li ng-repeat="goodsGroup in $ctrl.goodsData.goodsArr" ng-click="$ctrl.activeGroup = goodsGroup"
+			ng-class="{'active': $ctrl.activeGroup === goodsGroup}">
+			{{goodsGroup.groupName}}
 		</li>
 	</ul>
 	<a href="#">Как сюда попасть?</a>
