@@ -10,15 +10,36 @@
 }
 
 custom-select {
-    .active-add,
-    .ng-move,
-    .ng-enter,
-    .ng-leave {
+    a {
+        display: block;
+        position: relative;
+        z-index: 2;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+    ul {
         transition:all linear 0.2s;
-        color: red;
+        transform-origin: top;
+    }
+    li {
+        cursor: pointer;
+    }
+    .ng-enter {
+        transform: scaleY(0);
+    }
+    .ng-leave, .ng-enter.ng-enter-active {
+        transform: scaleY(1);
+    }
+    .ng-leave.ng-leave-active {
+        transform: scaleY(0);
+    }
+    &.revers {
+       ul {
+           transform-origin: bottom;
+       }
     }
 }
 
-.active-add {
-    color: red !important;
-}
+
+
