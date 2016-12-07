@@ -9,8 +9,8 @@
 		<form ng-show="$ctrl.showSearch" class="category-form" novalidate>
 			<div>
 				<ul class="category-list">
-					<li ng-repeat="cat1 in $ctrl.fieldsData.categories" ng-click="$ctrl.setActiveCat(cat1, $ctrl.activeCat1)">
-						<span ng-class="{'active': $ctrl.activeCat1 === cat1}">{{cat1.title}}</span>
+					<li ng-class="{'active': $ctrl.activeCat1 === cat1}" ng-repeat="cat1 in $ctrl.fieldsData.categories" ng-click="$ctrl.setActiveCat(cat1, $ctrl.activeCat1)">
+						<span>{{cat1.title}}</span>
 					</li>
 					<!--<li class="active"><a href="#"><span>В прокат</span></a></li>
 					<li><a href="#"><span>Купить</span></a></li>-->
@@ -28,8 +28,8 @@
 			</div>
 
 			<ul class="category-list">
-				<li ng-repeat="cat2 in $ctrl.activeCat1.subCat" ng-click="$ctrl.setActiveCat(cat2, $ctrl.activeCat2, true)">
-					<span ng-class="{'active': $ctrl.activeCat2 === cat2}">{{cat2.title}}</span>
+				<li ng-class="{'active': $ctrl.activeCat2 === cat2}" ng-repeat="cat2 in $ctrl.activeCat1.subCat" ng-click="$ctrl.setActiveCat(cat2, $ctrl.activeCat2, true)">
+					<span>{{cat2.title}}</span>
 					<!--<input ng-model="$ctrl.activeCat2" id="{{'form-cat2-index' + $index}}" type="radio" value="{{cat2}}" >
 					<label class="radio-label" for="{{'form-cat2-index' + $index}}">{{cat2.name}}</label>-->
 				</li>
@@ -41,8 +41,8 @@
 				<li><a href="#"><span>Зимняя техника</span></a></li>-->
 			</ul>
 			<ul class="category-list">
-				<li ng-repeat="cat3 in $ctrl.activeCat2.subCat" ng-click="$ctrl.setActiveCat(cat3, $ctrl.activeCat3, true)">
-					<span ng-class="{'active': $ctrl.activeCat3 === cat3}">{{cat3.title}}</span>
+				<li ng-class="{'active': $ctrl.activeCat3 === cat3}" ng-repeat="cat3 in $ctrl.activeCat2.subCat" ng-click="$ctrl.setActiveCat(cat3, $ctrl.activeCat3, true)">
+					<span>{{cat3.title}}</span>
 					<!--<input ng-model="$ctrl.activeCat3" id="{{'form-cat3-index' + $index}}" type="radio" value="{{cat3}}" >
 					<label class="radio-label" for="{{'form-cat3-index' + $index}}">{{cat3.name}}</label>-->
 				</li>
@@ -74,9 +74,9 @@
 			<button ng-click="$ctrl.searchRender()" type="submit">Показать {{$ctrl.goodsCount}} предложения</button>
 			<button  type="reset">Очистить условия поиска</button>
 
-			<a ng-click="$ctrl.showSearch = false" href="javascript:void(0)" class="close">скрыть</a>
-
 		</form>
+
+		<a ng-show="$ctrl.showSearch" ng-click="$ctrl.showSearch = false" href="javascript:void(0)" class="close">скрыть</a>
 
 	</div><!--container-->
 </section>
