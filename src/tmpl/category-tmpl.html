@@ -18,10 +18,10 @@
 
 		<banner></banner>
 
-		<!--<category-goods-info ng-repeat="good in $ctrl.dataGoods
+		<category-goods-info ng-repeat="good in $ctrl.dataGoods
 		|sort :$ctrl.tracker.name :$ctrl.tracker.reverse
-		|range :($ctrl.dataPagination.currPage + 4) :($ctrl.dataPagination.currPage + 8)"
-							 data="good"></category-goods-info>-->
+		|range :($ctrl.dataPagination.currPage + 4):($ctrl.dataPagination.currPage + 8)"
+							 data="good"></category-goods-info>
 
 		<pagination-nav curr-page="$ctrl.dataPagination.currPage"
 						page-count="$ctrl.dataPagination.pageCount"

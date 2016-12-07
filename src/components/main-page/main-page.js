@@ -431,7 +431,7 @@ angular.module('mainPage', ['ngAnimate'])
             
     })
     .component('mainPage', {
-        templateUrl: 'tmpl/main-page-tmpl.html',
+        template: require('./../../tmpl/main-page-tmpl.html'),
         controller: function (goodsData) {
             this.rentData = goodsData.rentData;
             this.sellData = goodsData.sellData;
@@ -442,7 +442,7 @@ angular.module('mainPage', ['ngAnimate'])
         }
     })
     .component('searchForm', {
-        templateUrl: 'tmpl/search-form-tmpl.html',
+        template: require('./../../tmpl/search-form-tmpl.html'),
         controller: function(searchFormData) {
             this.selects = searchFormData.selectsData;
             this.selectedArr = this.selects.map((item) => {
@@ -463,7 +463,7 @@ angular.module('mainPage', ['ngAnimate'])
             selectedOption: '=',
             customFunc: '<'
         },
-        templateUrl: 'tmpl/custom-select-tmpl.html',
+        template: require('./../../tmpl/custom-select-tmpl.html'),
         controller: function() {
             this.isOpen = false;
             this.setSelection = (newSelect) => {
@@ -491,14 +491,14 @@ angular.module('mainPage', ['ngAnimate'])
         bindings: {
             goodsData: '<'
         },
-        templateUrl: 'tmpl/goods-block-tmpl.html',
+        template: require('./../../tmpl/goods-block-tmpl.html'),
         controller: function () {
             //this.goodsData = goodsData.rentData;
             this.activeGroup = this.goodsData.goodsArr[0];
         }
     })
     .component('navbar', {
-        templateUrl: 'tmpl/navbar-tmpl.html',
+        template: require('./../../tmpl/navbar-tmpl.html'),
         controller: function ($scope, $window, $element) {
             this.isHidden = false;
             this.scrollFunc = () => {
@@ -558,7 +558,7 @@ angular.module('mainPage', ['ngAnimate'])
         }
     })
     .component('pagefooter', {
-        templateUrl: 'tmpl/pagefooter-tmpl.html',
+        template: require('./../../tmpl/pagefooter-tmpl.html'),
         controller: function (selectData) {
             this.langSelects = selectData.langSelectData;
             this.langSelected = this.langSelects[0];

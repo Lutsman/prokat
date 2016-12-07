@@ -51,7 +51,7 @@ module.exports = function makeWebpackConfig() {
     
     // Output path from the view of the page
     // Uses webpack-dev-server in development
-    publicPath: isProd ? '/' : 'http://localhost:8080/',
+    publicPath: isProd ? '//lutsman.github.io/demo/prokat/' : 'http://localhost:8080/',
     
     // Filename for entry points
     // Only adds hash in build mode
@@ -129,22 +129,22 @@ module.exports = function makeWebpackConfig() {
       // Pass along the updated reference to your code
       // You can add here any file extension you want to get copied to your output
       test: /\.(png|jpg|jpeg|gif)$/,
-      loader: 'file?&name=./resources/img/[name][hash].[ext]'
+      loader: 'file?&name=resources/img/[name][hash].[ext]'
     },{
       test: /\.woff(\?v=\d+\.\d+\.\d+)?$/,
-      loader: "url?limit=10000&mimetype=application/font-woff&name=./resources/fonts/[name].[hash].[ext]"
+      loader: "url?limit=10000&mimetype=application/font-woff&name=resources/fonts/[name].[hash].[ext]"
     }, {
       test: /\.woff2(\?v=\d+\.\d+\.\d+)?$/,
-      loader: "url?limit=10000&mimetype=application/font-woff&name=./resources/fonts/[name].[hash].[ext]"
+      loader: "url?limit=10000&mimetype=application/font-woff&name=resources/fonts/[name].[hash].[ext]"
     }, {
       test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
-      loader: "url?limit=10000&mimetype=application/octet-stream&name=./resources/fonts/[name].[hash].[ext]"
+      loader: "url?limit=10000&mimetype=application/octet-stream&name=resources/fonts/[name].[hash].[ext]"
     }, {
       test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
-      loader: "file?name=./resources/fonts/[name].[hash].[ext]"
+      loader: "file?name=resources/fonts/[name].[hash].[ext]"
     }, {
       test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
-      loader: "url?limit=10000&mimetype=image/svg+xml&name=./resources/fonts/[name].[hash].[ext]"
+      loader: "url?limit=10000&mimetype=image/svg+xml&name=resources/fonts/[name].[hash].[ext]"
     }, {
       // HTML LOADER
       // Reference: https://github.com/webpack/raw-loader
@@ -231,7 +231,7 @@ module.exports = function makeWebpackConfig() {
         
         // Reference: http://webpack.github.io/docs/list-of-plugins.html#uglifyjsplugin
         // Minify all javascript, switch loaders to minimizing mode
-        new webpack.optimize.UglifyJsPlugin(),
+        //new webpack.optimize.UglifyJsPlugin(),
         
         // Copy assets from the resources folder
         // Reference: https://github.com/kevlened/copy-webpack-plugin
