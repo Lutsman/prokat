@@ -148,10 +148,12 @@ module.exports = function makeWebpackConfig() {
       loader: "url?limit=10000&mimetype=image/svg+xml&name=resources/fonts/[name].[hash].[ext]"
     }, {
       // HTML LOADER
-      // Reference: https://github.com/webpack/raw-loader
-      // Allow loading html through js
+      // Reference: https://github.com/webpack/raw-loader,
+        // Allow loading html through js
+      // Ng template loader https://github.com/teux/ng-cache-loader
+      
       test: /\.html$/,
-      loader: 'raw'
+      loader: 'ng-cache?prefix=tmpl&-removeEmptyAttributes'          //raw'
     }]
   };
   

@@ -4,13 +4,6 @@
 			<custom-select class="search-form__select" options="select.options" selected-option="$ctrl.selectedArr[$index]"></custom-select>
 		</li>
 	</ul>
-	<div class="search__autocomplete">
-		<input ng-model="$ctrl.searchKeyword" ng-change="$ctrl.searchSelected = false" placeholder="в Ростове-на-Дону" required="" name="q" type="text">
-		<ul ng-if="!!$ctrl.searchKeyword && !$ctrl.searchSelected">
-			<li ng-repeat="field in $ctrl.searchPotentialFields | filter:$ctrl.searchKeyword" ng-click="$ctrl.setSearch(field.name)">
-				<span>{{field.name}}</span>
-			</li>
-		</ul>
-	</div>
-	<button type="submit">Найти</button>
+	<autocomplete value="$ctrl.searchAutocomplete.value" get-similar-value="$ctrl.searchAutocomplete.getSimilarValue" class="search__autocomplete"></autocomplete>
+	<button type="submit" ng-click="$ctrl.search()">Найти</button>
 </form>

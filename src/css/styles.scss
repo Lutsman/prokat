@@ -81,7 +81,7 @@
 }
 header {
     color: #fff;
-    @include transition(all 0.2s ease-in-out);
+    @include transition(all 0.5s ease-in-out);
     > div {
         &:first-of-type {
             height: 41px;
@@ -261,7 +261,6 @@ nav a {
             border-top: 2px solid #898989;
             border-right: 2px solid #898989;
             @include transform(rotate(135deg));
-            transition:all linear 0.2s;
         }
     }
    ul {

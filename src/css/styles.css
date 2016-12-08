@@ -320,10 +320,10 @@ category-goods-info:nth-of-type(5n+4) .goods-info {
 
 header {
   color: #fff;
-  -webkit-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out; }
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out; }
   header > div:first-of-type {
     height: 41px;
     background-color: rgba(88, 103, 116, 0.93); }
@@ -485,8 +485,7 @@ nav a {
     -moz-transform: rotate(135deg);
     -webkit-transform: rotate(135deg);
     -o-transform: rotate(135deg);
-    transform: rotate(135deg);
-    transition: all linear 0.2s; }
+    transform: rotate(135deg); }
 .search-form__select ul {
   width: 100%;
   padding-bottom: 10px;

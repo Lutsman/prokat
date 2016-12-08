@@ -6,6 +6,14 @@ import './../../css/normalize.css';
 import './../../css/styles.scss';
 
 
+import mainPageTmpl from './../../tmpl/main-page-tmpl.html';
+import searchFormTmpl from './../../tmpl/search-form-tmpl.html';
+import autocompleteTmpl from './../../tmpl/autocomplete-tmpl.html';
+import customSelectTmpl from './../../tmpl/custom-select-tmpl.html';
+import goodsBlockTmpl from './../../tmpl/goods-block-tmpl.html';
+import navbarTmpl from './../../tmpl/navbar-tmpl.html';
+import pagefooterTmpl from './../../tmpl/pagefooter-tmpl.html';
+
 angular.module('mainPage', ['ngAnimate'])
     .config(($locationProvider) => {
         "ngInject";   // ng-annotate doesn't handle arrow functions automatically; need to add the directive prologue.
@@ -435,7 +443,7 @@ angular.module('mainPage', ['ngAnimate'])
             
     })
     .component('mainPage', {
-        template: require('./../../tmpl/main-page-tmpl.html'),
+        templateUrl: mainPageTmpl,
         controller: function (goodsData) {
             this.rentData = goodsData.rentData;
             this.sellData = goodsData.sellData;
@@ -446,19 +454,43 @@ angular.module('mainPage', ['ngAnimate'])
         }
     })
     .component('searchForm', {
-        template: require('./../../tmpl/search-form-tmpl.html'),
+        templateUrl: searchFormTmpl,
         controller: function(searchFormData) {
             this.selects = searchFormData.selectsData;
             this.selectedArr = this.selects.map((item) => {
                 return item.options[0];
             });
-            this.searchKeyword = '';
-            this.searchSelected = false;
-            this.searchPotentialFields = searchFormData.searchData;
-            this.setSearch = (name) => {
-                this.searchKeyword = name;
-                this.searchSelected = true;
+            
+            this.search = () => {
+                
             };
+            this.searchAutocomplete = {
+                value: '',
+                getSimilarValue: (value) => {
+                    console.log(value);
+                    return searchFormData.searchData;
+                }
+            }
+        }
+    })
+    .component('autocomplete', {
+        templateUrl: autocompleteTmpl,
+        bindings: {
+            value: '=',
+            getSimilarValue: '<'
+        },
+        controller: function () {
+            this.value = this.value || '';
+            this.isSelected = false;
+            
+            this.setValue = (name) => {
+                this.value = name;
+                this.isSelected = true;
+            };
+            this.onValueChange = () => {
+                this.isSelected = false;
+                this.similarValues = this.getSimilarValue(this.value);
+            }
         }
     })
     .component('customSelect', {
@@ -467,7 +499,7 @@ angular.module('mainPage', ['ngAnimate'])
             selectedOption: '=',
             customFunc: '<'
         },
-        template: require('./../../tmpl/custom-select-tmpl.html'),
+        templateUrl: customSelectTmpl,
         controller: function() {
             this.isOpen = false;
             this.setSelection = (newSelect) => {
@@ -495,14 +527,14 @@ angular.module('mainPage', ['ngAnimate'])
         bindings: {
             goodsData: '<'
         },
-        template: require('./../../tmpl/goods-block-tmpl.html'),
+        templateUrl: goodsBlockTmpl,
         controller: function () {
             //this.goodsData = goodsData.rentData;
             this.activeGroup = this.goodsData.goodsArr[0];
         }
     })
     .component('navbar', {
-        template: require('./../../tmpl/navbar-tmpl.html'),
+        templateUrl: navbarTmpl,
         controller: function ($scope, $window, $element) {
             this.isHidden = false;
             this.scrollFunc = () => {
@@ -516,7 +548,7 @@ angular.module('mainPage', ['ngAnimate'])
                     let scrollDiff = currScrollPos - prevScrollPos;
                     //let scrollDirection = 0;
                     let isChanged = false;
-                    let offset = $element[0].getBoundingClientRect().height;
+                    let offset = 631 - $element[0].getBoundingClientRect().height;
                     
                     prevScrollPos = currScrollPos;
                     
@@ -562,7 +594,7 @@ angular.module('mainPage', ['ngAnimate'])
         }
     })
     .component('pagefooter', {
-        template: require('./../../tmpl/pagefooter-tmpl.html'),
+        templateUrl: pagefooterTmpl,
         controller: function (selectData) {
             this.langSelects = selectData.langSelectData;
             this.langSelected = this.langSelects[0];
