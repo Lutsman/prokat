@@ -25,6 +25,7 @@ module.exports = function makeWebpackConfig() {
    * This is the object where all configuration gets set
    */
   var config = {};
+  config.plugins = [];
   
   /**
    * Entry
@@ -105,7 +106,7 @@ module.exports = function makeWebpackConfig() {
       // Transpile .js files using babel-loader
       // Compiles ES6 and ES7 into ES5 code
       test: /\.js$/,
-      loader: 'babel',
+      loader: 'babel-loader?presets[]=es2015&plugins[]=transform-runtime!ng-annotate',
       exclude: /node_modules/
     }, {
       // CSS LOADER
@@ -185,11 +186,11 @@ module.exports = function makeWebpackConfig() {
    * Reference: http://webpack.github.io/docs/configuration.html#plugins
    * List: http://webpack.github.io/docs/list-of-plugins.html
    */
-  config.plugins = [
+  /*config.plugins = [
     new ngAnnotatePlugin({
       add: true
     })
-  ];
+  ];*/
   
   // Skip rendering index.html in test mode
   if (!isTest) {

@@ -19,20 +19,24 @@ custom-select {
         overflow: hidden;
     }
     ul {
-        transition:all linear 0.2s;
+        transition:all linear 0.3s;
         transform-origin: top;
+        overflow: hidden;
     }
     li {
         cursor: pointer;
     }
     .ng-enter {
-        transform: scaleY(0);
+        max-height: 0;
+        //transform: scaleY(0);
     }
     .ng-leave, .ng-enter.ng-enter-active {
-        transform: scaleY(1);
+        //transform: scaleY(1);
+        max-height: 300px;
     }
     .ng-leave.ng-leave-active {
-        transform: scaleY(0);
+        max-height: 0;
+        //transform: scaleY(0);
     }
     &.revers {
        ul {

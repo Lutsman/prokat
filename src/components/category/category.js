@@ -793,7 +793,7 @@ angular.module('categoryPage', ['ngAnimate'])
         }
     })
     .component('category', {
-        templateUrl: 'tmpl/category-tmpl.html',
+        template: require('./../../tmpl/category-tmpl.html'),
         controller: function () {
             let self = this;
             
@@ -973,7 +973,7 @@ angular.module('categoryPage', ['ngAnimate'])
         }
     })
     .component('paginationNav', {
-        templateUrl: 'tmpl/pagination-nav-tmpl.html',
+        template: require('./../../tmpl/pagination-nav-tmpl.html'),
         bindings: {
             currPage: '=',
             pageCount: '<',
@@ -1023,7 +1023,7 @@ angular.module('categoryPage', ['ngAnimate'])
         }
     })
     .component('searchAdvance', {
-        templateUrl: 'tmpl/search-advance-tmpl.html',
+        template: require('./../../tmpl/search-advance-tmpl.html'),
         bindings: {
             tracker: '=',
             itemsCount: '<',
@@ -1110,7 +1110,7 @@ angular.module('categoryPage', ['ngAnimate'])
         }
     })
     .component('categoryGoodsInfo', {
-        templateUrl: 'tmpl/category-goods-info-tmpl.html',
+        template: require('./../../tmpl/category-goods-info-tmpl.html'),
         bindings: {
             data: '<'
             
@@ -1139,7 +1139,7 @@ angular.module('categoryPage', ['ngAnimate'])
         }
     })
     .component('banner', {
-        templateUrl: 'tmpl/banner-tmpl.html',
+        template: require('./../../tmpl/banner-tmpl.html'),
         bindings: {
             data: '=?'
         },
@@ -1151,7 +1151,7 @@ angular.module('categoryPage', ['ngAnimate'])
         }
     })
     .component('navbar', {
-        templateUrl: 'tmpl/navbar-tmpl.html',
+        template: require('./../../tmpl/navbar-tmpl.html'),
         controller: function ($scope, $window, $element) {
             this.isHidden = false;
             this.scrollFunc = () => {
@@ -1211,7 +1211,7 @@ angular.module('categoryPage', ['ngAnimate'])
         }
     })
     .component('pagefooter', {
-        templateUrl: 'tmpl/pagefooter-tmpl.html',
+        template: require('./../../tmpl/pagefooter-tmpl.html'),
         controller: function (selectData) {
             this.langSelects = selectData.langSelectData;
             this.langSelected = this.langSelects[0];
@@ -1234,7 +1234,7 @@ angular.module('categoryPage', ['ngAnimate'])
             selectedOption: '=',
             customFunc: '<'
         },
-        templateUrl: 'tmpl/custom-select-tmpl.html',
+        template: require('./../../tmpl/custom-select-tmpl.html'),
         controller: function() {
             this.isOpen = false;
             this.setSelection = (newSelect) => {

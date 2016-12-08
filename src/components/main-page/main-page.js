@@ -7,6 +7,10 @@ import './../../css/styles.scss';
 
 
 angular.module('mainPage', ['ngAnimate'])
+    .config(($locationProvider) => {
+        "ngInject";   // ng-annotate doesn't handle arrow functions automatically; need to add the directive prologue.
+        $locationProvider.html5Mode(true);
+    })
     .service('searchFormData', function() {
         this.selectsData = [
             {
@@ -566,12 +570,12 @@ angular.module('mainPage', ['ngAnimate'])
             this.currencySelected = this.currencySelects[0];
             
             this.onChooseLang = () => {
-                console.log('lang choosed');
-                console.log(this);
+                //console.log('lang choosed');
+                //console.log(this);
             };
             this.onChooseCurrency = () => {
-                console.log('currency choosed');
-                console.log(this);
+                //console.log('currency choosed');
+                //console.log(this);
             };
         }
     });
