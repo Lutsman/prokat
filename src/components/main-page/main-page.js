@@ -14,50 +14,326 @@ angular.module('mainPage', ['ngAnimate'])
     .service('searchFormData', function() {
         this.selectsData = [
             {
-                options: [
-                    {
-                        name: 'В прокат',
-                        id: 1
-                    },
-                    {
-                        name: 'В подарок',
-                        id: 2
-                    },
-                    {
-                        name: 'На продажу',
-                        id: 3
-                    }
-                ]
-            },
-            {
-                options: [
+                name: 'В прокат',
+                id: 1,
+                subCat: [
                     {
                         name: 'Велосипед',
-                        id: 1
+                        id: '',
+                        subCat: [
+                            {
+                                name: 'Шоссейный',
+                                id: ''
+                            },
+                            {
+                                name: 'Горный',
+                                id: ''
+                            },
+                            {
+                                name: 'Детский',
+                                id: ''
+                            },
+                            {
+                                name: 'Хардтейл',
+                                id: ''
+                            },
+                            {
+                                name: 'Двухподвес',
+                                id: ''
+                            },
+                            {
+                                name: 'Фэтбайк',
+                                id: ''
+                            },
+                            {
+                                name: 'Электробайк',
+                                id: ''
+                            },
+                            {
+                                name: 'Складывающийся',
+                                id: ''
+                            }
+                        ]
+                    },
+                    {
+                        name: 'Гироскутер',
+                        id: '',
+                        subCat: [
+                            {
+                                name: 'Шоссейный',
+                                id: ''
+                            },
+                            {
+                                name: 'Детский',
+                                id: ''
+                            },
+                            {
+                                name: 'Внедорожный',
+                                id: ''
+                            },
+                            {
+                                name: 'Скоростной',
+                                id: ''
+                            }
+                        ]
                     },
                     {
                         name: 'Самокат',
-                        id: 2
+                        id: '',
+                        subCat: [
+                            {
+                                name: 'Городской',
+                                id: ''
+                            },
+                            {
+                                name: 'Детский',
+                                id: ''
+                            },
+                            {
+                                name: 'Внедорожный',
+                                id: ''
+                            },
+                            {
+                                name: 'Трюковый',
+                                id: ''
+                            }
+                        ]
                     },
                     {
-                        name: 'Пепелац',
-                        id: 3
+                        name: 'Роликовые коньки',
+                        id: '',
+                        subCat: [
+                            {
+                                name: 'Детские',
+                                id: ''
+                            },
+                            {
+                                name: 'Профессиональные',
+                                id: ''
+                            },
+                            {
+                                name: 'Трюковые',
+                                id: ''
+                            }
+                        ]
+                    },
+                    {
+                        name: 'Зимняя техника',
+                        id: '',
+                        subCat: [
+                            {
+                                name: 'Сноуборды',
+                                id: ''
+                            },
+                            {
+                                name: 'Лыжи',
+                                id: ''
+                            },
+                            {
+                                name: 'Санки',
+                                id: ''
+                            },
+                            {
+                                name: 'Снегокаты',
+                                id: ''
+                            },
+                            {
+                                name: 'Ледянки',
+                                id: ''
+                            }
+                        ]
+                    },
+                    {
+                        name: 'Аксессуары и туристическое оборудование',
+                        id: '',
+                        subCat: [
+                            {
+                                name: 'Экшн-камеры',
+                                id: ''
+                            },
+                            {
+                                name: 'Защитное снаряжение',
+                                id: ''
+                            },
+                            {
+                                name: 'Палатки',
+                                id: ''
+                            },
+                            {
+                                name: 'Спальные мешки',
+                                id: ''
+                            },
+                            {
+                                name: 'Рюкзаки туристические',
+                                id: ''
+                            },
+                            {
+                                name: 'Другое',
+                                id: ''
+                            }
+                        ]
                     }
                 ]
             },
             {
-                options: [
+                name: 'В подарок',
+                id: 2,
+                subCat: [
                     {
-                        name: 'Горный',
-                        id: 1
+                        name: 'ПВелосипед',
+                        id: '',
+                        subCat: [
+                            {
+                                name: 'Шоссейный',
+                                id: ''
+                            },
+                            {
+                                name: 'Горный',
+                                id: ''
+                            },
+                            {
+                                name: 'Детский',
+                                id: ''
+                            },
+                            {
+                                name: 'Хардтейл',
+                                id: ''
+                            },
+                            {
+                                name: 'Двухподвес',
+                                id: ''
+                            },
+                            {
+                                name: 'Фэтбайк',
+                                id: ''
+                            },
+                            {
+                                name: 'Электробайк',
+                                id: ''
+                            },
+                            {
+                                name: 'Складывающийся',
+                                id: ''
+                            }
+                        ]
                     },
                     {
-                        name: 'Норный',
-                        id: 2
+                        name: 'ПГироскутер',
+                        id: '',
+                        subCat: [
+                            {
+                                name: 'Шоссейный',
+                                id: ''
+                            },
+                            {
+                                name: 'Детский',
+                                id: ''
+                            },
+                            {
+                                name: 'Внедорожный',
+                                id: ''
+                            },
+                            {
+                                name: 'Скоростной',
+                                id: ''
+                            }
+                        ]
                     },
                     {
-                        name: 'Амфибия',
-                        id: 3
+                        name: 'Самокат',
+                        id: '',
+                        subCat: [
+                            {
+                                name: 'Городской',
+                                id: ''
+                            },
+                            {
+                                name: 'Детский',
+                                id: ''
+                            },
+                            {
+                                name: 'Внедорожный',
+                                id: ''
+                            },
+                            {
+                                name: 'Трюковый',
+                                id: ''
+                            }
+                        ]
+                    },
+                    {
+                        name: 'Роликовые коньки',
+                        id: '',
+                        subCat: [
+                            {
+                                name: 'Детские',
+                                id: ''
+                            },
+                            {
+                                name: 'Профессиональные',
+                                id: ''
+                            },
+                            {
+                                name: 'Трюковые',
+                                id: ''
+                            }
+                        ]
+                    },
+                    {
+                        name: 'Зимняя техника',
+                        id: '',
+                        subCat: [
+                            {
+                                name: 'Сноуборды',
+                                id: ''
+                            },
+                            {
+                                name: 'Лыжи',
+                                id: ''
+                            },
+                            {
+                                name: 'Санки',
+                                id: ''
+                            },
+                            {
+                                name: 'Снегокаты',
+                                id: ''
+                            },
+                            {
+                                name: 'Ледянки',
+                                id: ''
+                            }
+                        ]
+                    },
+                    {
+                        name: 'Аксессуары и туристическое оборудование',
+                        id: '',
+                        subCat: [
+                            {
+                                name: 'Экшн-камеры',
+                                id: ''
+                            },
+                            {
+                                name: 'Защитное снаряжение',
+                                id: ''
+                            },
+                            {
+                                name: 'Палатки',
+                                id: ''
+                            },
+                            {
+                                name: 'Спальные мешки',
+                                id: ''
+                            },
+                            {
+                                name: 'Рюкзаки туристические',
+                                id: ''
+                            },
+                            {
+                                name: 'Другое',
+                                id: ''
+                            }
+                        ]
                     }
                 ]
             }
@@ -449,9 +725,57 @@ angular.module('mainPage', ['ngAnimate'])
         template: require('./../../tmpl/search-form-tmpl.html'),
         controller: function(searchFormData) {
             this.selects = searchFormData.selectsData;
-            this.selectedArr = this.selects.map((item) => {
-                return item.options[0];
+            this.activeSelects = [];
+            this.activeSelectGroup = [];
+            this.initActiveSelects = () => {
+                let selectsCount = 3;
+                let activeSelectGroup = this.selects;
+                //let firstActive = this.selects[0];
+                
+                for (let i = 0; i < selectsCount; i++) {
+                    this.activeSelectGroup.push(activeSelectGroup);
+                    this.activeSelects.push(activeSelectGroup[0]);
+                    activeSelectGroup = activeSelectGroup[0].subCat;
+                }
+            };
+            this.reInitActiveSelectGroups = () => {
+                for (let i = 1; i < this.activeSelectGroup.length; i++) {
+                    let cachedGroup = this.activeSelectGroup[i];
+                    
+                    console.log(cachedGroup);
+                    this.activeSelectGroup[i] = this.activeSelects[i-1].subCat;
+                    console.log(this.activeSelects[i-1]);
+                    console.log(this.activeSelectGroup[i]);
+                    
+                    if ( cachedGroup !== this.activeSelectGroup[i]) {
+                        this.activeSelects[i] = this.activeSelectGroup[i][0];
+                    }
+                    
+                    /*console.log(this.activeSelectGroup[i][0]);*/
+                }
+                /*console.log(this.activeSelectGroup);
+                console.log(this.activeSelects);*/
+            };
+            Object.defineProperty(this, "selectExperimental", {
+                get: () => {
+                    this.reInitActiveSelectGroups();
+                    
+                    return this.activeSelectGroup;
+                }
             });
+                
+         
+            this.getActiveSelectGroups = (() => {
+                let init = false;
+                return () => {
+                    init ? this.reInitActiveSelectGroups() : init = true;
+        
+                    return this.activeSelectGroup;
+                }
+            })();
+            /*this.selectedArr = this.selects.map((item) => {
+                return item.options[0];
+            });*/
             this.searchKeyword = '';
             this.searchSelected = false;
             this.searchPotentialFields = searchFormData.searchData;
@@ -459,13 +783,16 @@ angular.module('mainPage', ['ngAnimate'])
                 this.searchKeyword = name;
                 this.searchSelected = true;
             };
+            
+            this.initActiveSelects();
+            //console.dir(this.getActiveSelectGroups());
         }
     })
     .component('customSelect', {
         bindings: {
             options: '<',
             selectedOption: '=',
-            customFunc: '<'
+            customFunc: '=?'
         },
         template: require('./../../tmpl/custom-select-tmpl.html'),
         controller: function() {
@@ -482,7 +809,6 @@ angular.module('mainPage', ['ngAnimate'])
                     this.customFunc();
                 }
             };
-    
             /*if(typeof this.customFunc === 'function') {
                 console.log('func run');
                 this.customFunc();
