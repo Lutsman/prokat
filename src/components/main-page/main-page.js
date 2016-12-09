@@ -727,6 +727,7 @@ angular.module('mainPage', ['ngAnimate'])
             this.selects = searchFormData.selectsData;
             this.activeSelects = [];
             this.activeSelectGroup = [];
+            this.selectIsChanged = false;
             this.initActiveSelects = () => {
                 let selectsCount = 3;
                 let activeSelectGroup = this.selects;
@@ -742,10 +743,10 @@ angular.module('mainPage', ['ngAnimate'])
                 for (let i = 1; i < this.activeSelectGroup.length; i++) {
                     let cachedGroup = this.activeSelectGroup[i];
                     
-                    console.log(cachedGroup);
+                    //console.log(cachedGroup);
                     this.activeSelectGroup[i] = this.activeSelects[i-1].subCat;
-                    console.log(this.activeSelects[i-1]);
-                    console.log(this.activeSelectGroup[i]);
+                    //console.log(this.activeSelects[i-1]);
+                    //console.log(this.activeSelectGroup[i]);
                     
                     if ( cachedGroup !== this.activeSelectGroup[i]) {
                         this.activeSelects[i] = this.activeSelectGroup[i][0];
@@ -756,12 +757,26 @@ angular.module('mainPage', ['ngAnimate'])
                 /*console.log(this.activeSelectGroup);
                 console.log(this.activeSelects);*/
             };
+            this.onSelect = () => {
+                this.selectIsChanged = true;
+            };
             Object.defineProperty(this, "selectExperimental", {
-                get: () => {
-                    this.reInitActiveSelectGroups();
-                    
-                    return this.activeSelectGroup;
-                }
+                get: (() => {
+                    var counter = 0;
+                    return () => {
+                        console.log(this.selectIsChanged);
+                        console.log(counter);
+                        if (this.selectIsChanged && counter < this.activeSelectGroup.length) {
+                            this.reInitActiveSelectGroups();
+                            counter++;
+                        } else {
+                            this.selectIsChanged = false;
+                            counter = 0;
+                        }
+    
+                        return this.activeSelectGroup;
+                    }
+                })()
             });
                 
          
