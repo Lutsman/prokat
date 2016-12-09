@@ -8,13 +8,14 @@
 			></custom-select>
 		</li>
 	</ul>
-	<div class="search__autocomplete">
+	<autocomplete class="search__autocomplete" ></autocomplete>
+	<!--<div class="search__autocomplete">
 		<input ng-model="$ctrl.searchKeyword" ng-change="$ctrl.searchSelected = false" placeholder="в Ростове-на-Дону" required="" name="q" type="text">
 		<ul ng-if="!!$ctrl.searchKeyword && !$ctrl.searchSelected">
 			<li ng-repeat="field in $ctrl.searchPotentialFields | filter:$ctrl.searchKeyword" ng-click="$ctrl.setSearch(field.name)">
 				<span>{{field.name}}</span>
 			</li>
 		</ul>
-	</div>
+	</div>-->
 	<button type="submit">Найти</button>
 </form>

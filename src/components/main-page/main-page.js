@@ -803,6 +803,26 @@ angular.module('mainPage', ['ngAnimate'])
             //console.dir(this.getActiveSelectGroups());
         }
     })
+    .component('autocomplete', {
+        template: require('./../../tmpl/autocomplete-tmpl.html'),
+        bindings: {
+            value: '=',
+            getSimilarValue: '<'
+        },
+        controller: function () {
+            this.value = this.value || '';
+            this.isSelected = false;
+            
+            this.setValue = (name) => {
+                this.value = name;
+                this.isSelected = true;
+            };
+            this.onValueChange = () => {
+                this.isSelected = false;
+                this.similarValues = this.getSimilarValue(this.value);
+            }
+        }
+    })
     .component('customSelect', {
         bindings: {
             options: '<',
