@@ -764,8 +764,8 @@ angular.module('mainPage', ['ngAnimate'])
                 get: (() => {
                     var counter = 0;
                     return () => {
-                        console.log(this.selectIsChanged);
-                        console.log(counter);
+                        //console.log(this.selectIsChanged);
+                        //console.log(counter);
                         if (this.selectIsChanged && counter < this.activeSelectGroup.length) {
                             this.reInitActiveSelectGroups();
                             counter++;
@@ -791,13 +791,27 @@ angular.module('mainPage', ['ngAnimate'])
             /*this.selectedArr = this.selects.map((item) => {
                 return item.options[0];
             });*/
-            this.searchKeyword = '';
+            /*this.searchKeyword = '';
             this.searchSelected = false;
             this.searchPotentialFields = searchFormData.searchData;
             this.setSearch = (name) => {
                 this.searchKeyword = name;
                 this.searchSelected = true;
+            };*/
+    
+            this.search = () => {
+        
             };
+            this.searchAutocomplete = {
+                value: '',
+                getSimilarValue: (value) => {
+                    console.log(value);
+                    //let val = value;
+                    //val.json.stringify;
+                    
+                    return searchFormData.searchData;
+                }
+            }
             
             this.initActiveSelects();
             //console.dir(this.getActiveSelectGroups());
@@ -871,13 +885,13 @@ angular.module('mainPage', ['ngAnimate'])
                 
                 return () => {
                     /*console.log(scrollPos++);
-                    console.log(this);*/
+                     console.log(this);*/
                     
                     let currScrollPos = $window.scrollY;
                     let scrollDiff = currScrollPos - prevScrollPos;
                     //let scrollDirection = 0;
                     let isChanged = false;
-                    let offset = $element[0].getBoundingClientRect().height;
+                    let offset = 631 - $element[0].getBoundingClientRect().height;
                     
                     prevScrollPos = currScrollPos;
                     
@@ -916,10 +930,10 @@ angular.module('mainPage', ['ngAnimate'])
             
             
             /*console.dir($window);
-            console.dir($element);
-            console.log($element[0].offsetHeight);
-            console.dir(this);
-            console.dir($scope);*/
+             console.dir($element);
+             console.log($element[0].offsetHeight);
+             console.dir(this);
+             console.dir($scope);*/
         }
     })
     .component('pagefooter', {
