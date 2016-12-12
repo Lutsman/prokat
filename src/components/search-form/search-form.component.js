@@ -87,8 +87,6 @@ class SearchFormController {
     search () {
 
     }
-
-
 }
 
 const searchFormComponent = {
