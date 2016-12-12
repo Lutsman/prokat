@@ -4,8 +4,7 @@
     <content url="file://$MODULE_DIR$" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="angular" level="application" />
-    <orderEntry type="library" name="angular-animate" level="application" />
+    <orderEntry type="library" name="angularjs-DefinitelyTyped" level="application" />
     <orderEntry type="library" name="www_prokat node_modules" level="project" />
   </component>
 </module>

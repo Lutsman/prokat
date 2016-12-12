@@ -47,11 +47,22 @@ class SearchAdvanceController {
          }*/
     }
     initCat () {
-        this.activeCat1 = this.getActiveCat(this.fieldsData.categories);
+        let activeCatGroup = this.fieldsData.categories;
+        let i = 0;
+        this.activeCatGroup = [];
+        this.activeCat = [];
+
+        do {
+            this.activeCatGroup.push(activeCatGroup);
+            this.activeCat.push(this.getActiveCat(activeCatGroup));
+            activeCatGroup = this.activeCat[this.activeCat.length - 1];
+        } while (activeCatGroup.subCat);
+
+        //this.activeCat1 = this.getActiveCat(this.fieldsData.categories);
         /*console.dir(this.fieldsData.categories);
          console.dir(this.activeCat1);*/
-        this.activeCat2 = this.getActiveCat(this.activeCat1.subCat);
-        this.activeCat3 = this.getActiveCat(this.activeCat2.subCat);
+        //this.activeCat2 = this.getActiveCat(this.activeCat1.subCat);
+        //this.activeCat3 = this.getActiveCat(this.activeCat2.subCat);
     }
     getActiveCat (obj) {
         let result = false;
@@ -76,6 +87,24 @@ class SearchAdvanceController {
     }
     searchRender () {
         //this.getItems();
+    }
+    reInitActiveCatGroups () {
+        for (let i = 1; i < this.activeSelectGroup.length; i++) {
+            let cachedGroup = this.activeSelectGroup[i];
+
+            //console.log(cachedGroup);
+            this.activeSelectGroup[i] = this.activeSelects[i-1].subCat;
+            //console.log(this.activeSelects[i-1]);
+            //console.log(this.activeSelectGroup[i]);
+
+            if ( cachedGroup !== this.activeSelectGroup[i]) {
+                this.activeSelects[i] = this.activeSelectGroup[i][0];
+            }
+
+            /*console.log(this.activeSelectGroup[i][0]);*/
+        }
+        /*console.log(this.activeSelectGroup);
+         console.log(this.activeSelects);*/
     }
 }
 

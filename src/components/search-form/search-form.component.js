@@ -4,22 +4,13 @@ class SearchFormController {
         this.activeSelects = [];
         this.activeSelectGroup = [];
         this.selectIsChanged = false;
-        this.searchAutocomplete = {
-            value: '',
-            getSimilarValue: (value) => {
-                console.log(value);
-                //let val = value;
-                //val.json.stringify;
 
-                return searchFormData.searchData;
-            }
-        };
-        Object.defineProperty(this, 'selectExperimental', {
+        Object.defineProperty(this, "selectsArr", {
             get: (() => {
                 var counter = 0;
                 return () => {
-                    //console.log(this.selectIsChanged);
-                    //console.log(counter);
+                    console.log(this.selectIsChanged);
+                    console.log(counter);
                     if (this.selectIsChanged && counter < this.activeSelectGroup.length) {
                         this.reInitActiveSelectGroups();
                         counter++;
