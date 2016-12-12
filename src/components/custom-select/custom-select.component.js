@@ -13,8 +13,10 @@ class CustomSelectController {
         this.selectedOption = newSelect;
         this.isOpen = false;
 
+        //this.customFunc();
         //console.dir(this.customFunc);
         //console.log(typeof this.customFunc);
+        console.dir(this.customFunc);
 
         if(typeof this.customFunc === 'function') {
             //console.log('func run');
@@ -27,7 +29,7 @@ const customSelectComponent = {
     bindings: {
         options: '<',
         selectedOption: '=',
-        customFunc: '=?'
+        customFunc: '&'
     },
     template: require('./custom-select-tmpl.html'),
     controller: CustomSelectController

@@ -48,7 +48,7 @@ class SearchAdvanceController {
     }
     initCat () {
         let activeCatGroup = this.fieldsData.categories;
-        let i = 0;
+        //let i = 0;
         this.activeCatGroup = [];
         this.activeCat = [];
 
