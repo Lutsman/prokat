@@ -179,7 +179,7 @@ class CategoryController {
 }
 
 const categoryComponent = {
-    template: require('./../../tmpl/category-tmpl.html'),
+    template: require('./category-tmpl.html'),
     controller: CategoryController
 };
 

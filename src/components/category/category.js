@@ -11,6 +11,7 @@ import navbarComponent from './../navbar/navbar.component';
 import pagefooterComponent from './../pagefooter/pagefooter.component';
 import customSelectComponent from './../custom-select/custom-select.component';
 import categoryComponent from './category.component';
+import searchAdvanceComponent from './../search-advance/search-advance.component';
 
 
 //import rangeFilter from './../filters/range.filter';
@@ -103,93 +104,7 @@ angular.module('categoryPage', ['ngAnimate'])
             this.repeater = this.getRepeaterArr();
         }
     })
-    .component('searchAdvance', {
-        template: require('./../../tmpl/search-advance-tmpl.html'),
-        bindings: {
-            tracker: '=',
-            itemsCount: '<',
-            getItems: '@'
-        },
-        controller: function (searchAdvanceData) {
-            this.fieldsData = searchAdvanceData.fieldsData;
-            this.showSearch = false;
-            this.init = () => {
-                this.initCat();
-                //this.trackByOutput = this.trackByOutputCached ? this.trackByOutputCached : 3;
-                //this.trackByOutputCached = this.trackByOutputCached ? this.trackByOutputCached : this.trackByOutput;
-                this.minPrice = this.fieldsData.minPrice;
-                this.maxPrice = this.fieldsData.maxPrice;
-                this.adress = undefined;
-                //this.title = this.fieldsData.title;
-                //this.trackers = this.fieldsData.trackers;
-                
-                for (let key in this.fieldsData.trackers) {
-                    if (this.fieldsData.trackers[key].active) {
-                        this.tracker = this.fieldsData.trackers[key];
-                        //console.log(this.fieldsData.trackers[key]);
-                        //console.log(this.tracker);
-                    }
-                        
-                }
-                //this.goodsCount = 1546;
-            };
-            this.resetForm = () => {
-                this.init();
-            };
-            this.setActiveCat = (currCat, activeCatLink, toggle) => {
-                console.log(activeCatLink === currCat);
-                console.dir(activeCatLink);
-                console.dir(currCat);
-                console.log(toggle);
-                /*if (toggle) {
-                    if (activeCatLink === currCat) {
-                        activeCatLink = {};
-                    } else {
-                        activeCatLink = currCat;
-                    }
-                    
-                    //activeCatLink = activeCatLink === currCat ? {} : currCat;
-                } else {
-                    activeCatLink = currCat;
-                    console.log(activeCatLink === currCat);
-                }*/
-            };
-            this.initCat = () => {
-                this.activeCat1 = this.getActiveCat(this.fieldsData.categories);
-                /*console.dir(this.fieldsData.categories);
-                console.dir(this.activeCat1);*/
-                this.activeCat2 = this.getActiveCat(this.activeCat1.subCat);
-                this.activeCat3 = this.getActiveCat(this.activeCat2.subCat);
-                
-            };
-            this.getActiveCat = (obj) => {
-                let result = false;
-                
-                if (typeof obj === 'object' && !Array.isArray(obj) && obj !== null) {
-                    for (let key in obj) {
-                        if (!obj[key].active) continue;
-                        
-                        result = obj[key];
-                        break;
-                    }
-                } else if (Array.isArray(obj)){
-                    for (let i = 0; i < obj.length; i++) {
-                        if (!obj[i].active) continue;
-                        
-                        result = obj[i];
-                        break;
-                    }
-                }
-                
-                return result;
-            };
-            this.searchRender = () => {
-                //this.getItems();
-            };
-            
-            this.init();
-        }
-    })
+    .component('searchAdvance', searchAdvanceComponent)
     .component('categoryGoodsInfo', {
         template: require('./../../tmpl/category-goods-info-tmpl.html'),
         bindings: {
