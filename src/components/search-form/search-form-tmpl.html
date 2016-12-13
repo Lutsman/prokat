@@ -1,10 +1,11 @@
 <form class="search-form">
 	<ul>
-		<li ng-repeat="select in $ctrl.selectsArr">
+		<li ng-repeat="selectGroup in $ctrl.activeSelectGroup">
 			<custom-select class="search-form__select"
-						   options="select"
+						   options="selectGroup"
 						   selected-option="$ctrl.activeSelects[$index]"
-						   custom-func="$ctrl.onSelect()"
+						   custom-func="$ctrl.reInitActiveSelectGroups(index)"
+						   index="$index"
 			></custom-select>
 		</li>
 	</ul>

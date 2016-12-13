@@ -16,7 +16,7 @@ class SearchFormController {
             }
         };
 
-        Object.defineProperty(this, "selectsArr", {
+        /*Object.defineProperty(this, "selectsArr", {
             get: (() => {
                 var counter = 0;
                 return () => {
@@ -33,7 +33,7 @@ class SearchFormController {
                     return this.activeSelectGroup;
                 }
             })()
-        });
+        });*/
 
         this.initActiveSelects();
         //this.onSelect();
@@ -51,8 +51,13 @@ class SearchFormController {
         }
     }
 
-    reInitActiveSelectGroups () {
-        for (let i = 1; i < this.activeSelectGroup.length; i++) {
+    reInitActiveSelectGroups (index) {
+        let i = index ? index : 1;
+        //console.log(index);
+        //console.log(i);
+
+        console.log(this.activeSelects);
+        for (i; i < this.activeSelectGroup.length; i++) {
             let cachedGroup = this.activeSelectGroup[i];
 
             //console.log(cachedGroup);
@@ -62,12 +67,15 @@ class SearchFormController {
 
             if ( cachedGroup !== this.activeSelectGroup[i]) {
                 this.activeSelects[i] = this.activeSelectGroup[i][0];
+
             }
+
 
             /*console.log(this.activeSelectGroup[i][0]);*/
         }
-        /*console.log(this.activeSelectGroup);
-         console.log(this.activeSelects);*/
+        console.log(this.activeSelects);
+        console.log(this.activeSelectGroup);
+         /*console.log(this.activeSelects);*/
     }
 
    /* getActiveSelectGroups () {
@@ -76,10 +84,12 @@ class SearchFormController {
             return this.activeSelectGroup;
     }*/
 
-    onSelect () {
-        console.log(this);
-        this.selectIsChanged = true;
-    }
+   /* onSelect (index) {
+        //console.log(this);
+        //this.selectIsChanged = true;
+
+        this.reInitActiveSelectGroups(index);
+    }*/
 
     search () {
 
