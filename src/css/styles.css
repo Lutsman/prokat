@@ -323,6 +323,7 @@ category-goods-info .goods-info__prem {
     box-shadow: none; }
 
 header {
+  font-family: "LatoWebLight";
   color: #fff;
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
