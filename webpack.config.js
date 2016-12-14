@@ -211,11 +211,18 @@ module.exports = function makeWebpackConfig() {
           inject: 'body',
           filename: 'category.html'
         }),
+        new HtmlWebpackPlugin({
+          title: 'category',
+          chunks: [],
+          template: './src/product.html',
+          inject: 'body',
+          filename: 'product.html'
+        }),
         
         // Reference: https://github.com/webpack/extract-text-webpack-plugin
         // Extract css files
         // Disabled when in test mode or not in build mode
-        new ExtractTextPlugin('css/style.[hash].css', {disable: !isProd})
+        new ExtractTextPlugin('css/styles.css', {disable: !isProd}) //'css/style.[hash].css'
     )
   }
   
@@ -236,10 +243,10 @@ module.exports = function makeWebpackConfig() {
         
         // Copy assets from the resources folder
         // Reference: https://github.com/kevlened/copy-webpack-plugin
-        new CopyWebpackPlugin([/*{
+        new CopyWebpackPlugin([{
           from: __dirname + '/src/img',
-          to: 'resources/img'
-        }*//*,
+          to: 'img'
+        }/*,
           {
             from: __dirname + '/src/tmpl',
             to: 'resources/tmpl'
