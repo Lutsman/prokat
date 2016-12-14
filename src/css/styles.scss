@@ -1041,11 +1041,13 @@ footer {
     .goods-info__contacts {
         position: relative;
     }
-    .goods-info_phone {
+
+    .goods-info__phone {
         position: absolute;
         top: 180%;
         left: 39px;
     }
+
     h5 {
         margin: 12px 0 6px;
     }
