@@ -1,7 +1,7 @@
 class SearchAdvanceController {
     constructor (searchAdvanceData, searchFormData) {
         this.fieldsData = searchAdvanceData.fieldsData;
-        this.showSearch = true;
+        this.showSearch = false;
         this.searchAutocomplete = {
             value: '',
             placeholder: 'Город, район, адрес',
