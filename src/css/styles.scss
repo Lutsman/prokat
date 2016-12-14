@@ -212,7 +212,7 @@ nav a {
     z-index: 2;
     width: 1000px;
     margin: 0 auto;
-    overflow: hidden;
+    //overflow: hidden;
     @include border-radius(5px 3px 3px 5px);
     ul, li {
         float: left;
@@ -293,6 +293,8 @@ nav a {
     color: #898989;
     letter-spacing: 0.5px;
     > ul {
+        position: absolute;
+        width: 100%;
         float: none;
         max-width: 275px;
         /*padding-bottom: 10px;*/
@@ -892,7 +894,10 @@ footer {
     .number-offers {
         float: right;
     }
-    .adress {
+    .search__autocomplete {
+        float: none;
+    }
+    .adress input {
         width: 488px;
         height: 41px;
         padding: 10px;
@@ -1032,6 +1037,14 @@ footer {
     @include border-radius(3px);
     &:hover {
         background-color: #effdff;
+    }
+    .goods-info__contacts {
+        position: relative;
+    }
+    .goods-info_phone {
+        position: absolute;
+        top: 180%;
+        left: 39px;
     }
     h5 {
         margin: 12px 0 6px;
