@@ -1024,20 +1024,11 @@ footer {
     font: 14px $lato-thin;
     letter-spacing: 0.4px;
     background-color: #fff;
-    border: 1px solid #ffb000;
+    border: 1px solid #d1d1d1;
     @include border-radius(3px);
-   /* &:first-of-type {
-        border-color: #d1d1d1;
-    }
-    &:nth-of-type(5n+2) {
+    &:hover {
         background-color: #effdff;
     }
-    &:nth-of-type(5n+3) {
-        background-color: #fed493;
-    }
-    &:nth-of-type(5n+4) {
-        background-color: #ffc96e;
-    }*/
     h5 {
         margin: 12px 0 6px;
     }
@@ -1318,6 +1309,12 @@ footer {
             margin: 25px 0 0;
         }
     }
+    .map {
+        width: 853px;
+        height: 370px;
+        margin: 15px 0;
+        background-image: url("../img/map_bg.jpg");
+    }
     .dropdown {
         li {
             margin: 0;
@@ -1447,12 +1444,7 @@ footer {
         }
     }
 }
-.map {
-    width: 853px;
-    height: 370px;
-    margin: 15px 0;
-    background-image: url("../img/map_bg.jpg");
-}
+
 .add-phone {
     p {
         margin-bottom: 5px;
@@ -1539,7 +1531,236 @@ footer {
     }
 }
 
+.product {
+    padding-bottom: 30px;
+    font-size: 14px;
+    > div {
+        float: left;
+        width: 520px;
+        &:last-of-type {
+            float: right;
+        }
+    }
+    h4 {
+        margin-bottom: 10px;
+    }
+}
+.product__category {
+    position: relative;
+    z-index: 2;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+.product__grey {
+    color: #656565;
+}
+.product__about {
+    text-align: justify;
+    line-height: 18px;
+}
+.product__price {
+    margin: 25px 0;
+    font-size: 18px;
+}
+.product__info {
+    margin-bottom: 25px;
+    line-height: 20px;
+    ul {
+        width: 340px;
+        span {
+            display: block;
+            float: left;
+            width: 45%;
+            + span {
+                margin-left: 10%;
+            }
+        }
+    }
+}
+.booking__block {
+    height: 101px;
+    margin-top: 25px;
+    border: 1px solid #b4b4b4;
+    @include border-radius(3px);
+    > div {
+        float: left;
+        width: 25%;
+        height: 100%;
+        padding: 25px 20px;
+        + div {
+            width: 75%;
+            border-left: 1px solid #b4b4b4;
+        }
+    }
+    .booking-btn {
+        margin: 4px auto 0;
+        + p {
+            font: 13px $lato-light;
+            color: #010101;
+            text-align: center;
+            line-height: 25px;
+            a {
+                font: 13px $lato-light;
+                border-bottom: 1px dashed #000;
+                &:hover {
+                    border-bottom-color: transparent;
+                }
+            }
+        }
+    }
+}
+.booking__logo {
+    line-height: 49px;
+    img {
+        vertical-align: middle;
+    }
+}
+.product__statistics {
+    margin-bottom: 20px;
+    font-size: 12px;
+    span + span {
+        margin-left: 15px;
+    }
+    .visits {
+        color: #56697a;
+        text-decoration: underline;
+    }
+    .accent {
+        color: #d35c60;
+        text-decoration: underline;
+    }
+    .fire-icon {
+        position: relative;
+        z-index: 2;
+        padding-left: 13px;
+    }
+    .diamond-small-icon {
+        position: relative;
+        z-index: 2;
+        padding-left: 22px;
+    }
+}
 
+.product__slider {
+    .slide {
+        height: 346px;
+    }
+    .slide-control {
+        margin: 5px 0 20px;
+        span {
+            display: block;
+            float: left;
+            width: 112px;
+            height: 76px;
+            cursor: pointer;
+            + span {
+                margin-left: 24px;
+            }
+        }
+    }
+}
+
+.product__banner {
+    position: relative;
+    z-index: 2;
+    height: 101px;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 12px;
+    border: 1px solid #b4b4b4;
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+    img {
+        float: left;
+        width: 124px;
+        margin-right: 10px;
+    }
+    p {
+        margin-bottom: 5px;
+        &:first-of-type {
+            margin-bottom: 10px;
+        }
+    }
+    span {
+        font-size: 14px;
+    }
+    &::after {
+        content: 'РЕКЛАМА';
+        display: block;
+        position: absolute;
+        z-index: 2;
+        top: 10px;
+        right: 10px;
+        color: #8f8f8f;
+    }
+}
+
+.product__map {
+    width: 100%;
+    height: 450px;
+    margin-bottom: 20px;
+    background-image: url("../img/product_map.jpg");
+    background-size: cover;
+}
+
+.product__social {
+    margin-bottom: 30px;
+    line-height: 41px;
+    span {
+        display: inline-block;
+        vertical-align: top;
+        font: 14px $lato-thin;
+        line-height: 41px;
+    }
+    a {
+        display: inline-block;
+        width: 41px;
+        height: 41px;
+        margin-left: 10px;
+        font-size: 26px;
+        color: #fff;
+        text-align: center;
+        @include border-radius(50%);
+    }
+    .vk {
+        background-color: #4d76a1;
+    }
+    .fb {
+        background-color: #3b5998;
+    }
+    .tw {
+        background-color: #55acee;
+    }
+}
+
+.product__more {
+    font: 12px $lato-light;
+    > div {
+        float: left;
+        width: 180px;
+        margin-bottom: 10px;
+        + div {
+            margin-left: 57px;
+        }
+        p {
+            margin-bottom: 5px;
+        }
+    }
+    img {
+        margin-bottom: 10px;
+    }
+}
+.product__more__title {
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+.product__more__goods-title {
+    color: #56697a;
+}
+.product__more__price {
+    font-size: 14px;
+}
 
 /* ----------------------------------------------
  Colors Backgrounds
@@ -1597,7 +1818,7 @@ footer {
     background-position: -64px -64px;
 }
 
-.diamond-icon, .page-icon, .point-icon, .currency-icon, .diamond-big-icon, .top3-icon {
+.diamond-icon, .page-icon, .point-icon, .currency-icon, .diamond-big-icon, .top3-icon, .heart-icon, .fire-icon, .diamond-small-icon {
     &::before {
         content: '';
         display: block;
@@ -1646,6 +1867,25 @@ footer {
     width: 66px;
     height: 66px;
     background-position: -256px -256px;
+}
+.heart-icon::before {
+    top: 2px;
+    left: -25px;
+    width: 15px;
+    height: 14px;
+    background-position: 0px 0px;
+}
+.fire-icon::before {
+    left: 0;
+    width: 10px;
+    height: 14px;
+    background-position: 0px 0px;
+}
+.diamond-small-icon::before {
+    left: 0;
+    width: 19px;
+    height: 14px;
+    background-position: 0px 0px;
 }
 
 /* ----------------------------------------------

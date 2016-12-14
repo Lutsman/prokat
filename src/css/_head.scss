@@ -39,6 +39,12 @@ section, .container {
     width: 1220px;
     margin: 0 auto;
 }
+.container__white {
+    padding: 20px 45px;
+    background-color: #fff;
+    border: 1px solid #d0d0d0;
+    @include border-radius(3px);
+}
 
 /* ----------------------------------------------
  Fonts Paragrahps

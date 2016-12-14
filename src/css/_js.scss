@@ -86,19 +86,11 @@ search-advance {
 }
 
 category-goods-info {
-    &:first-of-type .goods-info {
-        border-color: #d1d1d1;
-    }
-    &:nth-of-type(5n+2) .goods-info {
-        background-color: #effdff;
-        border-color: #d1d1d1;
-    }
-    &:nth-of-type(5n+3) .goods-info {
+    .goods-info__prem {
         background-color: #fed493;
-    }
-    &:nth-of-type(5n+4) .goods-info {
-        background-color: #ffc96e;
+        border-color: #ffb000;
+        &:hover {
+            background-color: #ffc96e;
+        }
     }
 }
-
-
