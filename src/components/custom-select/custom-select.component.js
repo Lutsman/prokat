@@ -20,10 +20,13 @@ class CustomSelectController {
         //console.dir(this.customFunc);
 
         if(typeof this.customFunc === 'function') {
-            console.log('func run');
-            console.log(newSelect);
+            //console.log('func run');
+            //console.log(newSelect);
             //console.log(index);
-            this.customFunc({index: index});
+            this.customFunc({
+                newActiveSelect: newSelect,
+                index: index
+            });
         }
     }
 }

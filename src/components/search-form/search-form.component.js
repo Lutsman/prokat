@@ -51,30 +51,32 @@ class SearchFormController {
         }
     }
 
-    reInitActiveSelectGroups (index) {
-        let i = index ? index : 1;
+    reInitActiveSelectGroups (newActiveSelect, index) {
+        let i = index + 1;
         //console.log(index);
         //console.log(i);
 
-        console.log(this.activeSelects);
+        this.activeSelects[index] = newActiveSelect;
+
+        //console.log(this.activeSelects);
         for (i; i < this.activeSelectGroup.length; i++) {
-            let cachedGroup = this.activeSelectGroup[i];
+            //let cachedGroup = this.activeSelectGroup[i];
 
             //console.log(cachedGroup);
             this.activeSelectGroup[i] = this.activeSelects[i-1].subCat;
+            this.activeSelects[i] = this.activeSelectGroup[i][0];
             //console.log(this.activeSelects[i-1]);
             //console.log(this.activeSelectGroup[i]);
 
-            if ( cachedGroup !== this.activeSelectGroup[i]) {
+           /* if ( cachedGroup !== this.activeSelectGroup[i]) {
                 this.activeSelects[i] = this.activeSelectGroup[i][0];
+            }*/
 
-            }
 
-
-            /*console.log(this.activeSelectGroup[i][0]);*/
+            //console.log(this.activeSelectGroup[i][0]);
         }
-        console.log(this.activeSelects);
-        console.log(this.activeSelectGroup);
+        //console.log(this.activeSelects);
+        //console.log(this.activeSelectGroup);
          /*console.log(this.activeSelects);*/
     }
 
