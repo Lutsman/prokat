@@ -25,6 +25,7 @@ module.exports = function makeWebpackConfig() {
    * This is the object where all configuration gets set
    */
   var config = {};
+  config.plugins = [];
   
   /**
    * Entry
@@ -51,7 +52,7 @@ module.exports = function makeWebpackConfig() {
     
     // Output path from the view of the page
     // Uses webpack-dev-server in development
-    publicPath: isProd ? '/' : 'http://localhost:8080/',
+    publicPath: isProd ? '//lutsman.github.io/demo/prokat/' : 'http://localhost:8080/',
     
     // Filename for entry points
     // Only adds hash in build mode
@@ -105,7 +106,7 @@ module.exports = function makeWebpackConfig() {
       // Transpile .js files using babel-loader
       // Compiles ES6 and ES7 into ES5 code
       test: /\.js$/,
-      loader: 'babel',
+      loader: 'babel-loader?presets[]=es2015&plugins[]=transform-runtime!ng-annotate',
       exclude: /node_modules/
     }, {
       // CSS LOADER
@@ -129,22 +130,22 @@ module.exports = function makeWebpackConfig() {
       // Pass along the updated reference to your code
       // You can add here any file extension you want to get copied to your output
       test: /\.(png|jpg|jpeg|gif)$/,
-      loader: 'file?&name=./resources/img/[name][hash].[ext]'
+      loader: 'file?&name=resources/img/[name][hash].[ext]'
     },{
       test: /\.woff(\?v=\d+\.\d+\.\d+)?$/,
-      loader: "url?limit=10000&mimetype=application/font-woff&name=./resources/fonts/[name].[hash].[ext]"
+      loader: "url?limit=10000&mimetype=application/font-woff&name=resources/fonts/[name].[hash].[ext]"
     }, {
       test: /\.woff2(\?v=\d+\.\d+\.\d+)?$/,
-      loader: "url?limit=10000&mimetype=application/font-woff&name=./resources/fonts/[name].[hash].[ext]"
+      loader: "url?limit=10000&mimetype=application/font-woff&name=resources/fonts/[name].[hash].[ext]"
     }, {
       test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
-      loader: "url?limit=10000&mimetype=application/octet-stream&name=./resources/fonts/[name].[hash].[ext]"
+      loader: "url?limit=10000&mimetype=application/octet-stream&name=resources/fonts/[name].[hash].[ext]"
     }, {
       test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
-      loader: "file?name=./resources/fonts/[name].[hash].[ext]"
+      loader: "file?name=resources/fonts/[name].[hash].[ext]"
     }, {
       test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
-      loader: "url?limit=10000&mimetype=image/svg+xml&name=./resources/fonts/[name].[hash].[ext]"
+      loader: "url?limit=10000&mimetype=image/svg+xml&name=resources/fonts/[name].[hash].[ext]"
     }, {
       // HTML LOADER
       // Reference: https://github.com/webpack/raw-loader
@@ -185,11 +186,11 @@ module.exports = function makeWebpackConfig() {
    * Reference: http://webpack.github.io/docs/configuration.html#plugins
    * List: http://webpack.github.io/docs/list-of-plugins.html
    */
-  config.plugins = [
+  /*config.plugins = [
     new ngAnnotatePlugin({
       add: true
     })
-  ];
+  ];*/
   
   // Skip rendering index.html in test mode
   if (!isTest) {
@@ -231,7 +232,7 @@ module.exports = function makeWebpackConfig() {
         
         // Reference: http://webpack.github.io/docs/list-of-plugins.html#uglifyjsplugin
         // Minify all javascript, switch loaders to minimizing mode
-        new webpack.optimize.UglifyJsPlugin(),
+        //new webpack.optimize.UglifyJsPlugin(),
         
         // Copy assets from the resources folder
         // Reference: https://github.com/kevlened/copy-webpack-plugin

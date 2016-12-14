@@ -185,16 +185,17 @@ custom-select a {
   white-space: nowrap;
   overflow: hidden; }
 custom-select ul {
-  transition: all linear 0.2s;
-  transform-origin: top; }
+  transition: all linear 0.3s;
+  transform-origin: top;
+  overflow: hidden; }
 custom-select li {
   cursor: pointer; }
 custom-select .ng-enter {
-  transform: scaleY(0); }
+  max-height: 0; }
 custom-select .ng-leave, custom-select .ng-enter.ng-enter-active {
-  transform: scaleY(1); }
+  max-height: 300px; }
 custom-select .ng-leave.ng-leave-active {
-  transform: scaleY(0); }
+  max-height: 0; }
 custom-select.revers ul {
   transform-origin: bottom; }
 
@@ -490,7 +491,8 @@ nav a {
     -moz-transform: rotate(135deg);
     -webkit-transform: rotate(135deg);
     -o-transform: rotate(135deg);
-    transform: rotate(135deg); }
+    transform: rotate(135deg);
+    transition: all linear 0.2s; }
 .search-form__select ul {
   width: 100%;
   padding-bottom: 10px;
@@ -524,7 +526,7 @@ nav a {
   .search__autocomplete > ul {
     float: none;
     max-width: 275px;
-    padding-bottom: 10px;
+    /*padding-bottom: 10px;*/
     background-color: rgba(255, 255, 255, 0.95);
     -moz-border-radius: 0 0 5px 5px;
     -webkit-border-radius: 0 0 5px 5px;
@@ -798,15 +800,15 @@ footer {
   margin-left: 40px;
   letter-spacing: 0.5px; }
   .goods-menu li {
-    float: left; }
+    float: left;
+    cursor: pointer;
+    border-bottom: 2px solid transparent; }
+    .goods-menu li:hover {
+      border-bottom-color: rgba(211, 92, 96, 0.9); }
+    .goods-menu li.active {
+      border-bottom-color: rgba(211, 92, 96, 0.9); }
     .goods-menu li + li {
       margin-left: 6px; }
-    .goods-menu li a {
-      border-bottom: 2px solid transparent; }
-      .goods-menu li a:hover {
-        border-bottom-color: rgba(211, 92, 96, 0.9); }
-  .goods-menu .active a {
-    border-bottom-color: rgba(211, 92, 96, 0.9); }
 
 .link-box {
   margin-bottom: 45px;
