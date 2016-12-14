@@ -3,8 +3,6 @@ class SearchFormController {
         this.selects = searchFormData.selectsData;
         this.activeSelects = [];
         this.activeSelectGroup = [];
-        this.selectIsChanged = false;
-        //this.isInit = false;
         this.searchAutocomplete = {
             value: '',
             getSimilarValue: (value) => {
@@ -36,62 +34,31 @@ class SearchFormController {
         });*/
 
         this.initActiveSelects();
-        //this.onSelect();
     }
 
     initActiveSelects () {
-        let selectsCount = 3;
+        //let selectsCount = 3;
         let activeSelectGroup = this.selects;
-        //let firstActive = this.selects[0];
+        let hasSubcat;
 
-        for (let i = 0; i < selectsCount; i++) {
+         do {
             this.activeSelectGroup.push(activeSelectGroup);
             this.activeSelects.push(activeSelectGroup[0]);
             activeSelectGroup = activeSelectGroup[0].subCat;
-        }
+
+            hasSubcat = !!this.activeSelects[this.activeSelects.length - 1].subCat;
+        } while (hasSubcat)
     }
 
     reInitActiveSelectGroups (newActiveSelect, index) {
         let i = index + 1;
-        //console.log(index);
-        //console.log(i);
-
         this.activeSelects[index] = newActiveSelect;
 
-        //console.log(this.activeSelects);
         for (i; i < this.activeSelectGroup.length; i++) {
-            //let cachedGroup = this.activeSelectGroup[i];
-
-            //console.log(cachedGroup);
             this.activeSelectGroup[i] = this.activeSelects[i-1].subCat;
             this.activeSelects[i] = this.activeSelectGroup[i][0];
-            //console.log(this.activeSelects[i-1]);
-            //console.log(this.activeSelectGroup[i]);
-
-           /* if ( cachedGroup !== this.activeSelectGroup[i]) {
-                this.activeSelects[i] = this.activeSelectGroup[i][0];
-            }*/
-
-
-            //console.log(this.activeSelectGroup[i][0]);
         }
-        //console.log(this.activeSelects);
-        //console.log(this.activeSelectGroup);
-         /*console.log(this.activeSelects);*/
     }
-
-   /* getActiveSelectGroups () {
-            this.isInit ? this.reInitActiveSelectGroups() : this.isInit = true;
-
-            return this.activeSelectGroup;
-    }*/
-
-   /* onSelect (index) {
-        //console.log(this);
-        //this.selectIsChanged = true;
-
-        this.reInitActiveSelectGroups(index);
-    }*/
 
     search () {
 

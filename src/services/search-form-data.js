@@ -164,7 +164,7 @@ class SearchFormData {
                 ]
             },
             {
-                name: 'В подарок',
+                name: 'Продажа',
                 id: 2,
                 subCat: [
                     {

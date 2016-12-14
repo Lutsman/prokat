@@ -1,7 +1,19 @@
 class GoodsBlockController {
     constructor () {
         //this.goodsData = goodsData.rentData;
-        this.activeGroup = this.goodsData.goodsArr[0];
+        this.activeGroup = this.getActiveGroup();
+    }
+
+    getActiveGroup ()  {
+        let arr = this.goodsData.goodsArr;
+
+        for (let i = 0; i < arr.length; i++) {
+            if (!arr[i].active) continue;
+
+            return arr[i];
+        }
+
+        return arr[0];
     }
 }
 

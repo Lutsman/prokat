@@ -10,9 +10,11 @@ class CustomSelectController {
     }
 
     setSelection (newSelect) {
+        let index = this.index;
+
         this.selectedOption = newSelect;
         this.isOpen = false;
-        let index = this.index;
+
 
         //this.customFunc();
         //console.dir(this.customFunc);
@@ -35,7 +37,7 @@ const customSelectComponent = {
     bindings: {
         options: '<',
         selectedOption: '=',
-        customFunc: '&',
+        customFunc: '&?',
         index: '<?'
     },
     template: require('./custom-select-tmpl.html'),

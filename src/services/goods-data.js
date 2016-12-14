@@ -234,7 +234,8 @@ class GoodsData {
                             traderImg: 'img/trader_logo_2.png',
                             traderTitle: 'bikecenter'
                         }
-                    ]
+                    ],
+                    active: true
                 },
                 {
                     groupName: 'Самокаты',
