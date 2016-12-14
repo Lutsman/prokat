@@ -2,6 +2,8 @@ class AutocompleteController {
     constructor () {
         this.value = this.value || '';
         this.isSelected = false;
+        
+        console.log(this.placeholder);
     }
 
     setValue (name) {
@@ -19,7 +21,8 @@ const autocompleteComponent = {
     template: require('./autocomplete-tmpl.html'),
     bindings: {
         value: '=',
-        getSimilarValue: '<'
+        getSimilarValue: '<',
+        placeholder: '<?'
     },
     controller: AutocompleteController
 };

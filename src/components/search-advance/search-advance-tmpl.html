@@ -49,7 +49,11 @@
 				</li>
 			</ul>
 
-			<input ng-model="$ctrl.adress" class="adress" name="adress" placeholder="Город, район, адрес" required="" type="text">
+			<!--<input ng-model="$ctrl.adress" class="adress" name="adress" placeholder="Город, район, адрес" required="" type="text">-->
+			<autocomplete value="$ctrl.searchAutocomplete.value"
+						  get-similar-value="$ctrl.searchAutocomplete.getSimilarValue"
+						  placeholder="$ctrl.placeholder"
+						  class="search__autocomplete adress"></autocomplete>
 			<div class="search-criterion">
 				<p>Показать:</p>
 				<input ng-repeat-start="tracker in $ctrl.fieldsData.trackers track by tracker.id"

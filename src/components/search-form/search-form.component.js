@@ -19,6 +19,7 @@ class SearchFormController {
         this.activeSelectGroup = [];
         this.searchAutocomplete = {
             value: '',
+            placeholder: 'В Ростове-на-Дону',
             getSimilarValue: (value) => {
                 console.log(value);
 

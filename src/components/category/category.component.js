@@ -138,22 +138,51 @@ class CategoryController {
          name: 'price',
          reverse: false
          };*/
+
         this.dataPagination = {
             goodsPerPage: 8,
             currPage: 0,
             pageLimit: 10,
             get goodsCount() {
-                let result = Object.keys(self.dataGoods).length;
+                //let result = Object.keys(self.dataGoodsTemp).length;
+                let result = self.minMaxFilter(self.dataGoods, self.min, self.max).length
                 //console.log(result);
                 //self.dataSearch.currGoodsCount;
+                this.tempCount = result;
+                this.pageCount = Math.ceil(this.tempCount / this.goodsPerPage);
+
 
                 return result;
-            },
-            get pageCount() {
-                return Math.ceil(this.goodsCount / this.goodsPerPage);
             }
+            /*get pageCount() {
+                return Math.ceil(this.goodsCount / this.goodsPerPage);
+            }*/
         };
+    }
 
+    minMaxFilter (input, min, max) {
+        if (!input) return [];
+    
+        //console.log(input);
+        //console.log(min);
+        //console.log(max);
+
+        let filteredArr = input.filter((item) => {
+            let result = true;
+
+            if ( min > 0 && max > min) {
+                result = item.price >= min && item.price <= max;
+            } else if (min > 0) {
+                result = item.price >= min;
+            } else if (max > 0) {
+                result = item.price <= max;
+            }
+
+            return result;
+        });
+
+
+        return filteredArr;
     }
 
     getGoods () {

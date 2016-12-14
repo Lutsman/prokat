@@ -9,7 +9,10 @@
 			></custom-select>
 		</li>
 	</ul>
-	<autocomplete value="$ctrl.searchAutocomplete.value" get-similar-value="$ctrl.searchAutocomplete.getSimilarValue" class="search__autocomplete"></autocomplete>
+	<autocomplete value="$ctrl.searchAutocomplete.value"
+				  get-similar-value="$ctrl.searchAutocomplete.getSimilarValue"
+				  placeholder="$ctrl.placeholder"
+				  class="search__autocomplete"></autocomplete>
 	<!--<div class="search__autocomplete">
 		<input ng-model="$ctrl.searchKeyword" ng-change="$ctrl.searchSelected = false" placeholder="в Ростове-на-Дону" required="" name="q" type="text">
 		<ul ng-if="!!$ctrl.searchKeyword && !$ctrl.searchSelected">

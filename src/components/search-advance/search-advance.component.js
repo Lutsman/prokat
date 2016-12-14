@@ -1,7 +1,16 @@
 class SearchAdvanceController {
-    constructor (searchAdvanceData) {
+    constructor (searchAdvanceData, searchFormData) {
         this.fieldsData = searchAdvanceData.fieldsData;
         this.showSearch = true;
+        this.searchAutocomplete = {
+            value: '',
+            placeholder: 'Город, район, адрес',
+            getSimilarValue: (value) => {
+                console.log(value);
+
+                return searchFormData.searchData;
+            }
+        };
         this.init();
     }
 
