@@ -16,8 +16,9 @@ import bannerComponent from './../banner/banner.component';
 import categoryGoodsInfoComponent from './../categoty-goods-info/category-goods-info.component';
 import paginationNavComponent from './../pagination-nav/pagination-nav.component';
 
-//import rangeFilter from './../filters/range.filter';
-//import sortFilter from './../filters/sort.filter';
+import rangeFilter from './../filters/range.filter';
+import sortFilter from './../filters/sort.filter';
+import minMaxFilter from '../filters/min-max.filter';
 
 import './../../css/normalize.css';
 import './../../css/styles.scss';
@@ -26,35 +27,9 @@ angular.module('categoryPage', ['ngAnimate'])
     .service('selectData', SelectData)
     .service('navData', NavData)
     .service('searchAdvanceData', SearchAdvanceData)
-    .filter('range', function () {
-        return function (input, from, to) {
-            if (!input) return [];
-
-            return input.slice(from, to);
-        }
-    })
-    .filter('sort', function () {
-        return (input, key, fromLowToHight) => {
-            if (!input) return [];
-            if (!key || !fromLowToHight) {
-                /*console.log(key);
-                 console.log(fromLowToHight);
-                 console.log(input);*/
-
-                return input;
-            }
-
-            return input.sort(function (a, b) {
-                if (fromLowToHight) {
-                    if (a[key] > b[key]) return 1;
-                    if (a[key] < b[key]) return -1;
-                } else {
-                    if (a[key] < b[key]) return 1;
-                    if (a[key] > b[key]) return -1;
-                }
-            });
-        }
-    })
+    .filter('range', rangeFilter)
+    .filter('sort', sortFilter)
+    .filter('minMax', minMaxFilter)
     .component('category', categoryComponent)
     .component('paginationNav', paginationNavComponent)
     .component('searchAdvance', searchAdvanceComponent)

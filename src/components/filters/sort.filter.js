@@ -1,13 +1,7 @@
 const sortFilter = () => {
     return (input, key, fromLowToHight) => {
         if (!input) return [];
-        if (!key || !fromLowToHight) {
-            /*console.log(key);
-             console.log(fromLowToHight);
-             console.log(input);*/
-
-            return input;
-        }
+        if (!key) return input;
 
         return input.sort(function (a, b) {
             if (fromLowToHight) {
@@ -18,7 +12,7 @@ const sortFilter = () => {
                 if (a[key] > b[key]) return -1;
             }
         });
-    }
+    };
 };
 
 export default sortFilter;

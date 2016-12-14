@@ -1,6 +1,8 @@
 <search-advance items-count="$ctrl.dataPagination.goodsCount"
 				tracker="$ctrl.tracker"
 				get-items="$ctrl.getGoods"
+				min-price="$ctrl.min"
+				max-price="$ctrl.max"
 ></search-advance>
 
 <section class="content">
@@ -12,15 +14,17 @@
 		</p>
 
 		<category-goods-info ng-repeat="good in $ctrl.dataGoods
+		|minMax :$ctrl.min :$ctrl.max
 		|sort :$ctrl.tracker.name :$ctrl.tracker.reverse
-		|range :$ctrl.dataPagination.currPage :($ctrl.dataPagination.currPage + 4)"
+		|range :($ctrl.dataPagination.currPage * $ctrl.dataPagination.goodsPerPage):($ctrl.dataPagination.currPage * $ctrl.dataPagination.goodsPerPage + 4)"
 							 data="good"></category-goods-info>
 
 		<banner></banner>
 
 		<category-goods-info ng-repeat="good in $ctrl.dataGoods
+		|minMax :$ctrl.min :$ctrl.max
 		|sort :$ctrl.tracker.name :$ctrl.tracker.reverse
-		|range :($ctrl.dataPagination.currPage + 4):($ctrl.dataPagination.currPage + 8)"
+		|range :($ctrl.dataPagination.currPage * $ctrl.dataPagination.goodsPerPage + 4):($ctrl.dataPagination.currPage * $ctrl.dataPagination.goodsPerPage + 8)"
 							 data="good"></category-goods-info>
 
 		<pagination-nav curr-page="$ctrl.dataPagination.currPage"

@@ -135,41 +135,25 @@ class CategoryController {
             }
         ];
         /*this.tracker = {
-         name: 'rate',
+         name: 'price',
          reverse: false
          };*/
         this.dataPagination = {
             goodsPerPage: 8,
             currPage: 0,
             pageLimit: 10,
-            //testCount: 500,
             get goodsCount() {
                 let result = Object.keys(self.dataGoods).length;
                 //console.log(result);
                 //self.dataSearch.currGoodsCount;
 
-                return result;//self.dataSearch.currGoodsCount; //result;
+                return result;
             },
-            /*set goodsCount(input) {
-             this.testCount;
-             },*/
             get pageCount() {
                 return Math.ceil(this.goodsCount / this.goodsPerPage);
             }
         };
-        /*Object.defineProperties(this, 'goodsCount', {
-         get: function() {
-         return Object.keys(this.dataGoods).length;
-         }.bind(this)
-         });*/
-        /*this.getPageCount = () => {
-         return Math.ceil(this.dataSearch.currGoodsCount / this.dataPagination.goodsPerPage);
-         };*/
 
-
-        //this.dataPagination.pageCount = this.getPageCount();
-        //console.log(this.dataPagination.goodsCount);
-        //console.log(this.dataPagination.pageCount);
     }
 
     getGoods () {

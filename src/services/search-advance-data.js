@@ -10,7 +10,7 @@ class SearchAdvanceData {
                     name: 'price',
                     reverse: false,
                     id: 0,
-                    active: true
+                    active: false
                 },
                 {
                     title: 'сначала дорогие',
@@ -24,7 +24,7 @@ class SearchAdvanceData {
                     name: 'rate',
                     reverse: false,
                     id: 2,
-                    active: false
+                    active: true
                 }
             ],
             categories: [

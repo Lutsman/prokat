@@ -1,110 +1,77 @@
 class SearchAdvanceController {
     constructor (searchAdvanceData) {
         this.fieldsData = searchAdvanceData.fieldsData;
-        this.showSearch = false;
+        this.showSearch = true;
         this.init();
     }
 
+
     init () {
         this.initCat();
-        //this.trackByOutput = this.trackByOutputCached ? this.trackByOutputCached : 3;
-        //this.trackByOutputCached = this.trackByOutputCached ? this.trackByOutputCached : this.trackByOutput;
         this.minPrice = this.fieldsData.minPrice;
         this.maxPrice = this.fieldsData.maxPrice;
-        this.adress = undefined;
-        //this.title = this.fieldsData.title;
-        //this.trackers = this.fieldsData.trackers;
+        this.adress = '';
 
         for (let key in this.fieldsData.trackers) {
             if (this.fieldsData.trackers[key].active) {
                 this.tracker = this.fieldsData.trackers[key];
-                //console.log(this.fieldsData.trackers[key]);
-                //console.log(this.tracker);
             }
-
         }
-        //this.goodsCount = 1546;
-    }
-    resetForm () {
-        this.init();
-    }
-    setActiveCat (currCat, activeCatLink, toggle) {
-        console.log(activeCatLink === currCat);
-        console.dir(activeCatLink);
-        console.dir(currCat);
-        console.log(toggle);
-        /*if (toggle) {
-         if (activeCatLink === currCat) {
-         activeCatLink = {};
-         } else {
-         activeCatLink = currCat;
-         }
-
-         //activeCatLink = activeCatLink === currCat ? {} : currCat;
-         } else {
-         activeCatLink = currCat;
-         console.log(activeCatLink === currCat);
-         }*/
+        
+        //console.log(this.tracker);
     }
     initCat () {
         let activeCatGroup = this.fieldsData.categories;
-        //let i = 0;
         this.activeCatGroup = [];
-        this.activeCat = [];
+        this.activeCats = [];
 
         do {
             this.activeCatGroup.push(activeCatGroup);
-            this.activeCat.push(this.getActiveCat(activeCatGroup));
-            activeCatGroup = this.activeCat[this.activeCat.length - 1];
-        } while (activeCatGroup.subCat);
+            this.activeCats.push(this.getActiveCat(activeCatGroup));
+            activeCatGroup = this.activeCats[this.activeCats.length - 1].subCat;
+        } while (activeCatGroup);
 
-        //this.activeCat1 = this.getActiveCat(this.fieldsData.categories);
-        /*console.dir(this.fieldsData.categories);
-         console.dir(this.activeCat1);*/
-        //this.activeCat2 = this.getActiveCat(this.activeCat1.subCat);
-        //this.activeCat3 = this.getActiveCat(this.activeCat2.subCat);
+        //console.log(this.activeCats);
+        //console.log(this.activeCatGroup);
+    }
+    reInitActiveCat (newActiveCat, index) {
+        let i = index + 1;
+        this.activeCats[index] = newActiveCat;
+
+        for (i; i < this.activeCatGroup.length; i++) {
+            this.activeCatGroup[i] = this.activeCats[i-1].subCat;
+            this.activeCats[i] = this.activeCatGroup[i][0];
+        }
     }
     getActiveCat (obj) {
-        let result = false;
-
         if (typeof obj === 'object' && !Array.isArray(obj) && obj !== null) {
             for (let key in obj) {
                 if (!obj[key].active) continue;
 
-                result = obj[key];
-                break;
+                return obj[key];
             }
         } else if (Array.isArray(obj)) {
             for (let i = 0; i < obj.length; i++) {
                 if (!obj[i].active) continue;
 
-                result = obj[i];
-                break;
+                return obj[i];
             }
         }
 
-        return result;
+        return obj[0];
+    }
+    setActiveCat (newActiveCat, index, toggle) {
+        if (this.activeCats[index] === newActiveCat) return;
+
+        this.reInitActiveCat(newActiveCat, index);
+
+        this.toggle = toggle; // unused
     }
     searchRender () {
         //this.getItems();
     }
-    reInitActiveCatGroups () {
-        for (let i = 1; i < this.activeSelectGroup.length; i++) {
-            let cachedGroup = this.activeSelectGroup[i];
-
-            //console.log(cachedGroup);
-            this.activeSelectGroup[i] = this.activeSelects[i-1].subCat;
-            //console.log(this.activeSelects[i-1]);
-            //console.log(this.activeSelectGroup[i]);
-
-            if ( cachedGroup !== this.activeSelectGroup[i]) {
-                this.activeSelects[i] = this.activeSelectGroup[i][0];
-            }
-
-            /*console.log(this.activeSelectGroup[i][0]);*/
-        }
-        /*console.log(this.activeSelectGroup);
-         console.log(this.activeSelects);*/
+    resetForm () {
+        this.init();
     }
 }
 
@@ -113,7 +80,9 @@ const searchAdvanceComponent = {
     bindings: {
         tracker: '=',
         itemsCount: '<',
-        getItems: '@'
+        getItems: '@',
+        minPrice: '=',
+        maxPrice: '='
     },
     controller: SearchAdvanceController
 };

@@ -1,3 +1,17 @@
+/*class SearchAutocomplete {
+ constructor (searchFormData) {
+ this.value = '';
+ }
+
+ getSimilarValue (value) {
+ console.log(value);
+ //let val = value;
+ //val.json.stringify;
+
+ return this.searchFormData.searchData;
+ }
+ }*/
+
 class SearchFormController {
     constructor (searchFormData) {
         this.selects = searchFormData.selectsData;
@@ -7,8 +21,6 @@ class SearchFormController {
             value: '',
             getSimilarValue: (value) => {
                 console.log(value);
-                //let val = value;
-                //val.json.stringify;
 
                 return searchFormData.searchData;
             }
@@ -37,17 +49,13 @@ class SearchFormController {
     }
 
     initActiveSelects () {
-        //let selectsCount = 3;
         let activeSelectGroup = this.selects;
-        let hasSubcat;
 
          do {
             this.activeSelectGroup.push(activeSelectGroup);
             this.activeSelects.push(activeSelectGroup[0]);
             activeSelectGroup = activeSelectGroup[0].subCat;
-
-            hasSubcat = !!this.activeSelects[this.activeSelects.length - 1].subCat;
-        } while (hasSubcat)
+        } while (activeSelectGroup)
     }
 
     reInitActiveSelectGroups (newActiveSelect, index) {
