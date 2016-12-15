@@ -75,7 +75,8 @@ class NavbarController {
 
 const navbarComponent = {
     bindings: {
-        callback: '&?'
+        callback: '&?',
+        isHidden: '=?'
     },
     template: require('./navbar-tmpl.html'),
     controller: NavbarController

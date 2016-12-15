@@ -72,11 +72,11 @@
     left: 0;
     width: 100%;
     @include transition(all 0.2s ease-in-out);
-    .hidden {
+    &.hidden {
         @include transform(translate3d(0, -100%, 0));
-    }
-    header.hidden > div:last-of-type {
-        @include box-shadow(none);
+        header > div:last-of-type {
+            @include box-shadow(none);
+        }
     }
 }
 header {

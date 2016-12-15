@@ -2,6 +2,7 @@ class MainPageController {
     constructor (goodsData) {
         this.rentData = goodsData.rentData;
         this.sellData = goodsData.sellData;
+        this.isHiddenNav = false;
     }
 }
 
