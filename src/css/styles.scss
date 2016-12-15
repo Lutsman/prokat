@@ -1792,34 +1792,34 @@ footer {
 }
 
 .winter-equip-bg {
-    background-image: url("../img/category_photo_2.jpg");
-    background-size: cover;
-}
-
-.giroskuter-bg {
     background-image: url("../img/category_photo_3.jpg");
     background-size: cover;
 }
 
-.kick-scooter-bg {
+.giroskuter-bg {
+    background-image: url("../img/category_photo_2.jpg");
+    background-size: cover;
+}
+
+/*.kick-scooter-bg {
+    background-image: url("../img/category_photo_4.jpg");
+    background-size: cover;
+}*/
+
+/*.rollers-bg {
+    background-image: url("../img/category_photo_5.jpg");
+    background-size: cover;
+}*/
+
+.travel-equip-bg {
     background-image: url("../img/category_photo_4.jpg");
     background-size: cover;
 }
 
-.rollers-bg {
-    background-image: url("../img/category_photo_5.jpg");
-    background-size: cover;
-}
-
-.travel-equip-bg {
-    background-image: url("../img/category_photo_6.png");
-    background-size: cover;
-}
-
-.map-bg {
+/*.map-bg {
     background-image: url("../img/category_photo_7.jpg");
     background-size: cover;
-}
+}*/
 
 .calendar-icon, .list-icon {
     display: block;
