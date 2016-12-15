@@ -7,6 +7,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var CopyWebpackPlugin = require('copy-webpack-plugin');
 var ngAnnotatePlugin = require('ng-annotate-webpack-plugin');
+var ngminPlugin = require('ngmin-webpack-plugin');
 var path = require('path');
 
 /**
@@ -52,7 +53,7 @@ module.exports = function makeWebpackConfig() {
     
     // Output path from the view of the page
     // Uses webpack-dev-server in development
-    publicPath: isProd ? '//lutsman.github.io/demo/prokat/' : 'http://localhost:8080/',
+    publicPath: isProd ? '/dist/' : 'http://localhost:8080/',
     
     // Filename for entry points
     // Only adds hash in build mode
@@ -106,7 +107,7 @@ module.exports = function makeWebpackConfig() {
       // Transpile .js files using babel-loader
       // Compiles ES6 and ES7 into ES5 code
       test: /\.js$/,
-      loader: 'babel-loader?presets[]=es2015&plugins[]=transform-runtime!ng-annotate',
+      loader: 'babel-loader?presets[]=es2015&plugins[]=transform-runtime',
       exclude: /node_modules/
     }, {
       // CSS LOADER
@@ -186,11 +187,13 @@ module.exports = function makeWebpackConfig() {
    * Reference: http://webpack.github.io/docs/configuration.html#plugins
    * List: http://webpack.github.io/docs/list-of-plugins.html
    */
-  /*config.plugins = [
+  config.plugins = [
     new ngAnnotatePlugin({
       add: true
     })
-  ];*/
+    //new ngminPlugin()
+
+  ];
   
   // Skip rendering index.html in test mode
   if (!isTest) {
@@ -239,7 +242,7 @@ module.exports = function makeWebpackConfig() {
         
         // Reference: http://webpack.github.io/docs/list-of-plugins.html#uglifyjsplugin
         // Minify all javascript, switch loaders to minimizing mode
-        //new webpack.optimize.UglifyJsPlugin(),
+        new webpack.optimize.UglifyJsPlugin(),
         
         // Copy assets from the resources folder
         // Reference: https://github.com/kevlened/copy-webpack-plugin

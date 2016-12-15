@@ -39,12 +39,20 @@ class NavbarController {
                 //scrollDirection = 1;
                 this.isHidden = true;
                 isChanged = true;
+
+                if (typeof this.callback === 'function') {
+                    this.callback({hide: true});
+                }
                 //console.log($element[0].offsetHeight);
             } else if (scrollDiff < 0  && this.isHidden) {
                 //scrollDirection = -1;
                 this.isHidden = false;
                 isChanged = true;
                 //console.log($element[0].offsetHeight);
+
+                if (typeof this.callback === 'function') {
+                    this.callback({hide: true});
+                }
             }
 
             //console.log(scrollDirection);
@@ -63,7 +71,12 @@ class NavbarController {
     }
 }
 
+//NavbarController.$inject = ['$scope', '$window', '$element'];
+
 const navbarComponent = {
+    bindings: {
+        callback: '&?'
+    },
     template: require('./navbar-tmpl.html'),
     controller: NavbarController
 };
