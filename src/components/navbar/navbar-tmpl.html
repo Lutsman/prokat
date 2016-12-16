@@ -1,7 +1,17 @@
 <header>
-	<div>
+	<div class="header__top-line" ng-hide="$ctrl.isHiddenApp">
+		<div class="container">
+			<p>Наше приложение onProkat, делает выбор техники
+				для отдыха простой и удобной.</p>
+			<a href="#"><img src="img/google-play-btn.png" alt="Google Play"></a>
+			<a href="#"><img src="img/app-store-btn.png" alt="App Store"></a>
+			<span class="close-btn" ng-click="$ctrl.isHiddenApp = true"></span>
+		</div>
+	</div>
+	<div class="header__nav-1">
 		<div class="container">
 			<nav class="top-menu-1">
+				<!--<span ng-click="$ctrl.isHiddenApp = false">Open</span>-->
 				<a href="#">Магазины</a>
 				<a href="#">Прокаты</a>
 				<a href="#">Акции и предложения</a>
@@ -16,7 +26,7 @@
 		</div><!--container-->
 	</div>
 
-	<div>
+	<div class="header__nav-2">
 		<div class="container">
 			<a href="/" class="logo"></a>
 

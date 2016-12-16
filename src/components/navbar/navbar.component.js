@@ -3,6 +3,7 @@ import angular from 'angular';
 class NavbarController {
     constructor ($scope, $window, $element) {
         this.isHidden = false;
+        this.isHiddenApp = false;
         this.$window = $window;
         this.$scope = $scope;
         this.$element = $element;

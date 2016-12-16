@@ -4,7 +4,8 @@
 @import 'fonts';
 @import 'variables';
 @import 'head';
-@import 'js'; 
+@import 'js';
+@import 'keyframes';
 
 #maket {
     position: absolute;
@@ -83,16 +84,79 @@ header {
     font-family: $lato-light;
     color: #fff;
     @include transition(all 0.5s ease-in-out);
-    > div {
-        &:first-of-type {
-            height: 41px;
-            background-color: rgba(88, 103, 116, 0.93);
+    .header__top-line {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        height: 70px;
+        padding: 12px 0;
+        background-image: url("../img/bg_app.jpg");
+        /*background-size: cover;*/
+        transition: all linear 0.3s;
+        overflow: hidden;
+
+        &.ng-hide-add {
+            height: 70px;
         }
-        &:last-of-type {
-            height: 90px;
-            background-color: rgba(56, 72, 86, 0.93);
-            @include box-shadow(0 0 9.5px 1.5px rgba(81, 81, 81, 0.6));
+        &.ng-hide-add-active {
+            height: 0;
+            padding: 0;
         }
+
+        p {
+            display: inline-block;
+            vertical-align: middle;
+            width: 365px;
+            margin: 0 25px 0 310px;
+            font-size: 15px;
+            color: #000;
+            text-align: center;
+        }
+        a {
+            display: inline-block;
+            vertical-align: middle;
+            width: 157px;
+            margin-right: 10px;
+        }
+        .close-btn {
+            display: block;
+            float: right;
+            position: relative;
+            z-index: 2;
+            width: 45px;
+            height: 45px;
+            cursor: pointer;
+
+            &::before, &::after {
+                content: '';
+                display: block;
+                position: absolute;
+                z-index: 2;
+                top: 16px;
+                width: 10px;
+                height: 10px;
+                border-top: 2px solid #443f41;
+                border-right: 2px solid #443f41;
+            }
+            &::before {
+                right: 14px;
+                @include transform(rotate(45deg));
+            }
+            &::after {
+                right: 0;
+                @include transform(rotate(225deg));
+            }
+
+        }
+    }
+    .header__nav-1 {
+        height: 41px;
+        background-color: rgba(88, 103, 116, 0.93);
+    }
+    .header__nav-2 {
+        height: 90px;
+        background-color: rgba(56, 72, 86, 0.93);
+        @include box-shadow(0 0 9.5px 1.5px rgba(81, 81, 81, 0.6));
     }
 }
 
@@ -146,12 +210,14 @@ nav a {
     span, a {
         position: relative;
         z-index: 2;
+        display: block;
+        float: left;
         &::before {
             content: '';
             display: block;
             position: absolute;
             z-index: 2;
-            top: -2px;
+            top: 0;
             background-image: url(../img/sprite.png);
         }
     }
@@ -213,6 +279,7 @@ nav a {
     width: 1000px;
     margin: 0 auto;
     //overflow: hidden;
+    @include box-shadow(0 0 13px rgba(81, 81, 81, 0.41));
     @include border-radius(5px 3px 3px 5px);
     ul, li {
         float: left;
@@ -220,12 +287,14 @@ nav a {
     > ul {
         width: 525px;
         > li {
+            position: relative;
+            z-index: 2;
             width: 33.3333333%;
         }
     }
     button {
         position: absolute;
-        z-index: 2;
+        z-index: 5;
         top: 0;
         right: 0;
         width: 200px;
@@ -245,7 +314,7 @@ nav a {
     > a {
         height: 62px;
         padding: 20px 40px 20px 25px;
-        font: 20px $lato-light;
+        font-size: 20px;
         color: #898989;
         line-height: 22px;
         background-color: rgba(255, 255, 255, 0.95);
@@ -266,15 +335,33 @@ nav a {
         }
     }
    ul {
-       width: 100%;
-       padding-bottom: 10px;
+       position: absolute;
+       z-index: 2;
+       top: 100%;
+       left: 0;
+       padding: 10px 0;
+       min-width: calc(100% - 4px);
        overflow: hidden;
+       white-space: nowrap;
        background-color: rgba(255, 255, 255, 0.95);
        @include border-radius(0 0 5px 5px);
+
+       &::after {
+           content: '';
+           display: block;
+           position: absolute;
+           z-index: 2;
+           top: -10px;
+           left: 0;
+           width: 100%;
+           height: 10px;
+           @include box-shadow(0 0 13px rgba(81, 81, 81, 0.41));
+       }
        li {
            float: none;
-           padding: 10px 25px;
-           font: 20px $lato-light;
+           padding: 0 25px;
+           line-height: 21px;
+           font-size: 17px;
            color: #898989;
        }
    }
@@ -288,28 +375,68 @@ nav a {
 }
 
 .search__autocomplete {
+    position: relative;
+    z-index: 2;
     float: left;
-    font: 20px $lato-light;
+    font-size: 20px;
     color: #898989;
     letter-spacing: 0.5px;
     > ul {
         position: absolute;
+        z-index: 2;
+        top: 100%;
+        left: 0;
         width: 100%;
-        float: none;
         max-width: 275px;
-        /*padding-bottom: 10px;*/
+        padding: 10px 0;
+        font-size: 17px;
         background-color: rgba(255, 255, 255, 0.95);
         @include border-radius(0 0 5px 5px);
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            z-index: 2;
+            top: -10px;
+            left: 0;
+            width: 100%;
+            height: 10px;
+            @include box-shadow(0 0 13px rgba(81, 81, 81, 0.41));
+        }
     }
     li {
         float: none;
-        padding: 10px 25px;
+        padding: 0 25px;
+        cursor: pointer;
     }
     input {
+        position: relative;
+        z-index: 3;
         width: 460px;
         height: 62px;
+        color: #898989;
         padding: 20px 225px 20px 25px;
         background-color: rgba(255, 255, 255, 0.95);
+
+        &::-webkit-input-placeholder {
+            color: #898989;
+            opacity: 1;
+        }
+
+        &:-moz-placeholder { /* Firefox 18- */
+            color: #898989;
+            opacity: 1;
+        }
+
+        &::-moz-placeholder {  /* Firefox 19+ */
+            color: #898989;
+            opacity: 1;
+        }
+
+        &:-ms-input-placeholder {
+            color: #898989;
+            opacity: 1;
+        }
     }
 }
 
@@ -475,19 +602,14 @@ footer {
 
 .category {
     padding-top: 30px;
-    font-size: 15px;
+    font: 18px $lato-bold;
     color: #fff;
     letter-spacing: 0.5px;
-    text-shadow: 0 0 4.7px rgba(81, 81, 81, 0.8);
+    line-height: 20px;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
     h2 {
-        margin-bottom: 9px;
+        margin-bottom: 25px;
         line-height: 26px;
-    }
-    ul {
-        float: left;
-        + ul {
-            margin-left: 22px;
-        }
     }
     li {
         margin-bottom: 7px;
@@ -501,28 +623,61 @@ footer {
     position: relative;
     z-index: 2;
     float: left;
-    height: 200px;
-    padding: 33px 60px 30px 17px;
+    padding: 30px;
     margin-bottom: 6px;
     @include border-radius(3px);
 }
 
 .category-big {
-    width: 607px;
-    + .category-big {
-        margin-left: 6px;
+    width: 100%;
+    height: 206px;
+
+    ul {
+        float: left;
+        + ul {
+            margin-left: 22px;
+        }
     }
+
     p {
         margin-bottom: 10px;
+    }
+
+    .category__sponsor {
+        top: 63px;
+        right: 70px;
     }
 }
 
 .category-small {
-    width: 403px;
+    width: 400px;
+    height: 400px;
     + .category-small {
-        margin-left: 5.5px;
+        margin-left: 10px;
+    }
+
+    .category__sponsor {
+        bottom: 32px;
+        left: 30px;
     }
 }
+
+.category__sponsor {
+    position: absolute;
+    z-index: 2;
+    span, a {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    span {
+        margin-right: 34px;
+    }
+
+    a {
+        width: 80px;
+    }
+}
+
 
 .content {
     padding: 10px 0 25px;
@@ -604,20 +759,25 @@ footer {
         float: right;
         font: 13px $lato-semibold;
         color: #f15c60;
+        @include transition(all 5s ease-in-out);
+
+        &:hover {
+            text-decoration: underline;
+        }
     }
 }
 
 .goods-menu {
     margin-left: 40px;
     letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: #c3c3c3;
     li {
         float: left;
         cursor: pointer;
         border-bottom: 2px solid transparent;
-        &:hover {
-            border-bottom-color: rgba(211, 92, 96, 0.9);
-        }
-        &.active {
+        &.active, &:hover {
+            color: #000;
             border-bottom-color: rgba(211, 92, 96, 0.9);
         }
         + li {
@@ -635,6 +795,8 @@ footer {
     > div {
         float: left;
         width: 302px;
+        position: relative;
+        z-index: 2;
         + div {
             margin-left: 4px;
         }
@@ -665,9 +827,15 @@ footer {
     }
     p {
         padding: 0 20px;
-        &:last-of-type {
-            margin-top: 18px;
-        }
+    }
+    .link-box__link-info {
+        position: absolute;
+        z-index: 2;
+        bottom: 15px;
+        left: 0;
+        width: 100%;
+        padding: 0 20px;
+
     }
     span {
         font: 14px $lato;

@@ -1,4 +1,4 @@
-<input ng-model="$ctrl.value" ng-change="$ctrl.onValueChange()" placeholder="{{$ctrl.placeholder}}" autocomplete="off" required="" name="q" type="text">
+<input ng-model="$ctrl.value" ng-change="$ctrl.onValueChange()" placeholder="в Ростове-на-Дону" autocomplete="off" required="" name="q" type="text">
 <ul ng-if="!!$ctrl.value && !$ctrl.isSelected">
 	<li ng-repeat="field in $ctrl.similarValues | filter:$ctrl.value" ng-click="$ctrl.setValue(field.name)">
 		<span>{{field.name}}</span>
