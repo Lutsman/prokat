@@ -3,6 +3,8 @@ class MainPageController {
         this.rentData = goodsData.rentData;
         this.sellData = goodsData.sellData;
         this.isHiddenNav = false;
+
+        console.log(this.rentData);
     }
 }
 

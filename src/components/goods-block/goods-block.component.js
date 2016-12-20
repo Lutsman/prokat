@@ -5,7 +5,8 @@ class GoodsBlockController {
     }
 
     getActiveGroup ()  {
-        let arr = this.goodsData.goodsArr;
+        console.log(this.data);
+        let arr = this.data.goodsArr;
 
         for (let i = 0; i < arr.length; i++) {
             if (!arr[i].active) continue;
@@ -19,7 +20,7 @@ class GoodsBlockController {
 
 const goodsBlockComponent = {
     bindings: {
-        goodsData: '<'
+        data: '<'
     },
     template: require('./goods-block-tmpl.html'),
     controller: GoodsBlockController
