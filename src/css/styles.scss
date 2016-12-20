@@ -1221,6 +1221,13 @@ footer {
             border-bottom: none !important;
         }
     }
+    .goods-info__links, .add-time {
+        position: absolute;
+        z-index: 2;
+        left: 0;
+        bottom: 30px;
+        width: 100%;
+    }
 
     h5 {
         margin: 12px 0 6px;
@@ -1231,14 +1238,23 @@ footer {
     a {
         font: 16px $lato;
     }
+    .btn {
+        font-size: 14px;
+        padding: 2px 10px;
+        width: 145px;
+        text-align: center;
+    }
     > img {
         float: left;
         max-width: 350px;
         margin-right: 40px;
     }
     > div {
+        position: relative;
+        z-index: 2;
         float: left;
         width: 590px;
+        height: 220px;
         &:last-of-type {
             width: 203px;
             margin-left: 15px;
@@ -1267,6 +1283,7 @@ footer {
         padding-left: 20px;
         margin: 0 10px;
         color: #ce4a4e;
+        line-height: 16px;
         &::before {
             content: '';
             display: block;
@@ -1298,11 +1315,11 @@ footer {
         }
     }
     .add-time {
-        position: relative;
-        z-index: 2;
+        margin-bottom: 0;
         font: 12px $lato-light;
         text-align: right;
         letter-spacing: 0.5px;
+        line-height: 23px;
         &::before, &::after {
             content: '';
             display: block;
@@ -1328,9 +1345,52 @@ footer {
 }
 
 .banner {
+    position: relative;
+    z-index: 2;
     height: 402px;
     margin: 12px 0;
     border: 1px solid #f4f4f4;
+
+    .close {
+        display: block;
+        position: absolute;
+        z-index: 2;
+        top: 10px;
+        right: 10px;
+        width: 30px;
+        height: 30px;
+        background-color: rgba(153, 153, 153, 0.8);
+        @include border-radius(50%);
+        @include transition(all 0.2s ease-in-out);
+        cursor: pointer;
+
+        &:hover {
+            background-color: rgba(153, 153, 153, 1);
+        }
+        &::after, &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            z-index: 2;
+            top: 10px;
+            width: 6px;
+            height: 6px;
+            border-top: 3px solid #fff;
+            border-right: 3px solid #fff;
+
+
+        }
+        &::before {
+            left: 6px;
+            @include transform(rotate(45deg));
+        }
+        &::after {
+            right: 6px;
+            @include transform(rotate(225deg));
+        }
+
+
+    }
 }
 
 .pages-list {
