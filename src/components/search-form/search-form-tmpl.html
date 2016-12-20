@@ -11,15 +11,7 @@
 	</ul>
 	<autocomplete value="$ctrl.searchAutocomplete.value"
 				  get-similar-value="$ctrl.searchAutocomplete.getSimilarValue"
-				  placeholder="$ctrl.placeholder"
+				  holder="$ctrl.searchAutocomplete.placeholder"
 				  class="search__autocomplete"></autocomplete>
-	<!--<div class="search__autocomplete">
-		<input ng-model="$ctrl.searchKeyword" ng-change="$ctrl.searchSelected = false" placeholder="в Ростове-на-Дону" required="" name="q" type="text">
-		<ul ng-if="!!$ctrl.searchKeyword && !$ctrl.searchSelected">
-			<li ng-repeat="field in $ctrl.searchPotentialFields | filter:$ctrl.searchKeyword" ng-click="$ctrl.setSearch(field.name)">
-				<span>{{field.name}}</span>
-			</li>
-		</ul>
-	</div>-->
 	<button type="submit" ng-click="$ctrl.search()">Найти</button>
 </form>

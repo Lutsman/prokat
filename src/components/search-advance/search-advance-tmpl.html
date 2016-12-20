@@ -9,29 +9,29 @@
 		<form ng-show="$ctrl.showSearch" class="category-form" novalidate>
 			<div>
 				<ul class="category-list">
-					<li ng-class="{'active': $ctrl.activeCats[0] === cat}" ng-repeat="cat in $ctrl.activeCatGroup[0]" ng-click="$ctrl.setActiveCat(cat, 0)">
+					<li ng-class="{'active': $ctrl.activeCats[0] === cat}" ng-repeat="cat in $ctrl.activeCatGroup[0]" ng-click="$ctrl.setActiveCat(cat, 0); $ctrl.getItems()">
 						<span>{{cat.title}}</span>
 					</li>
 				</ul>
 				<div class="choose-price">
 					<p>Цена:</p>
-					<input ng-model="$ctrl.minPrice" name="min-price" type="number" placeholder="от">
-					<input ng-model="$ctrl.maxPrice" name="max-price" type="number" placeholder="до">
+					<input ng-model="$ctrl.minPrice" ng-change="$ctrl.setMinMax()" name="min-price" type="number" placeholder="от">
+					<input ng-model="$ctrl.maxPrice" ng-change="$ctrl.setMinMax()" name="max-price" type="number" placeholder="до">
 				</div>
 				<div class="number-offers">
 					<p>Предложений:
-						<span>{{$ctrl.itemsCount}}</span>
+						<span>{{$ctrl.currItemsCount}}</span>
 					</p>
 				</div>
 			</div>
 
 			<ul class="category-list">
-				<li ng-class="{'active': $ctrl.activeCats[1] === cat}" ng-repeat="cat in $ctrl.activeCatGroup[1]" ng-click="$ctrl.setActiveCat(cat, 1, true)">
+				<li ng-class="{'active': $ctrl.activeCats[1] === cat}" ng-repeat="cat in $ctrl.activeCatGroup[1]" ng-click="$ctrl.setActiveCat(cat, 1, true); $ctrl.getItems()">
 					<span>{{cat.title}}</span>
 				</li>
 			</ul>
 			<ul class="category-list">
-				<li ng-class="{'active': $ctrl.activeCats[2] === cat}" ng-repeat="cat in $ctrl.activeCatGroup[2]" ng-click="$ctrl.setActiveCat(cat, 2, true)">
+				<li ng-class="{'active': $ctrl.activeCats[2] === cat}" ng-repeat="cat in $ctrl.activeCatGroup[2]" ng-click="$ctrl.setActiveCat(cat, 2, true); $ctrl.getItems()">
 					<span>{{cat.title}}</span>
 				</li>
 			</ul>
@@ -39,7 +39,8 @@
 			<!--<input ng-model="$ctrl.adress" class="adress" name="adress" placeholder="Город, район, адрес" required="" type="text">-->
 			<autocomplete value="$ctrl.searchAutocomplete.value"
 						  get-similar-value="$ctrl.searchAutocomplete.getSimilarValue"
-						  placeholder="$ctrl.holder"
+						  holder="$ctrl.searchAutocomplete.placeholder"
+						  on-change="$ctrl.getItems()"
 						  class="search__autocomplete adress"></autocomplete>
 			<div class="search-criterion">
 				<p>Показать:</p>

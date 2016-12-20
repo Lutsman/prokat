@@ -3,10 +3,6 @@ class CategoryController {
         this.isHiddenAppNav = true;
 
         this.dataGoods = [];
-        /*this.tracker = {
-         name: 'price',
-         reverse: false
-         };*/
 
         this.dataPagination = {
             goodsPerPage: 8,
@@ -14,23 +10,9 @@ class CategoryController {
             pageLimit: 10,
             goodsCount: 0,
             get pageCount () {
-                console.log(Math.ceil(this.goodsCount / this.goodsPerPage));
+                //console.log(Math.ceil(this.goodsCount / this.goodsPerPage));
                 return Math.ceil(this.goodsCount / this.goodsPerPage);
             }
-            /*get goodsCount() {
-                //let result = Object.keys(self.dataGoodsTemp).length;
-                let result = self.minMaxFilter(self.dataGoods, self.min, self.max).length
-                //console.log(result);
-                //self.dataSearch.currGoodsCount;
-                this.tempCount = result;
-                this.pageCount = Math.ceil(this.tempCount / this.goodsPerPage);
-
-
-                return result;
-            }*/
-            /*get pageCount() {
-                return Math.ceil(this.goodsCount / this.goodsPerPage);
-            }*/
         };
     }
 }

@@ -12,9 +12,11 @@
 	</div>
 	<div>
 		<a href="#" class="booking-btn">{{$ctrl.langServiceData.booking}}</a>
-		<p class="goods-info__contacts">{{$ctrl.langServiceData.or}}
-			<a ng-click="$ctrl.showTel = !$ctrl.showTel" href="javascript:void(0)">{{$ctrl.langServiceData.showRoom}}</a>
-			<span class="goods-info__phone" ng-show="$ctrl.showTel">+38(099)-546-78-79</span>
+		<p class="goods-info__contacts">
+			<span ng-show="!$ctrl.showTel">{{$ctrl.langServiceData.or}}</span>
+			<a ng-click="$ctrl.showTel = !$ctrl.showTel" ng-show="!$ctrl.showTel" href="javascript:void(0)">{{$ctrl.langServiceData.showTel}}</a>
+			<a ng-click="$ctrl.showTel = !$ctrl.showTel" ng-show="$ctrl.showTel" href="javascript:void(0)">{{$ctrl.langServiceData.hideTel}}</a>
+			<span class="goods-info__phone" ng-show="$ctrl.showTel"><a href="tel:+7234567890">+7234567890</a></span>
 		</p>
 
 		<img ng-src="{{$ctrl.data.traderImg}}" alt="company-logo">

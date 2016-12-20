@@ -1,8 +1,12 @@
 class PaginationNavController {
     constructor () {
         this.startPos = this.getStartPos();
-        this.repeater = this.getRepeaterArr();
-        Object.defineProperty()
+        //this.repeater = this.getRepeaterArr();
+        Object.defineProperty(this, "repeater", {
+            get: () => {
+                return this.getRepeaterArr();
+            }
+        });
     }
 
     setCurrPage (index) {

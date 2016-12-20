@@ -4,7 +4,7 @@ class MainPageController {
         this.sellData = goodsData.sellData;
         this.isHiddenNav = false;
 
-        console.log(this.rentData);
+        //console.log(this.rentData);
     }
 }
 

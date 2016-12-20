@@ -3,7 +3,7 @@ class AutocompleteController {
         this.value = this.value || '';
         this.isSelected = false;
         
-        console.log(this.placeholder);
+        //console.log(this.holder);
     }
 
     setValue (name) {
@@ -14,6 +14,14 @@ class AutocompleteController {
     onValueChange () {
         this.isSelected = false;
         this.similarValues = this.getSimilarValue(this.value);
+
+
+        //console.dir(this.onChange);
+        //console.log(typeof this.onChange === 'function');
+
+        if (typeof this.onChange === 'function') {
+            this.onChange();
+        }
     }
 }
 
@@ -22,7 +30,8 @@ const autocompleteComponent = {
     bindings: {
         value: '=',
         getSimilarValue: '<',
-        placeholder: '<?'
+        holder: '<',
+        onChange: '&?'
     },
     controller: AutocompleteController
 };

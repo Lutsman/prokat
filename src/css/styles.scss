@@ -1211,9 +1211,15 @@ footer {
     }
 
     .goods-info__phone {
+        display: block;
         position: absolute;
         top: 180%;
-        left: 39px;
+        left: 0;
+        width: 100%;
+
+        a {
+            border-bottom: none !important;
+        }
     }
 
     h5 {

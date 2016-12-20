@@ -7,7 +7,7 @@ class SearchAdvanceController {
         this.showSearch = false;
         this.searchAutocomplete = {
             value: '',
-            holder: 'Город, район, адрес',
+            placeholder: 'Город, район, адрес',
             getSimilarValue: (value) => {
                 console.log(value);
 
@@ -17,7 +17,8 @@ class SearchAdvanceController {
 
         this.init();
 
-        console.log(this.fieldsData.sorters);
+        //console.log(this.searchAutocomplete.holder);
+        //console.log(this.fieldsData.sorters);
     }
 
 
@@ -88,7 +89,7 @@ class SearchAdvanceController {
         this.toggle = toggle; // unused
     }
     searchRender () {
-        this.getItems(); //then need promise
+        //this.getItems(); //then need promise
 
         this.items = this.minMaxFilteredItems;
         this.itemsCount = this.currItemsCount;
@@ -96,11 +97,17 @@ class SearchAdvanceController {
     }
     resetForm () {
         this.init();
+
     }
     getItems () {
+        console.log('get items');
         this.newItems = this.catGoodsData.dataGoods;
+        this.setMinMax();
+    }
+    setMinMax () {
         this.minMaxFilteredItems = this.getMinMax();
         this.currItemsCount = this.minMaxFilteredItems.length;
+        console.log(this.currItemsCount);
     }
     getMinMax () {
         return this.minMaxFilter(this.newItems, this.minPrice, this.maxPrice);

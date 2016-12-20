@@ -27,25 +27,6 @@ class SearchFormController {
             }
         };
 
-        /*Object.defineProperty(this, "selectsArr", {
-            get: (() => {
-                var counter = 0;
-                return () => {
-                    //console.log(this.selectIsChanged);
-                    //console.log(counter);
-                    if (this.selectIsChanged && counter < this.activeSelectGroup.length) {
-                        this.reInitActiveSelectGroups();
-                        counter++;
-                    } else {
-                        this.selectIsChanged = false;
-                        counter = 0;
-                    }
-
-                    return this.activeSelectGroup;
-                }
-            })()
-        });*/
-
         this.initActiveSelects();
     }
 
