@@ -30,19 +30,6 @@
 					<span>{{cat.title}}</span>
 				</li>
 			</ul>
-			<!--<ul class="category-list">
-				<li ng-class="{'active': $ctrl.activeCat2 === cat2}" ng-repeat="cat2 in $ctrl.activeCat1.subCat" ng-click="$ctrl.setActiveCat(cat2, $ctrl.activeCat2, true)">
-					<span>{{cat2.title}}</span>
-					&lt;!&ndash;<input ng-model="$ctrl.activeCat2" id="{{'form-cat2-index' + $index}}" type="radio" value="{{cat2}}" >
-					<label class="radio-label" for="{{'form-cat2-index' + $index}}">{{cat2.name}}</label>&ndash;&gt;
-				</li>
-				&lt;!&ndash;<li class="active"><a href="#"><span>Велосипед</span></a></li>
-				<li><a href="#"><span>Гироскутер</span></a></li>
-				<li><a href="#"><span>Самокат</span></a></li>
-				<li><a href="#"><span>Роликовые коньки</span></a></li>
-				<li><a href="#"><span>Аксессуары и оборудование</span></a></li>
-				<li><a href="#"><span>Зимняя техника</span></a></li>&ndash;&gt;
-			</ul>-->
 			<ul class="category-list">
 				<li ng-class="{'active': $ctrl.activeCats[2] === cat}" ng-repeat="cat in $ctrl.activeCatGroup[2]" ng-click="$ctrl.setActiveCat(cat, 2, true)">
 					<span>{{cat.title}}</span>
@@ -52,29 +39,21 @@
 			<!--<input ng-model="$ctrl.adress" class="adress" name="adress" placeholder="Город, район, адрес" required="" type="text">-->
 			<autocomplete value="$ctrl.searchAutocomplete.value"
 						  get-similar-value="$ctrl.searchAutocomplete.getSimilarValue"
-						  placeholder="$ctrl.placeholder"
+						  placeholder="$ctrl.holder"
 						  class="search__autocomplete adress"></autocomplete>
 			<div class="search-criterion">
 				<p>Показать:</p>
-				<input ng-repeat-start="tracker in $ctrl.fieldsData.trackers track by tracker.id"
-					   ng-model="$ctrl.tracker"
+				<input ng-repeat-start="sorter in $ctrl.fieldsData.sorters track by sorter.id"
+					   ng-model="$ctrl.currSorter"
 					   id="{{'form-radio' + $index}}"
 					   name="radio"
-					   ng-value="tracker"
+					   ng-value="sorter"
 					   type="radio"
-					   ng-checked="$ctrl.tracker === tracker">
-				<label  ng-repeat-end class="radio-label" for="{{'form-radio' + $index}}">{{tracker.title}}</label>
-
-
-				<!--<input ng-model="$ctrl.tracker" id="form-radio1" name="radio" value="1" type="radio">
-				<label class="radio-label" for="form-radio1">сначала дешевые</label>
-				<input ng-model="$ctrl.tracker" id="form-radio2" name="radio" value="2" type="radio">
-				<label class="radio-label" for="form-radio2">сначала дорогие</label>
-				<input ng-model="$ctrl.tracker" id="form-radio3" name="radio" value="3" checked="checked" type="radio">
-				<label class="radio-label" for="form-radio3">по-популярности</label>-->
+					   ng-checked="$ctrl.currSorter === sorter">
+				<label  ng-repeat-end class="radio-label" for="{{'form-radio' + $index}}">{{sorter.title}}</label>
 			</div>
 
-			<button ng-click="$ctrl.searchRender()" type="submit">Показать {{$ctrl.goodsCount}} предложения</button>
+			<button ng-click="$ctrl.searchRender()" type="submit">Показать {{$ctrl.currItemsCount}} предложения</button>
 			<button ng-click="$ctrl.resetForm()" type="reset">Очистить условия поиска</button>
 
 		</form>

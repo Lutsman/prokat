@@ -4,7 +4,7 @@ class SearchAdvanceData {
             title: 'Прокат велосипедов в Ростове-на-Дону',
             maxPrice: undefined,
             minPrice: undefined,
-            trackers: [
+            sorters: [
                 {
                     title: 'сначала дешевые',
                     name: 'price',

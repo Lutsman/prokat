@@ -1,29 +1,40 @@
 class SearchAdvanceController {
-    constructor (searchAdvanceData, searchFormData) {
-        this.fieldsData = searchAdvanceData.fieldsData;
+    constructor (searchAdvanceData, searchFormData, catGoodsData) {
+        this.searchAdvanceData = searchAdvanceData;
+        this.searchFormData = searchFormData;
+        this.catGoodsData = catGoodsData;
+        this.fieldsData = this.searchAdvanceData.fieldsData;
         this.showSearch = false;
         this.searchAutocomplete = {
             value: '',
-            placeholder: 'Город, район, адрес',
+            holder: 'Город, район, адрес',
             getSimilarValue: (value) => {
                 console.log(value);
 
-                return searchFormData.searchData;
+                return this.searchFormData.searchData;
             }
         };
+
         this.init();
+
+        console.log(this.fieldsData.sorters);
     }
 
 
     init () {
-        this.initCat();
+        this.adress = '';
         this.minPrice = this.fieldsData.minPrice;
         this.maxPrice = this.fieldsData.maxPrice;
-        this.adress = '';
 
-        for (let key in this.fieldsData.trackers) {
-            if (this.fieldsData.trackers[key].active) {
-                this.tracker = this.fieldsData.trackers[key];
+        this.initCat();
+        this.getItems();
+
+        this.items = this.newItems;
+        this.itemsCount = this.currItemsCount;
+
+        for (let key in this.fieldsData.sorters) {
+            if (this.fieldsData.sorters[key].active) {
+                this.sorter = this.currSorter = this.fieldsData.sorters[key];
             }
         }
         
@@ -77,21 +88,54 @@ class SearchAdvanceController {
         this.toggle = toggle; // unused
     }
     searchRender () {
-        //this.getItems();
+        this.getItems(); //then need promise
+
+        this.items = this.minMaxFilteredItems;
+        this.itemsCount = this.currItemsCount;
+        this.sorter = this.currSorter;
     }
     resetForm () {
         this.init();
+    }
+    getItems () {
+        this.newItems = this.catGoodsData.dataGoods;
+        this.minMaxFilteredItems = this.getMinMax();
+        this.currItemsCount = this.minMaxFilteredItems.length;
+    }
+    getMinMax () {
+        return this.minMaxFilter(this.newItems, this.minPrice, this.maxPrice);
+    }
+    minMaxFilter (input, min, max) {
+        if (!input) return [];
+
+        min = min || 0;
+        max = max || 0;
+        //console.log(input);
+        //console.log(min);
+        //console.log(max);
+
+        return input.filter((item) => {
+            let result = true;
+
+            if ( min > 0 && max > min) {
+                result = item.price >= min && item.price <= max;
+            } else if (min > 0) {
+                result = item.price >= min;
+            } else if (max > 0) {
+                result = item.price <= max;
+            }
+
+            return result;
+        });
     }
 }
 
 const searchAdvanceComponent = {
     template: require('./search-advance-tmpl.html'),
     bindings: {
-        tracker: '=',
-        itemsCount: '<',
-        getItems: '@',
-        minPrice: '=',
-        maxPrice: '='
+        sorter: '=',
+        itemsCount: '=',
+        items: '=?'
     },
     controller: SearchAdvanceController
 };

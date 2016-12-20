@@ -7,6 +7,7 @@ import SearchAdvanceData from '../../services/search-advance-data';
 import SelectData from '../../services/select-data';
 import NavData from '../../services/nav-data';
 import SearchFormData from './../../services/search-form-data';
+import CatGoodsData from './../../services/category-goods-data';
 
 import navbarComponent from './../navbar/navbar.component';
 import pagefooterComponent from './../pagefooter/pagefooter.component';
@@ -21,7 +22,7 @@ import autocompleteComponent from './../autocomplete/autocomplete.component';
 
 import rangeFilter from './../filters/range.filter';
 import sortFilter from './../filters/sort.filter';
-import minMaxFilter from '../filters/min-max.filter';
+//import minMaxFilter from '../filters/min-max.filter';
 
 import './../../css/normalize.css';
 import './../../css/styles.scss';
@@ -31,9 +32,10 @@ angular.module('categoryPage', ['ngAnimate'])
     .service('navData', NavData)
     .service('searchAdvanceData', SearchAdvanceData)
     .service('searchFormData', SearchFormData)
+    .service('catGoodsData', CatGoodsData)
     .filter('range', rangeFilter)
     .filter('sort', sortFilter)
-    .filter('minMax', minMaxFilter)
+//    .filter('minMax', minMaxFilter)
     .component('category', categoryComponent)
     .component('paginationNav', paginationNavComponent)
     .component('searchAdvance', searchAdvanceComponent)

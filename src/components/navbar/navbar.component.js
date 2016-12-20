@@ -2,19 +2,13 @@ import angular from 'angular';
 
 class NavbarController {
     constructor ($scope, $window, $element) {
-        this.isHidden = false;
-        this.isHiddenApp = false;
+        this.isHidden = this.isHidden || false;
+        this.isHiddenApp = this.isHiddenApp || false;
         this.$window = $window;
         this.$scope = $scope;
         this.$element = $element;
 
         angular.element(this.$window).on('scroll', this.scrollFunc());
-
-        /*console.dir($window);
-         console.dir($element);
-         console.log($element[0].offsetHeight);
-         console.dir(this);
-         console.dir($scope);*/
     }
 
     scrollFunc ()  {
@@ -77,7 +71,8 @@ class NavbarController {
 const navbarComponent = {
     bindings: {
         callback: '&?',
-        isHidden: '=?'
+        isHidden: '=?',
+        isHiddenApp: '=?'
     },
     template: require('./navbar-tmpl.html'),
     controller: NavbarController
