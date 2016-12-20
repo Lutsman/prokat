@@ -7,7 +7,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var CopyWebpackPlugin = require('copy-webpack-plugin');
 var ngAnnotatePlugin = require('ng-annotate-webpack-plugin');
-var ngminPlugin = require('ngmin-webpack-plugin');
+//var ngminPlugin = require('ngmin-webpack-plugin');
 var path = require('path');
 
 /**
