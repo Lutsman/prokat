@@ -864,7 +864,8 @@ footer {
     p {
         padding: 0 20px;
     }
-    .link-box__link-info-absolute {
+
+    .link-box__link-info {
         position: absolute;
         z-index: 2;
         bottom: 15px;
@@ -889,6 +890,7 @@ footer {
         position: relative;
         z-index: 2;
         padding-left: 40px;
+        margin-top: 22px;
         margin-bottom: 18px;
         &::before {
             content: '';
