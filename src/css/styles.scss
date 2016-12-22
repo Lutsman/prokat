@@ -1403,6 +1403,19 @@ footer {
     height: 402px;
     margin: 12px 0;
     border: 1px solid #f4f4f4;
+    overflow: hidden;
+
+    @include transition(all 0.2s ease-in-out);
+
+    &.ng-leave {
+        height: 402px;
+        margin: 12px 0;
+    }
+    &.ng-leave-active {
+        height: 0;
+        margin: 0;
+    }
+
 
     .close {
         display: block;

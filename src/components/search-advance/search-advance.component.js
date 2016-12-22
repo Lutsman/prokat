@@ -94,6 +94,8 @@ class SearchAdvanceController {
         this.items = this.minMaxFilteredItems;
         this.itemsCount = this.currItemsCount;
         this.sorter = this.currSorter;
+
+        this.showSearch = false;
     }
     resetForm () {
         this.init();
