@@ -102,3 +102,26 @@ category-goods-info {
         opacity: 0;
     }
 }
+
+articles {
+    display: block;
+    .content {
+        padding: 25px 0 0;
+    }
+    .offers-box {
+        float: none;
+        width: 100%;
+        padding: 0;
+        margin-bottom: 75px;
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+}
+articles-block {
+    display: block;
+    margin-bottom: 23px;
+    .link-box {
+        margin-bottom: 6px;
+    }
+}
