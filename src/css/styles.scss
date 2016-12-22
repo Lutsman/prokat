@@ -273,6 +273,12 @@ nav a {
         letter-spacing: 1px;
         text-shadow: 0 0.7px 9.5px rgba(0, 0, 0, 0.6);
     }
+
+    .search__autocomplete {
+        ul {
+            max-width: 275px;
+        }
+    }
 }
 
 .search-form {
@@ -401,7 +407,6 @@ nav a {
         top: 100%;
         left: 0;
         width: 100%;
-        max-width: 275px;
         padding: 0;
         font-size: 17px;
         font-family: $lato-thin;
@@ -1055,6 +1060,7 @@ footer {
     padding: 38px 0 0;
     margin-bottom: 30px;
     background-color: #fff;
+    z-index: 3;
     h2 {
         margin-bottom: 10px;
         letter-spacing: 0.5px;
@@ -1080,7 +1086,7 @@ footer {
     color: #656565;
     letter-spacing: 0.5px;
     background-color: #fff;
-     border-top: 1px solid #f4f4f4;
+    border-top: 1px solid #f4f4f4;
     > div {
         .category-list, .choose-price {
             float: left;
@@ -1117,12 +1123,13 @@ footer {
     }
     .search__autocomplete {
         float: none;
+        display: inline-block;
+        margin-bottom: 32px;
     }
     .adress input {
         width: 488px;
         height: 41px;
         padding: 10px;
-        margin-bottom: 32px;
         color: #c8c8c8;
     }
     .search-criterion {

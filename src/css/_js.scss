@@ -45,35 +45,22 @@ goods-block {
 
 search-advance {
     form {
-        .ng-enter {
-            opacity: 0;
-            /*transition: all linear 0.5s;*/
+        &.ng-hide-remove {
+            animation: search-advance-show 0.2s linear;
+            overflow: hidden;
         }
-        .ng-enter.ng-enter-active {
-            opacity: 1;
-        }
-        max-height: 300px;
-        transition: all linear 0.2s;
-        overflow: hidden;
-        &.ng-hide {
-            max-height: 0;
-            padding: 0;
+        &.ng-hide-add {
+            animation: search-advance-hide 0.2s linear;
+            overflow: hidden;
         }
 
         .category-list {
             .ng-enter {
-                opacity: 0;
-                transition: all linear 0.2s;
-            }
-            .ng-enter.ng-enter-active {
-                opacity: 1;
+                animation: fade-in 0.2s linear;
             }
             .ng-leave {
-                transition: none;
-                opacity: 0;
-
+                display: none;
             }
-
         }
     }
     .close {
@@ -90,8 +77,12 @@ search-advance {
         background-color: #898989;
         @include border-radius(0 0 3px 3px);
         @include transform(translate3d(-50%, 0, 0));
-        &.ng-hide {
-            opacity: 0;
+
+        &.ng-hide-remove {
+            animation: fade-in 0.2s linear;
+        }
+        &.ng-hide-add {
+            animation: fade-out 0.2s linear;
         }
     }
 }
