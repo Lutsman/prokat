@@ -366,82 +366,91 @@ textarea {
 @charset "UTF-8";
 @font-face {
   font-family: 'PF DIN Display Pro';
-  src: url(/resources/fonts/pfdindisplaypro-med.a4948cf83446d3d5cdb4bc57d80d02a2.ttf) format("truetype");
+  src: url(/demo/prokat/resources/fonts/pfdindisplaypro-med.a4948cf83446d3d5cdb4bc57d80d02a2.ttf) format("truetype");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'PF DIN Display Pro Light';
-  src: url(/resources/fonts/pfdindisplaypro-light.2c16e7d5ba343a6315a433ca97a028cc.ttf) format("truetype");
+  src: url(/demo/prokat/resources/fonts/pfdindisplaypro-light.2c16e7d5ba343a6315a433ca97a028cc.ttf) format("truetype");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'PF DIN Display Pro Bold';
-  src: url(/resources/fonts/pfdindisplaypro-bold.b02b278624f946d313699ee7e6c127d7.ttf) format("truetype");
+  src: url(/demo/prokat/resources/fonts/pfdindisplaypro-bold.b02b278624f946d313699ee7e6c127d7.ttf) format("truetype");
   font-weight: normal;
   font-style: normal; }
 
 /* Webfont: Lato-Thin */
 @font-face {
   font-family: 'LatoWebThin';
-  src: url(/resources/fonts/Lato-Thin.fe4e34a5b0708ee85231d4b43fa6f2f3.eot);
+  src: url(/demo/prokat/resources/fonts/Lato-Thin.fe4e34a5b0708ee85231d4b43fa6f2f3.eot);
   /* IE9 Compat Modes */
-  src: url(/resources/fonts/Lato-Thin.fe4e34a5b0708ee85231d4b43fa6f2f3.eot?#iefix) format("embedded-opentype"), url(/resources/fonts/Lato-Thin.0faa1074c17a74a7f5e32cbe6f9d76f3.woff2) format("woff2"), url(/resources/fonts/Lato-Thin.13fa4c60e0ee7ea5fe2bd84059fb8cac.woff) format("woff"), url(/resources/fonts/Lato-Thin.454421e7b2b8aaee2980346571f86863.ttf) format("truetype");
+  src: url(/demo/prokat/resources/fonts/Lato-Thin.fe4e34a5b0708ee85231d4b43fa6f2f3.eot?#iefix) format("embedded-opentype"), url(/demo/prokat/resources/fonts/Lato-Thin.0faa1074c17a74a7f5e32cbe6f9d76f3.woff2) format("woff2"), url(/demo/prokat/resources/fonts/Lato-Thin.13fa4c60e0ee7ea5fe2bd84059fb8cac.woff) format("woff"), url(/demo/prokat/resources/fonts/Lato-Thin.454421e7b2b8aaee2980346571f86863.ttf) format("truetype");
   font-style: normal;
   font-weight: normal; }
 
 /* Webfont: Lato-Light */
 @font-face {
   font-family: 'LatoWebLight';
-  src: url(/resources/fonts/Lato-Light.4afee4c98483c85a33460792d1f0f6db.eot);
+  src: url(/demo/prokat/resources/fonts/Lato-Light.4afee4c98483c85a33460792d1f0f6db.eot);
   /* IE9 Compat Modes */
-  src: url(/resources/fonts/Lato-Light.4afee4c98483c85a33460792d1f0f6db.eot?#iefix) format("embedded-opentype"), url(/resources/fonts/Lato-Light.7244318390cc4d36aac4a613ff42d308.woff2) format("woff2"), url(/resources/fonts/Lato-Light.90301aa07d780a09812229d6375c3b28.woff) format("woff"), url(/resources/fonts/Lato-Light.cf44fd55d7045a2378f92f86ddfca3d3.ttf) format("truetype");
+  src: url(/demo/prokat/resources/fonts/Lato-Light.4afee4c98483c85a33460792d1f0f6db.eot?#iefix) format("embedded-opentype"), url(/demo/prokat/resources/fonts/Lato-Light.7244318390cc4d36aac4a613ff42d308.woff2) format("woff2"), url(/demo/prokat/resources/fonts/Lato-Light.90301aa07d780a09812229d6375c3b28.woff) format("woff"), url(/demo/prokat/resources/fonts/Lato-Light.cf44fd55d7045a2378f92f86ddfca3d3.ttf) format("truetype");
   font-style: normal;
   font-weight: normal; }
 
 /* Webfont: Lato-Regular */
 @font-face {
   font-family: 'LatoWeb';
-  src: url(/resources/fonts/Lato-Regular.8ab18d934cfa1e51dc8273cd8585387e.eot);
+  src: url(/demo/prokat/resources/fonts/Lato-Regular.8ab18d934cfa1e51dc8273cd8585387e.eot);
   /* IE9 Compat Modes */
-  src: url(/resources/fonts/Lato-Regular.8ab18d934cfa1e51dc8273cd8585387e.eot?#iefix) format("embedded-opentype"), url(/resources/fonts/Lato-Regular.bd03a2cc277bbbc338d464e679fe9942.woff2) format("woff2"), url(/resources/fonts/Lato-Regular.27bd77b9162d388cb8d4c4217c7c5e2a.woff) format("woff"), url(/resources/fonts/Lato-Regular.6d4e78225df0cfd5fe1bf3e8547fefe4.ttf) format("truetype");
+  src: url(/demo/prokat/resources/fonts/Lato-Regular.8ab18d934cfa1e51dc8273cd8585387e.eot?#iefix) format("embedded-opentype"), url(/demo/prokat/resources/fonts/Lato-Regular.bd03a2cc277bbbc338d464e679fe9942.woff2) format("woff2"), url(/demo/prokat/resources/fonts/Lato-Regular.27bd77b9162d388cb8d4c4217c7c5e2a.woff) format("woff"), url(/demo/prokat/resources/fonts/Lato-Regular.6d4e78225df0cfd5fe1bf3e8547fefe4.ttf) format("truetype");
   font-style: normal;
   font-weight: normal; }
 
 /* Webfont: Lato-Medium */
 @font-face {
   font-family: 'LatoWebMedium';
-  src: url(/resources/fonts/Lato-Medium.cecc32d267ee07ce3413637314b66ca0.eot);
+  src: url(/demo/prokat/resources/fonts/Lato-Medium.cecc32d267ee07ce3413637314b66ca0.eot);
   /* IE9 Compat Modes */
-  src: url(/resources/fonts/Lato-Medium.cecc32d267ee07ce3413637314b66ca0.eot?#iefix) format("embedded-opentype"), url(/resources/fonts/Lato-Medium.0996d39c4cf5d223a14559dfa37047fd.woff2) format("woff2"), url(/resources/fonts/Lato-Medium.acbd6ecc97c80340e9bf00ea80063234.woff) format("woff"), url(/resources/fonts/Lato-Medium.06e1c8dbe641dd9dfa4367dc2a6efb9f.ttf) format("truetype");
+  src: url(/demo/prokat/resources/fonts/Lato-Medium.cecc32d267ee07ce3413637314b66ca0.eot?#iefix) format("embedded-opentype"), url(/demo/prokat/resources/fonts/Lato-Medium.0996d39c4cf5d223a14559dfa37047fd.woff2) format("woff2"), url(/demo/prokat/resources/fonts/Lato-Medium.acbd6ecc97c80340e9bf00ea80063234.woff) format("woff"), url(/demo/prokat/resources/fonts/Lato-Medium.06e1c8dbe641dd9dfa4367dc2a6efb9f.ttf) format("truetype");
   font-style: normal;
   font-weight: normal; }
 
 /* Webfont: Lato-Semibold */
 @font-face {
   font-family: 'LatoWebSemibold';
-  src: url(/resources/fonts/Lato-Semibold.8bb939ef88123e279c292794c0b23768.eot);
+  src: url(/demo/prokat/resources/fonts/Lato-Semibold.8bb939ef88123e279c292794c0b23768.eot);
   /* IE9 Compat Modes */
-  src: url(/resources/fonts/Lato-Semibold.8bb939ef88123e279c292794c0b23768.eot?#iefix) format("embedded-opentype"), url(/resources/fonts/Lato-Semibold.8b4f872c5de19974857328d06d3fe48f.woff2) format("woff2"), url(/resources/fonts/Lato-Semibold.c2b50f4a7d908c8d06f5b05ec135e166.woff) format("woff"), url(/resources/fonts/Lato-Semibold.3b0cd7254b3b6ddb8a313d41573fda8b.ttf) format("truetype");
+  src: url(/demo/prokat/resources/fonts/Lato-Semibold.8bb939ef88123e279c292794c0b23768.eot?#iefix) format("embedded-opentype"), url(/demo/prokat/resources/fonts/Lato-Semibold.8b4f872c5de19974857328d06d3fe48f.woff2) format("woff2"), url(/demo/prokat/resources/fonts/Lato-Semibold.c2b50f4a7d908c8d06f5b05ec135e166.woff) format("woff"), url(/demo/prokat/resources/fonts/Lato-Semibold.3b0cd7254b3b6ddb8a313d41573fda8b.ttf) format("truetype");
   font-style: normal;
   font-weight: normal; }
 
 /* Webfont: Lato-Bold */
 @font-face {
   font-family: 'LatoWebBold';
-  src: url(/resources/fonts/Lato-Bold.a2fb219c999a8fa6b95ad7c24890072e.eot);
+  src: url(/demo/prokat/resources/fonts/Lato-Bold.a2fb219c999a8fa6b95ad7c24890072e.eot);
   /* IE9 Compat Modes */
-  src: url(/resources/fonts/Lato-Bold.a2fb219c999a8fa6b95ad7c24890072e.eot?#iefix) format("embedded-opentype"), url(/resources/fonts/Lato-Bold.cccb897485813c7c256901dbca54ecf2.woff2) format("woff2"), url(/resources/fonts/Lato-Bold.d878b6c29b10beca227e9eef4246111b.woff) format("woff"), url(/resources/fonts/Lato-Bold.5b1b8b856d7a8cb1cb0bae6d0573f2e9.ttf) format("truetype");
+  src: url(/demo/prokat/resources/fonts/Lato-Bold.a2fb219c999a8fa6b95ad7c24890072e.eot?#iefix) format("embedded-opentype"), url(/demo/prokat/resources/fonts/Lato-Bold.cccb897485813c7c256901dbca54ecf2.woff2) format("woff2"), url(/demo/prokat/resources/fonts/Lato-Bold.d878b6c29b10beca227e9eef4246111b.woff) format("woff"), url(/demo/prokat/resources/fonts/Lato-Bold.5b1b8b856d7a8cb1cb0bae6d0573f2e9.ttf) format("truetype");
   font-style: normal;
+  font-weight: normal; }
+
+/* Webfont: Lato-BoldItalic */
+@font-face {
+  font-family: 'LatoWebBoldItalic';
+  src: url(/demo/prokat/resources/fonts/Lato-BoldItalic.7b48d663230528ecb6dbf730251bbe44.eot);
+  /* IE9 Compat Modes */
+  src: url(/demo/prokat/resources/fonts/Lato-BoldItalic.7b48d663230528ecb6dbf730251bbe44.eot?#iefix) format("embedded-opentype"), url(/demo/prokat/resources/fonts/Lato-BoldItalic.0b6bb6725576b072c5d0b02ecdd1900d.woff2) format("woff2"), url(/demo/prokat/resources/fonts/Lato-BoldItalic.9c7e4e9eb485b4a121c760e61bc3707c.woff) format("woff"), url(/demo/prokat/resources/fonts/Lato-BoldItalic.71e8fd8ecaf5b352d6bee317985c2ee8.ttf) format("truetype");
+  font-style: italic;
   font-weight: normal; }
 
 /* Webfont: Lato-Heavy */
 @font-face {
   font-family: 'LatoWebHeavy';
-  src: url(/resources/fonts/Lato-Heavy.b0357e425384d4222769a19587e27867.eot);
+  src: url(/demo/prokat/resources/fonts/Lato-Heavy.b0357e425384d4222769a19587e27867.eot);
   /* IE9 Compat Modes */
-  src: url(/resources/fonts/Lato-Heavy.b0357e425384d4222769a19587e27867.eot?#iefix) format("embedded-opentype"), url(/resources/fonts/Lato-Heavy.c9cbbdc3762c340d5d37073a54971487.woff2) format("woff2"), url(/resources/fonts/Lato-Heavy.2ce4d82354fdf1be1788c526d94eefc1.woff) format("woff"), url(/resources/fonts/Lato-Heavy.72c6dd530f0acc74b5286a7dcfa9e2d8.ttf) format("truetype");
+  src: url(/demo/prokat/resources/fonts/Lato-Heavy.b0357e425384d4222769a19587e27867.eot?#iefix) format("embedded-opentype"), url(/demo/prokat/resources/fonts/Lato-Heavy.c9cbbdc3762c340d5d37073a54971487.woff2) format("woff2"), url(/demo/prokat/resources/fonts/Lato-Heavy.2ce4d82354fdf1be1788c526d94eefc1.woff) format("woff"), url(/demo/prokat/resources/fonts/Lato-Heavy.72c6dd530f0acc74b5286a7dcfa9e2d8.ttf) format("truetype");
   font-style: normal;
   font-weight: normal; }
 
@@ -580,26 +589,19 @@ goods-block {
   float: left;
   width: 75%; }
 
-search-advance form {
-  max-height: 300px;
-  transition: all linear 0.2s;
+search-advance form.ng-hide-remove {
+  animation: search-advance-show 0.2s linear;
   overflow: hidden; }
-  search-advance form .ng-enter {
-    opacity: 0;
-    /*transition: all linear 0.5s;*/ }
-  search-advance form .ng-enter.ng-enter-active {
-    opacity: 1; }
-  search-advance form.ng-hide {
-    max-height: 0;
-    padding: 0; }
-  search-advance form .category-list .ng-enter {
-    opacity: 0;
-    transition: all linear 0.2s; }
-  search-advance form .category-list .ng-enter.ng-enter-active {
-    opacity: 1; }
-  search-advance form .category-list .ng-leave {
-    transition: none;
-    opacity: 0; }
+
+search-advance form.ng-hide-add {
+  animation: search-advance-hide 0.2s linear;
+  overflow: hidden; }
+
+search-advance form .category-list .ng-enter {
+  animation: fade-in 0.2s linear; }
+
+search-advance form .category-list .ng-leave {
+  display: none; }
 
 search-advance .close {
   display: block;
@@ -621,8 +623,10 @@ search-advance .close {
   -webkit-transform: translate3d(-50%, 0, 0);
   -o-transform: translate3d(-50%, 0, 0);
   transform: translate3d(-50%, 0, 0); }
-  search-advance .close.ng-hide {
-    opacity: 0; }
+  search-advance .close.ng-hide-remove {
+    animation: fade-in 0.2s linear; }
+  search-advance .close.ng-hide-add {
+    animation: fade-out 0.2s linear; }
 
 category-goods-info .goods-info__prem {
   background-color: #fed493;
@@ -634,18 +638,60 @@ category-goods-info .goods-info__prem {
   transition: none;
   opacity: 0; }
 
-@keyframes slideUp {
+articles {
+  display: block; }
+  articles .content {
+    padding: 25px 0 0; }
+  articles .offers-box {
+    float: none;
+    width: 100%;
+    padding: 0;
+    margin-bottom: 75px; }
+    articles .offers-box:last-of-type {
+      margin-bottom: 0; }
+
+articles-block {
+  display: block;
+  margin-bottom: 23px; }
+  articles-block .link-box {
+    margin-bottom: 6px; }
+
+/*search-advance slide*/
+@keyframes search-advance-show {
   from {
-    height: 70px; }
+    max-height: 0;
+    padding: 0; }
   to {
-    height: 0; } }
+    max-height: 300px;
+    padding: 19px 0; } }
+
+@keyframes search-advance-hide {
+  from {
+    max-height: 300px;
+    padding: 19px 0; }
+  to {
+    max-height: 0;
+    padding: 0; } }
+
+/*fade*/
+@keyframes fade-in {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@keyframes fade-out {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0; } }
 
 #maket {
   position: absolute;
   top: 0;
   left: 0;
   width: 1920px;
-  background: url(/resources/img/main_page_1920adcb51e3872f22a078dc6038e54e9b6e.jpg) no-repeat top center;
+  background: url(/demo/prokat/resources/img/main_page_1920adcb51e3872f22a078dc6038e54e9b6e.jpg) no-repeat top center;
   height: 3643px;
   opacity: 0.5;
   z-index: 1; }
@@ -655,7 +701,7 @@ category-goods-info .goods-info__prem {
   top: 10px;
   left: 0;
   width: 1920px;
-  background: url(/resources/img/category_ads_page_1920b20210cbca5da5552ae713eb78e7ceab.jpg) no-repeat top center;
+  background: url(/demo/prokat/resources/img/category_ads_page_1920b20210cbca5da5552ae713eb78e7ceab.jpg) no-repeat top center;
   height: 3643px;
   opacity: 0.5;
   z-index: 1; }
@@ -665,7 +711,7 @@ category-goods-info .goods-info__prem {
   top: 0;
   left: 0;
   width: 1920px;
-  background: url(/resources/img/add_page_1920733de027c51beecb6ab677ee3c1a3c8e.jpg) no-repeat top center;
+  background: url(/demo/prokat/resources/img/add_page_1920733de027c51beecb6ab677ee3c1a3c8e.jpg) no-repeat top center;
   height: 3643px;
   opacity: 0.5;
   z-index: 1; }
@@ -690,6 +736,18 @@ category-goods-info .goods-info__prem {
   text-align: center;
   background-color: #008adf;
   border: 2px solid #008adf;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px; }
+
+.load-more-btn {
+  display: block;
+  width: 100%;
+  height: 35px;
+  font-size: 14px;
+  line-height: 35px;
+  text-align: center;
+  background-color: #b7b7b7;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px; }
@@ -731,7 +789,7 @@ header {
     width: 100%;
     height: 70px;
     padding: 12px 0;
-    background-image: url(/resources/img/bg_appb526b6e9917113918cc263243294bad3.jpg);
+    background-image: url(/demo/prokat/resources/img/bg_appb526b6e9917113918cc263243294bad3.jpg);
     /*background-size: cover;*/
     transition: all linear 0.3s;
     overflow: hidden; }
@@ -850,7 +908,7 @@ nav a {
       position: absolute;
       z-index: 2;
       top: 0;
-      background-image: url(/resources/img/sprite3ecda3cfe3933001ca2a407642d4a63e.png); }
+      background-image: url(/demo/prokat/resources/img/sprite3ecda3cfe3933001ca2a407642d4a63e.png); }
   .user-data span {
     margin-left: 25px; }
     .user-data span::before {
@@ -874,7 +932,7 @@ nav a {
   width: 188px;
   height: 68px;
   margin-top: 11px;
-  background-image: url(/resources/img/logo335474265fc97e8d8e3954725de9a722.png);
+  background-image: url(/demo/prokat/resources/img/logo335474265fc97e8d8e3954725de9a722.png);
   background-size: contain; }
 
 .add-offer {
@@ -886,13 +944,52 @@ nav a {
   height: 631px;
   padding-top: 131px;
   color: #fff;
-  background-image: url(/resources/img/bg_headercd93849b7948baa98d506e5604e87494.jpg);
+  background-image: url(/demo/prokat/resources/img/bg_headercd93849b7948baa98d506e5604e87494.jpg);
   background-size: cover;
   background-position: center bottom; }
   .pageheader h1 {
     margin: 162px 0 23px 120px;
     letter-spacing: 1px;
     text-shadow: 0 0.7px 9.5px rgba(0, 0, 0, 0.6); }
+  .pageheader .search__autocomplete ul {
+    max-width: 275px; }
+
+.articles__pageheader {
+  height: 590px;
+  background-image: url(/demo/prokat/resources/img/articles-pageheader52e4c6aea66b78ccb89fb5c35d737c33.jpg); }
+
+.articles__title {
+  width: 590px;
+  margin: 130px auto 0;
+  font: 38px "PF DIN Display Pro Bold";
+  line-height: 38px;
+  text-align: center;
+  text-shadow: -6px 1px 10px rgba(81, 81, 81, 0.6); }
+  .articles__title h1 {
+    margin: 0;
+    font: 59px "PF DIN Display Pro Bold";
+    line-height: 60px;
+    text-shadow: -6px 1px 10px rgba(81, 81, 81, 0.6); }
+  .articles__title .read-more {
+    display: block;
+    position: relative;
+    z-index: 2;
+    margin-top: 10px;
+    font: 18px "LatoWebBoldItalic";
+    text-align: center; }
+    .articles__title .read-more::before, .articles__title .read-more::after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 50%;
+      width: 35%;
+      height: 3px;
+      margin-top: -1px;
+      background-color: #fff; }
+    .articles__title .read-more::before {
+      left: 0; }
+    .articles__title .read-more::after {
+      right: 0; }
 
 .search-form {
   position: relative;
@@ -1031,7 +1128,6 @@ nav a {
     top: 100%;
     left: 0;
     width: 100%;
-    max-width: 275px;
     padding: 0;
     font-size: 17px;
     font-family: "LatoWebThin";
@@ -1393,17 +1489,21 @@ footer {
       margin-left: 6px; }
 
 .link-box {
-  margin-bottom: 45px;
+  margin-bottom: 40px;
   font: 14px "PF DIN Display Pro Light"; }
   .link-box > div {
     float: left;
     width: 302px;
     position: relative;
-    z-index: 2; }
-    .link-box > div + div {
-      margin-left: 4px; }
+    z-index: 2;
+    margin-right: 4px;
+    margin-bottom: 5px; }
+    .link-box > div:nth-of-type(3n) {
+      margin-right: 0; }
   .link-box .big-link {
     width: 608px; }
+    .link-box .big-link + div {
+      margin-right: 0; }
     .link-box .big-link p:last-of-type {
       margin-top: 13px; }
     .link-box .big-link p:nth-of-type(3) {
@@ -1457,39 +1557,41 @@ footer {
       left: 20px;
       width: 16px;
       height: 20px;
-      background-image: url(/resources/img/sprite3ecda3cfe3933001ca2a407642d4a63e.png);
+      background-image: url(/demo/prokat/resources/img/sprite3ecda3cfe3933001ca2a407642d4a63e.png);
       background-position: -256px 1px; }
-  .link-box .look {
+  .link-box .look, .link-box .comment, .link-box .like {
+    display: inline-block;
     position: relative;
     z-index: 2;
-    padding-left: 26px;
-    margin-right: 15px; }
-    .link-box .look::before {
-      content: '';
-      display: block;
-      position: absolute;
-      z-index: 2;
-      top: 1px;
-      left: 0;
-      width: 23px;
-      height: 16px;
-      background-image: url(/resources/img/sprite3ecda3cfe3933001ca2a407642d4a63e.png);
-      background-position: -319px 1px; }
-  .link-box .comment {
-    position: relative;
-    z-index: 2;
-    padding-left: 20px; }
-    .link-box .comment::before {
+    margin-right: 15px;
+    line-height: 16px; }
+    .link-box .look::before, .link-box .comment::before, .link-box .like::before {
       content: '';
       display: block;
       position: absolute;
       z-index: 2;
       top: 0;
       left: 0;
+      background-image: url(/demo/prokat/resources/img/sprite3ecda3cfe3933001ca2a407642d4a63e.png); }
+  .link-box .look {
+    padding-left: 26px; }
+    .link-box .look::before {
+      top: 1px;
+      width: 23px;
+      height: 16px;
+      background-position: -319px 0; }
+  .link-box .comment {
+    padding-left: 20px; }
+    .link-box .comment::before {
       width: 16px;
       height: 14px;
-      background-image: url(/resources/img/sprite3ecda3cfe3933001ca2a407642d4a63e.png);
-      background-position: -192px 1px; }
+      background-position: -192px 0; }
+  .link-box .like {
+    padding-left: 18px; }
+    .link-box .like::before {
+      width: 14px;
+      height: 14px;
+      background-position: -128px 0; }
   .link-box .company-logo {
     display: block;
     float: right;
@@ -1584,7 +1686,8 @@ footer {
 .search-conditions {
   padding: 38px 0 0;
   margin-bottom: 30px;
-  background-color: #fff; }
+  background-color: #fff;
+  z-index: 3; }
   .search-conditions h2 {
     margin-bottom: 10px;
     letter-spacing: 0.5px; }
@@ -1635,12 +1738,13 @@ footer {
   .category-form .number-offers {
     float: right; }
   .category-form .search__autocomplete {
-    float: none; }
+    float: none;
+    display: inline-block;
+    margin-bottom: 32px; }
   .category-form .adress input {
     width: 488px;
     height: 41px;
     padding: 10px;
-    margin-bottom: 32px;
     color: #c8c8c8; }
   .category-form .search-criterion {
     float: right;
@@ -1835,7 +1939,7 @@ footer {
       left: 0;
       width: 15px;
       height: 14px;
-      background-image: url(/resources/img/sprite3ecda3cfe3933001ca2a407642d4a63e.png);
+      background-image: url(/demo/prokat/resources/img/sprite3ecda3cfe3933001ca2a407642d4a63e.png);
       background-position: -384px 0; }
   .goods-info .booking-btn {
     margin: 18px 0 5px;
@@ -1861,7 +1965,7 @@ footer {
       display: block;
       position: absolute;
       z-index: 2;
-      background-image: url(/resources/img/sprite3ecda3cfe3933001ca2a407642d4a63e.png); }
+      background-image: url(/demo/prokat/resources/img/sprite3ecda3cfe3933001ca2a407642d4a63e.png); }
     .goods-info .add-time::before {
       width: 29px;
       height: 22px;
@@ -2084,7 +2188,7 @@ footer {
     width: 853px;
     height: 370px;
     margin: 15px 0;
-    background-image: url(/resources/img/map_bgf14f9c63a63718539904a5bd70526278.jpg); }
+    background-image: url(/demo/prokat/resources/img/map_bgf14f9c63a63718539904a5bd70526278.jpg); }
   .new-offer-form .dropdown li {
     margin: 0; }
   .new-offer-form .dropdown a {
@@ -2161,7 +2265,7 @@ footer {
     width: 92px;
     height: 74px;
     margin: 40px auto 30px;
-    background-image: url(/resources/img/sprite3ecda3cfe3933001ca2a407642d4a63e.png);
+    background-image: url(/demo/prokat/resources/img/sprite3ecda3cfe3933001ca2a407642d4a63e.png);
     background-position: -384px -128px; }
   .new-offer-form .photo textarea {
     width: 853px;
@@ -2415,7 +2519,7 @@ footer {
   width: 100%;
   height: 450px;
   margin-bottom: 20px;
-  background-image: url(/resources/img/product_mapade189dbc061ecaeaee6e9ccd65724da.jpg);
+  background-image: url(/demo/prokat/resources/img/product_mapade189dbc061ecaeaee6e9ccd65724da.jpg);
   background-size: cover; }
 
 .product__social {
@@ -2471,15 +2575,15 @@ footer {
  Colors Backgrounds
  ---------------------------------------------- */
 .bicycle-bg {
-  background-image: url(/resources/img/category_photo_147a065bb543fbced0c0767d2bfa813f3.jpg);
+  background-image: url(/demo/prokat/resources/img/category_photo_147a065bb543fbced0c0767d2bfa813f3.jpg);
   background-size: cover; }
 
 .winter-equip-bg {
-  background-image: url(/resources/img/category_photo_3b4f064a906df37b1f5b4141c1f241a76.jpg);
+  background-image: url(/demo/prokat/resources/img/category_photo_3b4f064a906df37b1f5b4141c1f241a76.jpg);
   background-size: cover; }
 
 .giroskuter-bg {
-  background-image: url(/resources/img/category_photo_25ba4ae3f13fc9f49694283304deed791.jpg);
+  background-image: url(/demo/prokat/resources/img/category_photo_25ba4ae3f13fc9f49694283304deed791.jpg);
   background-size: cover; }
 
 /*.kick-scooter-bg {
@@ -2491,7 +2595,7 @@ footer {
     background-size: cover;
 }*/
 .travel-equip-bg {
-  background-image: url(/resources/img/category_photo_407ee8bfc6fac75da24ab391fab379253.jpg);
+  background-image: url(/demo/prokat/resources/img/category_photo_407ee8bfc6fac75da24ab391fab379253.jpg);
   background-size: cover; }
 
 /*.map-bg {
@@ -2504,7 +2608,7 @@ footer {
   width: 33px;
   height: 33px;
   margin-top: -12px;
-  background-image: url(/resources/img/sprite3ecda3cfe3933001ca2a407642d4a63e.png); }
+  background-image: url(/demo/prokat/resources/img/sprite3ecda3cfe3933001ca2a407642d4a63e.png); }
 
 .calendar-icon {
   background-position: 0 -64px; }
@@ -2518,7 +2622,7 @@ footer {
   position: absolute;
   z-index: 2;
   top: 0;
-  background-image: url(/resources/img/sprite3ecda3cfe3933001ca2a407642d4a63e.png); }
+  background-image: url(/demo/prokat/resources/img/sprite3ecda3cfe3933001ca2a407642d4a63e.png); }
 
 .diamond-icon::before {
   left: 0;

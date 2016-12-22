@@ -39,9 +39,14 @@
                         <div class="booking__logo">
                             <img src="img/trader_logo_1.png" alt="company logo">
                         </div>
-                        <div>
-                            <a href="#" class="booking-btn ng-binding">Забронировать</a>
-                            <p>или <a href="#">показать номер</a></p>
+                        <div class="booking">
+                            <a href="#" class="booking-btn">{{$ctrl.langServiceData.booking}}</a>
+                            <p class="booking__contacts">
+                                <span ng-show="!$ctrl.showTel">{{$ctrl.langServiceData.or}}</span>
+                                <a ng-click="$ctrl.showTel = !$ctrl.showTel" ng-show="!$ctrl.showTel" href="javascript:void(0)">{{$ctrl.langServiceData.showTel}}</a>
+                                <a ng-click="$ctrl.showTel = !$ctrl.showTel" ng-show="$ctrl.showTel" href="javascript:void(0)">{{$ctrl.langServiceData.hideTel}}</a>
+                                <span class="booking__phone" ng-show="$ctrl.showTel"><a href="tel:+7234567890">+7234567890</a></span>
+                            </p>
                         </div>
 
                     </div>
@@ -87,7 +92,8 @@
 
             </div>
 
-            <div class="product__map"></div>
+            <!--<div class="product__map"></div>-->
+            <ng-map center="[40.74, -74.18]" class="product__map"></ng-map>
 
             <div class="product__social">
                 <p>

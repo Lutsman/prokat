@@ -142,8 +142,8 @@ class SearchAdvanceController {
 const searchAdvanceComponent = {
     template: require('./search-advance-tmpl.html'),
     bindings: {
-        sorter: '=',
-        itemsCount: '=',
+        sorter: '=?',
+        itemsCount: '=?',
         items: '=?'
     },
     controller: SearchAdvanceController

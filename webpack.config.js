@@ -54,7 +54,7 @@ module.exports = function makeWebpackConfig() {
     
     // Output path from the view of the page
     // Uses webpack-dev-server in development
-    publicPath: isProd ? '/' : 'http://localhost:8080/', // /dist/
+    publicPath: isProd ? '/demo/prokat/' : 'http://localhost:8080/', // /dist/
     
     // Filename for entry points
     // Only adds hash in build mode
@@ -229,7 +229,13 @@ module.exports = function makeWebpackConfig() {
             inject: 'body',
             filename: 'add-offer.html'
         }),
-        
+        new HtmlWebpackPlugin({
+          title: 'articles',
+          chunks: [],
+          template: './src/articles.html',
+          inject: 'body',
+          filename: 'articles.html'
+        }),
         // Reference: https://github.com/webpack/extract-text-webpack-plugin
         // Extract css files
         // Disabled when in test mode or not in build mode
