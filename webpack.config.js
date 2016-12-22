@@ -35,8 +35,9 @@ module.exports = function makeWebpackConfig() {
    * Karma will set this when it's a test build
    */
   config.entry = isTest ? {} : {
-    appMain: './src/components/main-page/main-page',
-    appCat: './src/components/category/category'
+    appMain: './src/js/main-page',
+    appCat: './src/js/category',
+    appProd: './src/js/product'
     //'resources/img/': './src/resources/img/'
     //'css/style': './src/css/app.scss'
   };
@@ -216,7 +217,7 @@ module.exports = function makeWebpackConfig() {
         }),
         new HtmlWebpackPlugin({
           title: 'product',
-          chunks: [],
+          chunks: ['appProd'],
           template: './src/product.html',
           inject: 'body',
           filename: 'product.html'
