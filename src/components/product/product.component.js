@@ -12,6 +12,52 @@ class ProductController {
             showTel: 'показать номер',
             hideTel: 'скрыть номер'
         };
+
+        this.sliderData = [
+            {
+                id: 0,
+                slide: {
+                    src: 'img/product_slide_img.jpg'
+                },
+                thumb: {
+                    src: 'img/product_slider_control.jpg'
+                }
+            },
+            {
+                id: 1,
+                slide: {
+                    src: 'img/product_slider_control.jpg'
+                },
+                thumb: {
+                    src: 'img/product_slider_control.jpg'
+                }
+            },
+            {
+                id: 2,
+                slide: {
+                    src: 'img/product_slide_img.jpg'
+                },
+                thumb: {
+                    src: 'img/product_slider_control.jpg'
+                }
+            },
+            {
+                id: 3,
+                slide: {
+                    src: 'img/product_slider_control.jpg'
+                },
+                thumb: {
+                    src: 'img/product_slider_control.jpg'
+                }
+            }
+        ];
+
+
+        this.activeSlide = this.sliderData[0];
+    }
+
+    setActiveSlide (slide) {
+        this.activeSlide = slide;
     }
 }
 

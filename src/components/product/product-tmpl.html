@@ -63,14 +63,12 @@
 
                     <div class="product__slider">
                         <div class="slide">
-                            <img src="img/product_slide_img.jpg" alt="img">
+                            <img ng-repeat="slide in $ctrl.sliderData" ng-if="$ctrl.activeSlide === slide" ng-src="{{slide.slide.src}}" alt="img">
                         </div>
 
-                        <div class="slide-control">
-                            <span><img src="img/product_slider_control.jpg" alt="slide-control"></span>
-                            <span><img src="img/product_slider_control.jpg" alt="slide-control"></span>
-                            <span><img src="img/product_slider_control.jpg" alt="slide-control"></span>
-                            <span><img src="img/product_slider_control.jpg" alt="slide-control"></span>
+
+                        <div class="slide-control" >
+                            <span ng-repeat="slide in $ctrl.sliderData" ng-click="$ctrl.setActiveSlide(slide)"><img ng-src="{{slide.thumb.src}}" alt="slide-control"></span>
                         </div>
 
                     </div>
@@ -93,7 +91,11 @@
             </div>
 
             <!--<div class="product__map"></div>-->
-            <ng-map center="[40.74, -74.18]" class="product__map"></ng-map>
+            <div map-lazy-load="https://maps.googleapis.com/maps/api/js?key=AIzaSyDH3hC07zDykGfQWp4D3xBuwpVX8nU2s9M">
+                <ng-map center="[40.74, -74.18]" class="product__map">
+                    <marker position="[40.74, -74.18]"></marker>
+                </ng-map>
+            </div>
 
             <div class="product__social">
                 <p>

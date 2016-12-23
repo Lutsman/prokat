@@ -2036,7 +2036,25 @@ footer {
 
 .product__slider {
     .slide {
+        position: relative;
+        z-index: 2;
         height: 346px;
+        overflow: hidden;
+
+        img {
+            position: absolute;
+            z-index: 2;
+            top: 0;
+            left: 0;
+
+            &.ng-enter {
+                animation: fade-in 0.3s linear;
+            }
+            &.ng-leave {
+                animation: fade-out 0.3s linear;
+            }
+        }
+
     }
     .slide-control {
         margin: 5px 0 20px;
