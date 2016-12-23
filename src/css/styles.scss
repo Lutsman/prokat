@@ -1998,6 +1998,12 @@ footer {
                 &:hover {
                     border-bottom-color: transparent;
                 }
+                &.ng-hide-remove {
+                    animation: fade-in 0.2s linear;
+                }
+                &.ng-hide-add {
+                    display: none;
+                }
             }
         }
     }
@@ -2006,6 +2012,28 @@ footer {
     line-height: 49px;
     img {
         vertical-align: middle;
+    }
+}
+.booking__contacts {
+    position: relative;
+    z-index: 2;
+}
+.booking__phone {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    top: 80%;
+    left: 0;
+    width: 100%;
+
+    a {
+        border-bottom: none!important;
+    }
+    &.ng-hide-remove {
+        animation: fade-in 0.2s linear;
+    }
+    &.ng-hide-add {
+        display: none;
     }
 }
 .product__statistics {
