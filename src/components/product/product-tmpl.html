@@ -74,18 +74,7 @@
 
                     </div>
 
-                    <div class="product__banner">
-                        <img src="img/product_banner.jpg" alt="img">
-                        <p>Рама GT FURY ELITE</p>
-                        <p>В сентябре выгода до 15000 руб. только у нас. Количество ограничено!</p>
-                        <p>Тел.: <span>(495) 241-87-96</span></p>
-                    </div>
-                    <div class="product__banner">
-                        <img src="img/product_banner.jpg" alt="img">
-                        <p>Рама GT FURY ELITE</p>
-                        <p>В сентябре выгода до 15000 руб. только у нас. Количество ограничено!</p>
-                        <p>Тел.: (<span>(495) 241-87-96</span></p>
-                    </div>
+                    <motion ng-repeat="motion in [0,1]" class="product__banner"></motion>
 
                 </div>
 
@@ -101,46 +90,16 @@
             <div class="product__social">
                 <p>
                     <span>Поделиться в</span>
-                    <a href="#" class="vk"><i class="fa fa-vk" aria-hidden="true"></i></a>
-                    <a href="#" class="fb"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                    <a href="#" class="tw"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    <a href="" class="vk" social-vk><i class="fa fa-vk" aria-hidden="true"></i></a>
+                    <a href="" class="fb" social-facebook><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                    <a href="" class="tw" social-twitter><i class="fa fa-twitter" aria-hidden="true"></i></a>
                 </p>
             </div>
 
             <div class="product__more">
                 <p class="product__more__title">Похожие предложения</p>
 
-                <div>
-                    <img src="img/product_more.jpg" alt="img">
-                    <p class="product__more__goods-title">Велосипед GT FURY ELITE</p>
-                    <p>ул. Пушкинская 25А</p>
-                    <p class="product__more__price">350 <i class="fa fa-rub" aria-hidden="true"></i></p>
-                </div>
-                <div>
-                    <img src="img/product_more.jpg" alt="img">
-                    <p class="product__more__goods-title">Велосипед GT FURY ELITE</p>
-                    <p>ул. Пушкинская 25А</p>
-                    <p class="product__more__price">350 <i class="fa fa-rub" aria-hidden="true"></i></p>
-                </div>
-                <div>
-                    <img src="img/product_more.jpg" alt="img">
-                    <p class="product__more__goods-title">Велосипед GT FURY ELITE</p>
-                    <p>ул. Пушкинская 25А</p>
-                    <p class="product__more__price">350 <i class="fa fa-rub" aria-hidden="true"></i></p>
-                </div>
-                <div>
-                    <img src="img/product_more.jpg" alt="img">
-                    <p class="product__more__goods-title">Велосипед GT FURY ELITE</p>
-                    <p>ул. Пушкинская 25А</p>
-                    <p class="product__more__price">350 <i class="fa fa-rub" aria-hidden="true"></i></p>
-                </div>
-                <div>
-                    <img src="img/product_more.jpg" alt="img">
-                    <p class="product__more__goods-title">Велосипед GT FURY ELITE</p>
-                    <p>ул. Пушкинская 25А</p>
-                    <p class="product__more__price">350 <i class="fa fa-rub" aria-hidden="true"></i></p>
-                </div>
-
+                <prod-offer ng-repeat="offer in [0,1,2,3,4]" class="product__more__offer"></prod-offer>
             </div>
 
         </div><!--container-->

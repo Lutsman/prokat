@@ -3,6 +3,7 @@
 import angular from 'angular';
 import 'angular-animate';
 import 'ngmap';
+import 'angular-social-links';
 
 import SelectData from '../components/services/select-data';
 import NavData from '../components/services/nav-data';
@@ -16,11 +17,13 @@ import searchAdvanceComponent from '../components/search-advance/search-advance.
 import autocompleteComponent from '../components/autocomplete/autocomplete.component';
 import customSelectComponent from '../components/custom-select/custom-select.component';
 import pagefooterComponent from '../components/pagefooter/pagefooter.component';
+import prodOfferComponent from '../components/prod-offer/prod-offer.component';
+import motionComponent from '../components/motion/motion.component';
 
 import './../css/normalize.css';
 import './../css/styles.scss';
 
-angular.module('product', ['ngAnimate', 'ngMap'])
+angular.module('product', ['ngAnimate', 'ngMap', 'socialLinks'])
     .service('selectData', SelectData)
     .service('navData', NavData)
     .service('searchAdvanceData', SearchAdvanceData)
@@ -31,4 +34,6 @@ angular.module('product', ['ngAnimate', 'ngMap'])
     .component('searchAdvance', searchAdvanceComponent)
     .component('autocomplete', autocompleteComponent)
     .component('customSelect', customSelectComponent)
-    .component('pagefooter', pagefooterComponent);
+    .component('pagefooter', pagefooterComponent)
+    .component('prodOffer', prodOfferComponent)
+    .component('motion', motionComponent);

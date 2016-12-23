@@ -2099,9 +2099,11 @@ footer {
     }
 }
 
+
 .product__banner {
     position: relative;
     z-index: 2;
+    display: block;
     height: 101px;
     padding: 10px;
     margin-bottom: 20px;
@@ -2157,7 +2159,7 @@ footer {
         width: 41px;
         height: 41px;
         margin-left: 10px;
-        font-size: 26px;
+        font-size: 21px;
         color: #fff;
         text-align: center;
         @include border-radius(50%);
@@ -2175,16 +2177,17 @@ footer {
 
 .product__more {
     font: 12px $lato-light;
-    > div {
+    .product__more__offer {
         float: left;
         width: 180px;
         margin-bottom: 10px;
-        + div {
+        + .product__more__offer {
             margin-left: 56px;
         }
         p {
             margin-bottom: 5px;
         }
+
     }
     img {
         margin-bottom: 10px;
