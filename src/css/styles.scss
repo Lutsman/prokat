@@ -62,7 +62,7 @@
 
     &:hover {
         background-color: rgba(0, 138, 223, 0.66);
-        border: 2px solid rgba(0, 138, 223, 0);
+        border-color: rgba(0, 138, 223, 0);
     }
 }
 
@@ -369,11 +369,11 @@ nav a {
         font: 25px $lato-semibold;
         color: #fff;
         background-color: #f6870d;
+        @include border-radius(0 5px 5px 0);
         @include transition(all 0.2s ease-in-out);
 
         &:hover {
             background-color: #d0720b;
-            @include border-radius(0 3px 3px 0);
         }
     }
     > ul li:first-of-type {
@@ -608,14 +608,15 @@ footer {
 
 .pagefooter {
     padding-top: 35px;
-    font-family: $dindisplay-light;
+    font-family: $lato-thin;
+    font-size: 15px;
+    color: #737373;
     h3 {
-        font-family: $lato-bold;
         margin-bottom: 15px;
+        font-family: $lato-bold;
     }
     p {
         margin-bottom: 30px;
-        font-weight: 300;
     }
     .info-us {
         margin: 55px 0 45px;
@@ -654,8 +655,8 @@ footer {
         right: 0;
         width: 6px;
         height: 6px;
-        border-top: 1px solid #000;
-        border-right: 1px solid #000;
+        border-top: 1px solid #737373;
+        border-right: 1px solid #737373;
         @include transform(rotate(135deg));
     }
     span {
@@ -682,12 +683,11 @@ footer {
 
 .footer-menu {
     margin-top: 16px;
-    color: #737373;
     a {
         margin: 0 8px 0 9px;
-        text-decoration: underline;
+        text-decoration: none;
         &:hover {
-            text-decoration: none;
+            text-decoration: underline;
         }
         &:last-of-type {
             margin-right: 0;
@@ -701,10 +701,10 @@ footer {
 
 .category {
     padding-top: 30px;
-    font: 18px $lato;
+    font: 18px $lato-light;
     color: #fff;
     letter-spacing: 0.5px;
-    line-height: 20px;
+    line-height: 18px;
     text-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
     h2 {
         margin-bottom: 25px;
@@ -1135,12 +1135,18 @@ footer {
     h2 {
         margin-bottom: 10px;
         letter-spacing: 0.5px;
+        font-family: $lato;
     }
     .btn {
         padding: 6px 5px;
         color: #56697a;
         letter-spacing: 0.5px;
-        border-color: #4c697c;
+        border: 2px solid #485663;
+        font-size: 15px;
+        &:hover {
+            color: rgba(72, 86, 99, 0.72);
+            border-color: rgba(72, 86, 99, 0.72);
+        }
         + .btn {
             margin-left: 10px;
         }
@@ -1181,16 +1187,23 @@ footer {
         @include border-radius(3px);
     }
     button[type="submit"] {
+        font-size: 14px;
         color: #fff;
-        background-color: #f15c60;
+        background-color: #eb3c55;
+
+        &:hover {
+            background-color: rgba(235, 60, 85, 0.73);
+        }
     }
     button[type="reset"] {
         margin-left: 12px;
-        color: #d35c60;
+        font-size: 14px;
+        color: #eb3c55;;
         background-color: #fff;
     }
     .number-offers {
         float: right;
+        font-size: 14px;
     }
     .search__autocomplete {
         float: none;
@@ -1199,16 +1212,20 @@ footer {
     }
     .adress input {
         width: 488px;
-        height: 41px;
-        padding: 10px;
+        height: 29px;
+        padding: 0 10px;
         color: #c8c8c8;
+        font-family: $lato-light;
+        font-size: 14px;
     }
     .search-criterion {
         float: right;
         padding: 10px 5px 10px 0;
         p {
             float: left;
-            margin-right: 15px;
+            margin-right: 9px;
+            font: 14px $lato-light;
+            line-height: 20px;
         }
     }
     input[type="radio"] {
@@ -1224,7 +1241,8 @@ footer {
         z-index: 2;
         padding-left: 33px;
         margin-left: 10px;
-        line-height: 21px;
+        line-height: 16px;
+        font: 14px $lato-light;
         cursor: pointer;
         &::before, &::after {
             content: '';
@@ -1232,8 +1250,8 @@ footer {
             position: absolute;
             top: 0;
             left: 0;
-            width: 21px;
-            height: 21px;
+            width: 17px;
+            height: 17px;
             @include border-radius(50%);
             @include box-sizing(border-box);
         }
@@ -1242,8 +1260,8 @@ footer {
             border: 1px solid #b5b5b5;
         }
         &::after {
-            background-color: #f15c60;
-            border: 1px solid #f15c60;
+            background-color: #eb3c55;
+            border: 1px solid #eb3c55;
             opacity: 0;
             visibility: hidden;
             @include transition(all 0.2s ease-in-out 0s);
@@ -1256,6 +1274,7 @@ footer {
         display: inline-block;
         height: 29px;
         padding: 0 22px;
+        font: 14px $lato-light;
         @include border-radius(3px);
         @include transition(all 0.2s ease-in-out);
         cursor: pointer;
@@ -1265,7 +1284,7 @@ footer {
         }
         &:hover {
             color: #fff;
-            background-color: #f15c60;
+            background-color: rgba(171, 171, 171, 0.35);
             span {
                 border-bottom-color: transparent;
             }
@@ -1276,7 +1295,7 @@ footer {
     }
     .active {
         color: #fff;
-        background-color: #f15c60;
+        background-color: #ababab;
         span {
             border-bottom-color: transparent;
         }
@@ -1285,6 +1304,7 @@ footer {
 
 .choose-price {
     margin-left: 155px;
+    font: 14px $lato-light;
     input {
         width: 135px;
         height: 29px;
@@ -1309,9 +1329,9 @@ footer {
 .top-line {
     margin: 0 0 20px;
     letter-spacing: 0.5px;
+    font-family: $lato-light;
     span {
         margin-right: 5px;
-        font-family: $lato-bold;
     }
     a {
         float: right;
@@ -1322,7 +1342,7 @@ footer {
         }
     }
     .active {
-        border-bottom-color: rgba(211, 92, 96, 0.9);
+        border-bottom-color: #eb3c55;
     }
 }
 
@@ -1367,18 +1387,39 @@ footer {
 
     h5 {
         margin: 12px 0 6px;
+        font: 16px $lato;
     }
     p {
         margin-bottom: 17px;
+        font: 13px $lato-light;
     }
     a {
         font: 16px $lato;
     }
     .btn {
-        font-size: 14px;
+        font-size: 13px;
         padding: 2px 10px;
-        width: 145px;
+        width: 134px;
         text-align: center;
+        font-family: $lato-light;
+        margin-left: 13px;
+        color: rgba(84, 84, 84, 0.62);
+        border: 1px solid rgba(84, 84, 84, 0.62);
+        @include border-radius(13px);
+
+        &:hover {
+            color: rgb(84, 84, 84);
+            border-color: rgb(84, 84, 84);
+        }
+    }
+    .btn-red {
+        color: rgba(235, 60, 85, 0.48);
+        border-color: rgba(235, 60, 85, 0.48);
+
+        &:hover {
+            color: rgb(235, 60, 85);
+            border-color: rgb(235, 60, 85);
+        }
     }
     > img {
         float: left;
@@ -1411,14 +1452,15 @@ footer {
     }
     .more {
         margin: 0 10px;
-        color: #2b87db;
+        color: #008adf;
     }
     .bookmarks {
         position: relative;
         z-index: 2;
+        display: inline-block;
         padding-left: 20px;
         margin: 0 10px;
-        color: #ce4a4e;
+        color: #eb3c55;
         line-height: 16px;
         &::before {
             content: '';
@@ -1442,7 +1484,7 @@ footer {
             color: #010101;
             text-align: center;
             a {
-                font: 13px $lato-light;
+                font-size: 13px;
                 border-bottom: 1px dashed #000;
                 &:hover {
                     border-bottom-color: transparent;
@@ -1606,16 +1648,23 @@ footer {
         left: 0;
         width: 100%;
         height: 2px;
-        background-color: rgba(211, 92, 96, 0.9);
+        background-color: #eb3c55;
         @include transition(all 0.2s ease-in-out);
     }
     .btn {
         padding: 0 3px;
         margin-left: 42px;
-        font-size: 14px;
-        color: #000;
+        font-size: 13px;
+        color: rgba(84, 84, 84, 0.62);
         line-height: 24px;
         letter-spacing: 0.4px;
+        border-color: rgba(84, 84, 84, 0.62);
+        cursor: pointer;
+
+        &:hover {
+            color: rgb(84, 84, 84);
+            border-color: rgb(84, 84, 84);
+        }
     }
 }
 
