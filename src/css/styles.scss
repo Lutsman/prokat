@@ -1331,6 +1331,11 @@ footer {
     @include border-radius(3px);
     &:hover {
         background-color: #effdff;
+
+        .hidden {
+            visibility: visible;
+            opacity: 1;
+        }
     }
     .goods-info__contacts {
         position: relative;

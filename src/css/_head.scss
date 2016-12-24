@@ -45,6 +45,10 @@ section, .container {
     border: 1px solid #d0d0d0;
     @include border-radius(3px);
 }
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+}
 
 /* ----------------------------------------------
  Fonts Paragrahps
