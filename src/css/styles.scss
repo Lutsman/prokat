@@ -2104,13 +2104,11 @@ footer {
         margin-left: 15px;
     }
     .visits {
-      text-decoration: underline;
   color: #000;
   font-family: "LatoWeb";
     }
     .accent {
         color: #eb3c55;
-        text-decoration: underline;
     }
     .fire-icon {
         position: relative;
@@ -2213,7 +2211,7 @@ footer {
     span {
         display: inline-block;
         vertical-align: top;
-        font: 14px $lato-thin;
+        font: 14px $lato-light;
         line-height: 41px;
     }
     a {
