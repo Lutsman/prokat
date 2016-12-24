@@ -59,6 +59,11 @@
     background-color: #008adf;
     border: 2px solid #008adf;
     @include border-radius(3px);
+
+    &:hover {
+        background-color: rgba(0, 138, 223, 0.66);
+        border: 2px solid rgba(0, 138, 223, 0);
+    }
 }
 
 .load-more-btn {
