@@ -2005,6 +2005,7 @@ footer {
 }
 .product__grey {
     color: #656565;
+    font-family: "LatoWebLight";
 }
 .product__about {
     text-align: justify;
@@ -2017,6 +2018,7 @@ footer {
 .product__info {
     margin-bottom: 25px;
     line-height: 20px;
+    font-family: "LatoWebLight";
     ul {
         width: 340px;
         span {
@@ -2052,7 +2054,7 @@ footer {
             text-align: center;
             line-height: 25px;
             a {
-                font: 13px $lato-light;
+                font: 13px $lato;
                 border-bottom: 1px dashed #000;
                 &:hover {
                     border-bottom-color: transparent;
@@ -2102,11 +2104,12 @@ footer {
         margin-left: 15px;
     }
     .visits {
-        color: #56697a;
-        text-decoration: underline;
+      text-decoration: underline;
+  color: #000;
+  font-family: "LatoWeb";
     }
     .accent {
-        color: #d35c60;
+        color: #eb3c55;
         text-decoration: underline;
     }
     .fire-icon {
@@ -2148,11 +2151,11 @@ footer {
         span {
             display: block;
             float: left;
-            width: 112px;
-            height: 76px;
+            width: 100px;
+            height: 64px;
             cursor: pointer;
             + span {
-                margin-left: 24px;
+                margin-left: 5px;
             }
         }
     }
@@ -2370,11 +2373,11 @@ footer {
     background-position: -256px -256px;
 }
 .heart-icon::before {
-    top: 2px;
-    left: -25px;
-    width: 15px;
-    height: 14px;
-    background-position: 0px 0px;
+  top: 2px;
+left: -25px;
+width: 18px;
+height: 14px;
+background-position: -383px 0px;
 }
 .fire-icon::before {
     left: 0;
