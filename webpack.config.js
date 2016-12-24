@@ -54,7 +54,7 @@ module.exports = function makeWebpackConfig() {
     
     // Output path from the view of the page
     // Uses webpack-dev-server in development
-    publicPath: isProd ? '/demo/prokat/' : 'http://localhost:8080/', // /dist/
+    publicPath: isProd ? '/' : 'http://localhost:8080/', // /dist/ demo/prokat/
     
     // Filename for entry points
     // Only adds hash in build mode

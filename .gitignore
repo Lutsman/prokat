@@ -1,7 +1,7 @@
 node_modules
-dist
-#dist/resources
-#dist/img
+#dist
+dist/resources
+dist/img
 coverage
 docs
 
