@@ -192,6 +192,7 @@ nav a {
     float: left;
     padding-top: 36px;
     margin-left: 60px;
+    color: #000;
     letter-spacing: 0.2px;
     a {
         position: relative;
@@ -320,7 +321,7 @@ nav a {
         margin-top: 10px;
         font: 18px $lato-boldItalic;
         text-align: center;
-        
+
         &::before, &::after {
             content: '';
             display: block;
@@ -2404,5 +2405,3 @@ Pop up
   overflow:hidden;
   z-index: 99;
 }*/
-
-
