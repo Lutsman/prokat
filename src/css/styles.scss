@@ -73,7 +73,17 @@
     font-size: 14px;
     line-height: 35px;
     text-align: center;
-    background-color: #b7b7b7;
+    background-color: #ddd;
+    @include border-radius(3px);
+}
+.load-more-btn:hover {
+    display: block;
+    width: 100%;
+    height: 35px;
+    font-size: 14px; 
+    line-height: 35px;
+    text-align: center;
+    background-color: #d1d1d1;
     @include border-radius(3px);
 }
 
