@@ -8,7 +8,7 @@
                     <p class="product__category heart-icon">{{$ctrl.productData.businessType}}</p>
                     <h4>{{$ctrl.productData.title}}</h4>
                     <p class="product__grey">{{$ctrl.productData.adress}}</p>
-                    <p class="product__price">{{$ctrl.productData.price}} ₽</p>
+                    <p class="product__price">{{$ctrl.productData.price}} {{$ctrl.getCurrency()}}</p>
                     <div class="product__info">
                         <p># Общая информация:</p>
                         <ul>
@@ -59,8 +59,8 @@
                     <div class="product__slider">
                         <div class="slide">
                             <img ng-repeat="slide in $ctrl.slider" ng-if="$ctrl.activeSlide === slide" ng-src="{{slide.slide.src}}" alt="img">
-                            <span ng-click="$ctrl.slidePrev()" class="arrow arrow-prev"></span>
-                            <span ng-click="$ctrl.slideNext()" class="arrow arrow-next"></span>
+                            <span ng-click="$ctrl.slidePrev()" class="arrow arrow-prev hidden"></span>
+                            <span ng-click="$ctrl.slideNext()" class="arrow arrow-next hidden"></span>
                         </div>
 
 

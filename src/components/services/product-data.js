@@ -5,7 +5,7 @@ class ProductData {
             title: 'Горный профессиональный велосипед двухподвес GT FURY',
             adress: 'г. Ростов-на-Дону, пр-т. Космонавтов, 17/1',
             price: '400',
-            currency: 'rus',
+            currency: '8381',
             vehicleType: 'Велосипед',
             trend: 'Горный',
             color: 'Синий',
