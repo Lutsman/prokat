@@ -10,6 +10,7 @@ import NavData from '../components/services/nav-data';
 import SearchAdvanceData from '../components/services/search-advance-data';
 import SearchFormData from '../components/services/search-form-data';
 import CatGoodsData from '../components/services/category-goods-data';
+import ProductData from '../components/services/product-data';
 
 import productComponent from '../components/product/product.component';
 import navbarComponent from '../components/navbar/navbar.component';
@@ -29,6 +30,7 @@ angular.module('product', ['ngAnimate', 'ngMap', 'socialLinks'])
     .service('searchAdvanceData', SearchAdvanceData)
     .service('searchFormData', SearchFormData)
     .service('catGoodsData', CatGoodsData)
+    .service('productData', ProductData)
     .component('product', productComponent)
     .component('navbar', navbarComponent)
     .component('searchAdvance', searchAdvanceComponent)
