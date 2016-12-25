@@ -66,12 +66,12 @@
 
 
                         <div class="slide-control" >
-                            <span ng-repeat="slide in $ctrl.sliderData" ng-click="$ctrl.setActiveSlide(slide, $index)"><img ng-src="{{slide.thumb.src}}" alt="slide-control"></span>
+                            <span ng-repeat="slide in $ctrl.slider" ng-click="$ctrl.setActiveSlide(slide, $index)"><img ng-src="{{slide.thumb.src}}" alt="slide-control"></span>
                         </div>
 
                     </div>
 
-                    <motion ng-repeat="motion in [0,1]" class="product__banner"></motion>
+                    <motion data="motion" ng-repeat="motion in $ctrl.motions" class="product__banner"></motion>
 
                 </div>
 
@@ -96,7 +96,7 @@
             <div class="product__more">
                 <p class="product__more__title">Похожие предложения</p>
 
-                <prod-offer ng-repeat="offer in [0,1,2,3,4]" class="product__more__offer"></prod-offer>
+                <prod-offer data="product" ng-repeat="product in $ctrl.similarProd" class="product__more__offer"></prod-offer>
             </div>
 
         </div><!--container-->
