@@ -4,5 +4,5 @@
 <a ng-href="{{$ctrl.data.href}}">
     <p class="product__more__goods-title">{{$ctrl.data.title}}</p>
     <p>{{$ctrl.data.adress}}</p>
-    <p class="product__more__price">{{$ctrl.data.price}} ₽</p>
+    <p class="product__more__price">{{$ctrl.data.price}} {{$ctrl.getCurrency()}}</p>
 </a>

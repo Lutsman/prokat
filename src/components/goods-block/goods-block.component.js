@@ -15,6 +15,9 @@ class GoodsBlockController {
 
         return arr[0];
     }
+    getCurrency (currency) {
+        return String.fromCharCode(currency);
+    }
 }
 
 const goodsBlockComponent = {

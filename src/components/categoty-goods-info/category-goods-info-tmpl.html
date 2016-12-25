@@ -3,7 +3,7 @@
 	<div>
 		<h5>{{$ctrl.data.name}}</h5>
 		<p class="adress">{{$ctrl.data.adress}}</p>
-		<p class="price">{{$ctrl.data.price}} {{$ctrl.data.currency}}</p>
+		<p class="price">{{$ctrl.data.price}} {{$ctrl.getCurrency()}}</p>
 		<p>{{$ctrl.data.description}}</p>
 		<div class="goods-info__links">
 			<a class="more" href="#">{{$ctrl.langServiceData.more}}</a>
@@ -18,7 +18,7 @@
 			<span ng-show="!$ctrl.showTel">{{$ctrl.langServiceData.or}}</span>
 			<a ng-click="$ctrl.showTel = !$ctrl.showTel" ng-show="!$ctrl.showTel" href="javascript:void(0)">{{$ctrl.langServiceData.showTel}}</a>
 			<a ng-click="$ctrl.showTel = !$ctrl.showTel" ng-show="$ctrl.showTel" href="javascript:void(0)">{{$ctrl.langServiceData.hideTel}}</a>
-			<span class="goods-info__phone" ng-show="$ctrl.showTel"><a href="tel:+7234567890">+7234567890</a></span>
+			<span class="goods-info__phone" ng-show="$ctrl.showTel"><a href="tel:{{$ctrl.data.phone}}">{{$ctrl.parsePhone($ctrl.data.phone)}}</a></span>
 		</p>
 
 		<img ng-src="{{$ctrl.data.traderImg}}" alt="company-logo">

@@ -11,7 +11,7 @@ class PaginationNavController {
 
     setCurrPage (index) {
         this.currPage = index;
-        this.repeater = this.getRepeaterArr();
+        //this.repeater = this.getRepeaterArr();
     }
     getStartPos () {
         return Math.floor(this.currPage / this.pageLimit) * this.pageLimit;
