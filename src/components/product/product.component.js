@@ -1,5 +1,5 @@
 class ProductController {
-    constructor (NgMap) {
+    constructor (NgMap, productData) {
         this.isHiddenAppNav = true;
         this.ngMap = NgMap;
         this.langServiceData = {
@@ -12,7 +12,6 @@ class ProductController {
             showTel: 'показать номер',
             hideTel: 'скрыть номер'
         };
-
         this.sliderData = [
             {
                 id: 0,
@@ -49,8 +48,18 @@ class ProductController {
                 thumb: {
                     src: 'img/product_slider_control.jpg'
                 }
+            },
+            {
+                id: 3,
+                slide: {
+                    src: 'img/product_slider_control.jpg'
+                },
+                thumb: {
+                    src: 'img/product_slider_control.jpg'
+                }
             }
         ];
+        this.productData = productData.product;
 
 
         this.activeSlide = this.sliderData[0];
