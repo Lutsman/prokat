@@ -2103,10 +2103,12 @@ footer {
     line-height: 14px;
     span {
         margin-left: 15px;
+        font-family: "LatoWebLight";
+        color: #656565;
     }
     .visits {
-        color: #000;
-        font-family: $lato;
+      font-family: "LatoWebLight";
+      color: #656565;
     }
     .accent {
         color: #eb3c55;
