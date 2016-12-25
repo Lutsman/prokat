@@ -80,7 +80,7 @@
     display: block;
     width: 100%;
     height: 35px;
-    font-size: 14px; 
+    font-size: 14px;
     line-height: 35px;
     text-align: center;
     background-color: #d1d1d1;
@@ -942,6 +942,7 @@ footer {
     }
     p {
         padding: 0 20px;
+        padding-top: 5px;
     }
 
     .link-box__link-info {
@@ -962,7 +963,7 @@ footer {
     }
     .price, .title {
         margin-bottom: 2px;
-        font: 20px $dindisplay-bold;
+        font: 16px $lato-bold;
         letter-spacing: 0.5px;
     }
     .place {
