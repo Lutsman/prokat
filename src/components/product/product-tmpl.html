@@ -6,38 +6,33 @@
             <div class="product">
                 <div>
                     <p class="product__category heart-icon">{{$ctrl.productData.businessType}}</p>
-                    <h4>Горный профессиональный велосипед двухподвес GT FURY</h4>
-                    <p class="product__grey">г. Ростов-на-Дону, пр-т. Космонавтов, 17/1</p>
-                    <p class="product__price">400 <i class="fa fa-rub" aria-hidden="true"></i></p>
+                    <h4>{{$ctrl.productData.title}}</h4>
+                    <p class="product__grey">{{$ctrl.productData.adress}}</p>
+                    <p class="product__price">{{$ctrl.productData.price}} <i class="fa fa-rub" aria-hidden="true"></i></p>
 
                     <div class="product__info">
                         <p># Общая информация:</p>
                         <ul>
-                            <li><span>Тип техники:</span> <span>Велосипед</span></li>
-                            <li><span>Направление:</span> <span>Горный</span></li>
-                            <li><span>Цвет:</span> <span>Синий</span></li>
-                            <li><span>Размер:</span> <span>S</span></li>
-                            <li><span>Колеса:</span> <span>26’’</span></li>
-                            <li><span>Вилка:</span> <span>180 мм</span></li>
-                            <li><span>Аммортизатор:</span> <span>80 мм</span></li>
-                            <li><span>Кол-во скоростей:</span> <span>13</span></li>
-                            <li><span>Тормоза:</span> <span>Дисковые</span></li>
-                            <li><span>Система:</span> <span>С успокоителем</span></li>
-                            <li><span>Наличие:</span> <span>Есть</span></li>
+                            <li><span>Тип техники:</span> <span>{{$ctrl.productData.vehicleType}}</span></li>
+                            <li><span>Направление:</span> <span>{{$ctrl.productData.trend}}</span></li>
+                            <li><span>Цвет:</span> <span>{{$ctrl.productData.color}}</span></li>
+                            <li><span>Размер:</span> <span>{{$ctrl.productData.size}}</span></li>
+                            <li><span>Колеса:</span> <span>{{$ctrl.productData.wheelSize}}’’</span></li>
+                            <li><span>Вилка:</span> <span>{{$ctrl.productData.forkSize}} мм</span></li>
+                            <li><span>Аммортизатор:</span> <span>{{$ctrl.productData.absorberSize}} мм</span></li>
+                            <li><span>Кол-во скоростей:</span> <span>{{$ctrl.productData.gearsCount}}</span></li>
+                            <li><span>Тормоза:</span> <span>{{$ctrl.productData.brakesType}}</span></li>
+                            <li><span>Система:</span> <span>{{$ctrl.productData.brakesSystem}}</span></li>
+                            <li><span>Наличие:</span> <span>{{$ctrl.productData.avaliablity}}</span></li>
                         </ul>
 
                     </div>
 
-                    <p class="product__grey product__about">С этим байком, рама которого аналогична верхней модели, вы будете не только быстрее на
-                        даунхильных трассах, но и сможете крепко подружиться в байк-парках. Если вы тот, кто не намерен
-                        отступать перед большими трамплинами и самым сложным уклоном или рельефом... геометрия рамы и
-                        подвеска Fury Expert, проверенные и уже побеждавшие в каньонах Юты, превращают гравитацию из
-                        вашего соперника в партнера. Каждый компонент этого байка предназначен для бескомпромиссного и
-                        продолжительного катания в больших горах. С Fury Expert вы станете быстрее, храбрее, и счастливее.</p>
+                    <p class="product__grey product__about">{{$ctrl.productData.description}}</p>
 
                     <div class="booking__block">
                         <div class="booking__logo">
-                            <img src="img/trader_logo_1.png" alt="company logo">
+                            <img ng-src="{{$ctrl.productData.trader.logoSrc}}" alt="{{$ctrl.productData.trader.logoTitle}}">
                         </div>
                         <div class="booking">
                             <a href="#" class="booking-btn">{{$ctrl.langServiceData.booking}}</a>
@@ -45,7 +40,7 @@
                                 <span ng-show="!$ctrl.showTel">{{$ctrl.langServiceData.or}}</span>
                                 <a ng-click="$ctrl.showTel = !$ctrl.showTel" ng-show="!$ctrl.showTel" href="javascript:void(0)">{{$ctrl.langServiceData.showTel}}</a>
                                 <a ng-click="$ctrl.showTel = !$ctrl.showTel" ng-show="$ctrl.showTel" href="javascript:void(0)">{{$ctrl.langServiceData.hideTel}}</a>
-                                <span class="booking__phone" ng-show="$ctrl.showTel"><a href="tel:+7234567890">+7234567890</a></span>
+                                <span class="booking__phone" ng-show="$ctrl.showTel"><a href="tel:{{$ctrl.productData.trader.phone}}">{{$ctrl.productData.trader.phone}}</a></span>
                             </p>
 
                         </div>
@@ -56,20 +51,22 @@
 
                 <div>
                     <div class="product__statistics">
-                        <span class="visits">Просмотров: всего 5520, за сегодня 213</span>
-                        <span class="accent fire-icon">Выделение</span>
-                        <span class="accent diamond-small-icon">Премиум</span>
-                        <span>сегодня, 11:00</span>
+                        <a href="#" class="visits">Просмотров: всего {{$ctrl.productData.statistic.viewsAll}}, за сегодня {{$ctrl.productData.statistic.viewsToday}}</a>
+                        <a href="#" class="accent fire-icon">Выделение</a>
+                        <a href="#" class="accent diamond-small-icon">Премиум</a>
+                        <span>{{$ctrl.productData.statistic.addDate}}, {{$ctrl.productData.statistic.addTime}}</span>
                     </div>
 
                     <div class="product__slider">
                         <div class="slide">
-                            <img ng-repeat="slide in $ctrl.sliderData" ng-if="$ctrl.activeSlide === slide" ng-src="{{slide.slide.src}}" alt="img">
+                            <img ng-repeat="slide in $ctrl.slider" ng-if="$ctrl.activeSlide === slide" ng-src="{{slide.slide.src}}" alt="img">
+                            <span ng-click="$ctrl.slidePrev()" class="arrow-prev">prev</span>
+                            <span ng-click="$ctrl.slideNext()" class="arrow-next">next</span>
                         </div>
 
 
                         <div class="slide-control" >
-                            <span ng-repeat="slide in $ctrl.sliderData" ng-click="$ctrl.setActiveSlide(slide)"><img ng-src="{{slide.thumb.src}}" alt="slide-control"></span>
+                            <span ng-repeat="slide in $ctrl.sliderData" ng-click="$ctrl.setActiveSlide(slide, $index)"><img ng-src="{{slide.thumb.src}}" alt="slide-control"></span>
                         </div>
 
                     </div>

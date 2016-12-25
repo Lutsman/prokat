@@ -62,12 +62,26 @@ class ProductController {
         this.productData = productData.product;
 
 
-        this.activeSlide = this.sliderData[0];
+        this.slider = this.sliderData;
+        this.activeSlideIndex = 0;
+        this.activeSlide = this.slider[0];
     }
 
-    setActiveSlide (slide) {
+    setActiveSlide (slide, index) {
+        this.activeSlideIndex = index;
         this.activeSlide = slide;
     }
+    slidePrev () {
+        let index = this.activeSlideIndex - 1 >= 0 ?  this.activeSlideIndex - 1 : 0;
+
+        this.setActiveSlide(this.slider[index], index);
+    }
+    slideNext () {
+        let index = this.activeSlideIndex + 1 < this.slider.length ?  this.activeSlideIndex + 1 : this.slider.length - 1;
+
+        this.setActiveSlide(this.slider[index], index);
+    }
+
 }
 
 const ProductComponent = {
