@@ -5,6 +5,9 @@ class ProdOfferController {
 }
 
 const prodOfferComponent = {
+    bindings: {
+        data: '<'
+    },
     template: require('./prod-offer-tmpl.html'),
     controller: ProdOfferController
 };

@@ -30,9 +30,110 @@ class ProductData {
                 isAccent: true,
                 addDate: 'сегодня',
                 addTime: '11:00'
-            }
-
+            },
+            slider: [
+                {
+                    id: 0,
+                    slide: {
+                        src: 'img/product_slide_img.jpg'
+                    },
+                    thumb: {
+                        src: 'img/product_slider_control.jpg'
+                    }
+                },
+                {
+                    id: 1,
+                    slide: {
+                        src: 'img/product_slider_control.jpg'
+                    },
+                    thumb: {
+                        src: 'img/product_slider_control.jpg'
+                    }
+                },
+                {
+                    id: 2,
+                    slide: {
+                        src: 'img/product_slide_img.jpg'
+                    },
+                    thumb: {
+                        src: 'img/product_slider_control.jpg'
+                    }
+                },
+                {
+                    id: 3,
+                    slide: {
+                        src: 'img/product_slider_control.jpg'
+                    },
+                    thumb: {
+                        src: 'img/product_slider_control.jpg'
+                    }
+                },
+                {
+                    id: 3,
+                    slide: {
+                        src: 'img/product_slider_control.jpg'
+                    },
+                    thumb: {
+                        src: 'img/product_slider_control.jpg'
+                    }
+                }
+            ]
         };
+
+        this.similarProd = [
+            {
+                title: 'Велосипед GT FURY ELITE',
+                adress: 'ул. Пушкинская 25А',
+                img: 'img/product_more.jpg',
+                href: '#',
+                price: '350'
+            },
+            {
+                title: 'Велосипед GT FURY ELITE',
+                adress: 'ул. Пушкинская 25А',
+                img: 'img/product_more.jpg',
+                href: '#',
+                price: '350'
+            },
+            {
+                title: 'Велосипед GT FURY ELITE',
+                adress: 'ул. Пушкинская 25А',
+                img: 'img/product_more.jpg',
+                href: '#',
+                price: '350'
+            },
+            {
+                title: 'Велосипед GT FURY ELITE',
+                adress: 'ул. Пушкинская 25А',
+                img: 'img/product_more.jpg',
+                href: '#',
+                price: '350'
+            },
+            {
+                title: 'Велосипед GT FURY ELITE',
+                adress: 'ул. Пушкинская 25А',
+                img: 'img/product_more.jpg',
+                href: '#',
+                price: '350'
+            }
+        ];
+
+        this.advertisement = [
+            {
+                title: 'Рама GT FURY ELITE',
+                description: 'В сентябре выгода до 15000 руб. только у нас. Количество ограничено!',
+                img: 'img/product_banner.jpg',
+                href: '#',
+                phone: '(495) 241-87-96'
+            },
+            {
+                title: 'Рама GT FURY ELITE',
+                description: 'В сентябре выгода до 15000 руб. только у нас. Количество ограничено!',
+                img: 'img/product_banner.jpg',
+                href: '#',
+                phone: '(495) 241-87-96'
+            }
+        ];
     }
 }
 

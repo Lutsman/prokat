@@ -5,6 +5,9 @@ class MotionController {
 }
 
 const motionComponent = {
+    bindings: {
+        data: '<'
+    },
     template: require('./motion-tmpl.html'),
     controller: MotionController
 };

@@ -12,62 +12,30 @@ class ProductController {
             showTel: 'показать номер',
             hideTel: 'скрыть номер'
         };
-        this.sliderData = [
-            {
-                id: 0,
-                slide: {
-                    src: 'img/product_slide_img.jpg'
-                },
-                thumb: {
-                    src: 'img/product_slider_control.jpg'
-                }
-            },
-            {
-                id: 1,
-                slide: {
-                    src: 'img/product_slider_control.jpg'
-                },
-                thumb: {
-                    src: 'img/product_slider_control.jpg'
-                }
-            },
-            {
-                id: 2,
-                slide: {
-                    src: 'img/product_slide_img.jpg'
-                },
-                thumb: {
-                    src: 'img/product_slider_control.jpg'
-                }
-            },
-            {
-                id: 3,
-                slide: {
-                    src: 'img/product_slider_control.jpg'
-                },
-                thumb: {
-                    src: 'img/product_slider_control.jpg'
-                }
-            },
-            {
-                id: 3,
-                slide: {
-                    src: 'img/product_slider_control.jpg'
-                },
-                thumb: {
-                    src: 'img/product_slider_control.jpg'
-                }
-            }
-        ];
         this.productData = productData.product;
+        this.similarProd = productData.similarProd;
+        this.motions = productData.advertisement;
 
-
-        this.activeSlide = this.sliderData[0];
+        this.slider = this.productData.slider;
+        this.activeSlideIndex = 0;
+        this.activeSlide = this.slider[this.activeSlideIndex];
     }
 
-    setActiveSlide (slide) {
+    setActiveSlide (slide, index) {
+        this.activeSlideIndex = index;
         this.activeSlide = slide;
     }
+    slidePrev () {
+        let index = this.activeSlideIndex - 1 >= 0 ?  this.activeSlideIndex - 1 : 0;
+
+        this.setActiveSlide(this.slider[index], index);
+    }
+    slideNext () {
+        let index = this.activeSlideIndex + 1 < this.slider.length ?  this.activeSlideIndex + 1 : this.slider.length - 1;
+
+        this.setActiveSlide(this.slider[index], index);
+    }
+
 }
 
 const ProductComponent = {
