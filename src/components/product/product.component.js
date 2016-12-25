@@ -12,6 +12,7 @@ class ProductController {
             showTel: 'показать номер',
             hideTel: 'скрыть номер'
         };
+        //this.productData = productData;
         this.productData = productData.product;
         this.similarProd = productData.similarProd;
         this.motions = productData.advertisement;
@@ -41,6 +42,9 @@ class ProductController {
             + str.slice(5, 8) + '-' + str.slice(8, 10) + '-' + str.slice(10);
 
         return newStr;
+    }
+    getCurrency () {
+        return String.fromCharCode(this.productData.currency);
     }
 
 }

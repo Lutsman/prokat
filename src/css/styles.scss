@@ -2133,6 +2133,13 @@ footer {
         height: 346px;
         overflow: hidden;
 
+        &:hover {
+            .hidden {
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+
         img {
             position: absolute;
             z-index: 2;
@@ -2171,6 +2178,7 @@ footer {
         margin-top: -11px;
         background-image: url("../img/sprite.png");
         cursor: pointer;
+        @include transition(all 0.2s ease-in-out);
     }
     .arrow-prev {
         left: 15px;
