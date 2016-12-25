@@ -1,8 +1,8 @@
 <a ng-href="{{$ctrl.data.href}}">
     <img ng-src="{{$ctrl.data.img}}" alt="{{$ctrl.data.title}}">
 </a>
-<a href="#">
-    <p class="product__more__goods-title">Велосипед GT FURY ELITE</p>
-    <p>ул. Пушкинская 25А</p>
-    <p class="product__more__price">500 ₽</p>
+<a ng-href="{{$ctrl.data.href}}">
+    <p class="product__more__goods-title">{{$ctrl.data.title}}</p>
+    <p>{{$ctrl.data.adress}}</p>
+    <p class="product__more__price">{{$ctrl.data.price}} ₽</p>
 </a>

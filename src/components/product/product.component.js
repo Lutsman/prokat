@@ -36,6 +36,13 @@ class ProductController {
         this.setActiveSlide(this.slider[index], index);
     }
 
+    parsePhone (str) {
+        let newStr = str.slice(0, 2) + '(' + str.slice(2, 5) + ')'
+            + str.slice(5, 8) + '-' + str.slice(8, 10) + '-' + str.slice(10);
+
+        return newStr;
+    }
+
 }
 
 const ProductComponent = {
