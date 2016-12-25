@@ -58,11 +58,11 @@ module.exports = function makeWebpackConfig() {
     
     // Filename for entry points
     // Only adds hash in build mode
-    filename: isProd ? 'js/[name].[hash].js' : '[name].bundle.js',
+    filename: isProd ? 'js/[name].js' : '[name].bundle.js',
     
     // Filename for non-entry points
     // Only adds hash in build mode
-    chunkFilename: isProd ? '[name].[hash].js' : '[name].bundle.js'
+    chunkFilename: isProd ? '[name].js' : '[name].bundle.js'
   };
   
   /**
