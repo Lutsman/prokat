@@ -1,7 +1,7 @@
 class BannerController {
     constructor () {
         this.data = {
-            img: 'img/banner_1.jpg',
+            img: 'img/banner.png',
             href: ''
         }
     }
