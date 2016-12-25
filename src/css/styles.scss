@@ -2100,7 +2100,8 @@ footer {
 .product__statistics {
     margin-bottom: 20px;
     font-size: 12px;
-    span + span {
+    line-height: 14px;
+    span {
         margin-left: 15px;
     }
     .visits {
@@ -2110,14 +2111,17 @@ footer {
     .accent {
         color: #eb3c55;
     }
-    .fire-icon {
+    .fire-icon, .diamond-small-icon {
+        display: inline-block;
         position: relative;
         z-index: 2;
         padding-left: 13px;
+        margin-left: 15px;
+    }
+    .fire-icon {
+        padding-left: 13px;
     }
     .diamond-small-icon {
-        position: relative;
-        z-index: 2;
         padding-left: 22px;
     }
 }
@@ -2156,6 +2160,25 @@ footer {
                 margin-left: 5px;
             }
         }
+    }
+    .arrow {
+        display: block;
+        position: absolute;
+        z-index: 2;
+        top: 50%;
+        width: 22px;
+        height: 23px;
+        margin-top: -11px;
+        background-image: url("../img/sprite.png");
+        cursor: pointer;
+    }
+    .arrow-prev {
+        left: 15px;
+        background-position: -256px -64px;
+    }
+    .arrow-next {
+        right: 15px;
+        background-position: -320px -64px;
     }
 }
 
