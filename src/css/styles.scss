@@ -2005,7 +2005,7 @@ footer {
 }
 .product__grey {
     color: #656565;
-    font-family: "LatoWebLight";
+    font-family: $lato-light;
 }
 .product__about {
     text-align: justify;
@@ -2018,7 +2018,7 @@ footer {
 .product__info {
     margin-bottom: 25px;
     line-height: 20px;
-    font-family: "LatoWebLight";
+    font-family: $lato-light;
     ul {
         width: 340px;
         span {
@@ -2104,8 +2104,8 @@ footer {
         margin-left: 15px;
     }
     .visits {
-  color: #000;
-  font-family: "LatoWeb";
+        color: #000;
+        font-family: $lato;
     }
     .accent {
         color: #eb3c55;
@@ -2371,11 +2371,11 @@ footer {
     background-position: -256px -256px;
 }
 .heart-icon::before {
-  top: 2px;
-left: -25px;
-width: 18px;
-height: 14px;
-background-position: -383px 0px;
+    top: 2px;
+    left: -25px;
+    width: 18px;
+    height: 14px;
+    background-position: -383px 0px;
 }
 .fire-icon::before {
     left: 0;
