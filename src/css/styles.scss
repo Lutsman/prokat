@@ -304,8 +304,11 @@ nav a {
     height: 590px;
     background-image: url(../img/articles-pageheader.jpg);
 }
+.events__pageheader {
+    height: 590px;
+    background-image: url(../img/events_pageheader.jpg);
+}
 .articles__title {
-    width: 590px;
     margin: 130px auto 0;
     font: 38px $dindisplay-bold;
     line-height: 38px;
@@ -321,7 +324,8 @@ nav a {
         display: block;
         position: relative;
         z-index: 2;
-        margin-top: 10px;
+        width: 590px;
+        margin: 10px auto 0;
         font: 18px $lato-boldItalic;
         text-align: center;
 
@@ -341,6 +345,11 @@ nav a {
         &::after {
             right: 0;
         }
+    }
+}
+.events__title {
+    h1, p {
+        text-transform: uppercase;
     }
 }
 
@@ -912,15 +921,6 @@ footer {
         + div {
             margin-right: 0;
         }
-        p:last-of-type {
-            margin-top: 13px;
-        }
-        p:nth-of-type(3) {
-            margin-top: 7px;
-        }
-        .title {
-            margin-bottom: 0;
-        }
     }
     a {
         display: block;
@@ -935,8 +935,7 @@ footer {
         }
     }
     p {
-        padding: 0 20px;
-        padding-top: 5px;
+        padding: 5px 20px 0;
     }
 
     .link-box__link-info {
@@ -954,6 +953,12 @@ footer {
     }
     img {
         margin-bottom: 12px;
+    }
+    .data {
+        padding-top: 0;
+        + p {
+            margin-top: 5px;
+        }
     }
     .price, .title {
         margin-bottom: 2px;
@@ -1046,9 +1051,10 @@ footer {
 }
 
 .offers-box {
-    float: left;
-    width: 25%;
-    padding: 0 30px;
+    margin-bottom: 75px;
+    &:last-of-type {
+        margin-bottom: 0;
+    }
     h3 {
         margin-bottom: 11px;
     }

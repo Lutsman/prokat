@@ -2,6 +2,14 @@
     //display: none;
 }
 
+main-page {
+    .offers-box {
+        float: left;
+        width: 25%;
+        padding: 0 30px;
+    }
+}
+
 custom-select {
     a {
         display: block;
@@ -108,17 +116,8 @@ articles {
     .content {
         padding: 25px 0 0;
     }
-    .offers-box {
-        float: none;
-        width: 100%;
-        padding: 0;
-        margin-bottom: 75px;
-        &:last-of-type {
-            margin-bottom: 0;
-        }
-    }
 }
-articles-block {
+articles-block, events-block {
     display: block;
     margin-bottom: 23px;
     .link-box {
