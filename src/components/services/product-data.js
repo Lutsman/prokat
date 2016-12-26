@@ -86,35 +86,40 @@ class ProductData {
                 adress: 'ул. Пушкинская 25А',
                 img: 'img/product_more.jpg',
                 href: '#',
-                price: '350'
+                price: '350',
+                currency: '8381'
             },
             {
                 title: 'Велосипед GT FURY ELITE',
                 adress: 'ул. Пушкинская 25А',
                 img: 'img/product_more.jpg',
                 href: '#',
-                price: '350'
+                price: '350',
+                currency: '8381'
             },
             {
                 title: 'Велосипед GT FURY ELITE',
                 adress: 'ул. Пушкинская 25А',
                 img: 'img/product_more.jpg',
                 href: '#',
-                price: '350'
+                price: '350',
+                currency: '8381'
             },
             {
                 title: 'Велосипед GT FURY ELITE',
                 adress: 'ул. Пушкинская 25А',
                 img: 'img/product_more.jpg',
                 href: '#',
-                price: '350'
+                price: '350',
+                currency: '8381'
             },
             {
                 title: 'Велосипед GT FURY ELITE',
                 adress: 'ул. Пушкинская 25А',
                 img: 'img/product_more.jpg',
                 href: '#',
-                price: '350'
+                price: '350',
+                currency: '8381'
             }
         ];
 

@@ -2,6 +2,9 @@ class ProdOfferController {
     constructor () {
 
     }
+    getCurrency () {
+        return String.fromCharCode(this.data.currency);
+    }
 }
 
 const prodOfferComponent = {

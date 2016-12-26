@@ -12,7 +12,7 @@
 	<div ng-repeat="goodsCard in goodsGroup.groupArr">
 		<a href="javascript:void(0)">
 			<img ng-src="{{goodsCard.img}}" alt="{{goodsCard.imgTitle}}">
-			<p class="price">{{goodsCard.price}} &#8381;</p>
+			<p class="price">{{goodsCard.price}} {{$ctrl.getCurrency(goodsCard.currency)}}</p>
 			<p>{{goodsCard.name}}</p>
 			<p class="place">{{goodsCard.adress}}</p>
 			<p>

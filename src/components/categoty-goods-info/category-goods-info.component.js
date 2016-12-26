@@ -11,6 +11,15 @@ class CategoryGoodsInfoController {
             hideTel: 'скрыть номер'
         };
     }
+    parsePhone (str) {
+        let newStr = str.slice(0, 2) + '(' + str.slice(2, 5) + ')'
+            + str.slice(5, 8) + '-' + str.slice(8, 10) + '-' + str.slice(10);
+
+        return newStr;
+    }
+    getCurrency () {
+        return String.fromCharCode(this.data.currency);
+    }
 }
 
 const categoryGoodsInfoComponent = {
