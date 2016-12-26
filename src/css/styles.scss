@@ -105,7 +105,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    
+
 }
 header {
     font-family: $lato-light;
@@ -309,7 +309,7 @@ nav a {
 }
 
 .articles__pageheader {
-    height: 590px;
+    height: 631px;
     background-image: url(../img/articles-pageheader.jpg);
 }
 .articles-inner__pageheader {
@@ -321,8 +321,8 @@ nav a {
     }
 }
 .events__pageheader {
-    height: 590px;
-    padding-top: 90px;
+    height: 631px;
+    padding-top: 131px;
     background-image: url(../img/events_pageheader.jpg);
     .articles__title {
         margin-top: 145px;
