@@ -17,7 +17,7 @@
 		|range :($ctrl.dataPagination.currPage * $ctrl.dataPagination.goodsPerPage):($ctrl.dataPagination.currPage * $ctrl.dataPagination.goodsPerPage + 4)"
 							 data="good"></category-goods-info>
 
-		<banner></banner>
+		<banner data="$ctrl.bannerData"></banner>
 
 		<category-goods-info ng-repeat="good in $ctrl.dataGoods
 		|sort :$ctrl.sorter.name :$ctrl.sorter.reverse

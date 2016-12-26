@@ -4,6 +4,12 @@ class CategoryController {
 
         this.dataGoods = [];
 
+        this.bannerData = {
+            title: '',
+            img: 'img/banner.png',
+            href: ''
+        };
+
         this.dataPagination = {
             goodsPerPage: 8,
             currPage: 0,
