@@ -2,7 +2,8 @@
     //display: none;
 }
 
-main-page {
+.main-page {
+    display: block;
     .offers-box {
         float: left;
         width: 25%;
@@ -111,7 +112,7 @@ category-goods-info {
     }
 }
 
-articles {
+.articles, .events {
     display: block;
     .content {
         padding: 25px 0 0;
