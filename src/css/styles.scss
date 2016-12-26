@@ -75,16 +75,10 @@
     text-align: center;
     background-color: #ddd;
     @include border-radius(3px);
-}
-.load-more-btn:hover {
-    display: block;
-    width: 100%;
-    height: 35px;
-    font-size: 14px;
-    line-height: 35px;
-    text-align: center;
-    background-color: #d1d1d1;
-    @include border-radius(3px);
+
+    &:hover {
+        background-color: #d1d1d1;
+    }
 }
 
 /* ----------------------------------------------
@@ -2114,12 +2108,12 @@ footer {
     line-height: 14px;
     span {
         margin-left: 15px;
-        font-family: "LatoWebLight";
+        font-family: $lato-light;
         color: #656565;
     }
     .visits {
-      font-family: "LatoWebLight";
-      color: #656565;
+        font-family: $lato-light;
+        color: #656565;
     }
     .accent {
         color: #eb3c55;
