@@ -958,6 +958,7 @@ footer {
     }
     p {
         padding: 5px 20px 0;
+        font-family: $lato-light;
     }
 
     .link-box__link-info {
@@ -979,25 +980,25 @@ footer {
         }
     }
     .price, .title {
-        margin-bottom: 2px;
-        font: 16px $lato-bold;
+        margin-bottom: 7px;
+        font: 16px $lato;
         letter-spacing: 0.5px;
     }
     .place {
-        position: relative;
-        z-index: 2;
-        padding-left: 40px;
-        margin-top: 22px;
-        margin-bottom: 18px;
+      position: relative;
+      z-index: 2;
+      padding-left: 40px;
+      margin-top: 22px;
+      margin-bottom: 18px;
         &::before {
-            content: '';
-            display: block;
-            position: absolute;
-            z-index: 2;
-            top: 0;
-            left: 20px;
-            width: 16px;
-            height: 20px;
+          content: '';
+  display: block;
+  position: absolute;
+  z-index: 2;
+  top: 4px;
+  left: 20px;
+  width: 16px;
+  height: 20px;
             background-image: url("../img/sprite.png");
             background-position: -256px 1px;
         }
@@ -1038,7 +1039,7 @@ footer {
     p {
         float: left;
         margin-top: 5px;
-        font-family: $lato-medium;
+        font-family: $lato;
         span {
             display: block;
         }
@@ -2495,7 +2496,7 @@ footer {
     position: relative;
     z-index: 2;
     margin-right: 15px;
-    font: 14px $lato;
+    font: 14px $lato-light;
     color: #3a3a3a;
     line-height: 16px;
     &::before {
