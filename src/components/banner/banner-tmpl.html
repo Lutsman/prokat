@@ -1,5 +1,7 @@
 <!-- <span ng-click="$ctrl.isHidden = false">open</span> -->
 <div ng-if="!$ctrl.isHidden" class="banner">
-	<img ng-src="{{$ctrl.data.img}}" alt="banner">
+	<a ng-href="{{$ctrl.data.href}}">
+		<img ng-src="{{$ctrl.data.img}}" alt="{{$ctrl.data.title}}">
+	</a>
 	<span ng-click="$ctrl.isHidden = true" class="close"></span>
 </div>
