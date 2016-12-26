@@ -1157,9 +1157,9 @@ footer {
     color: #3a3a3a; }
   .link-box img {
     margin-bottom: 12px; }
-  .link-box .data {
+  .link-box .date {
     padding-top: 0; }
-    .link-box .data + p {
+    .link-box .date + p {
       margin-top: 5px; }
   .link-box .price, .link-box .title {
     margin-bottom: 2px;
