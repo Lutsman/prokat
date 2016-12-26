@@ -37,7 +37,9 @@ module.exports = function makeWebpackConfig() {
   config.entry = isTest ? {} : {
     appMain: './src/js/main-page',
     appCat: './src/js/category',
-    appProd: './src/js/product'
+    appProd: './src/js/product',
+    appArticles: './src/js/articles',
+    appAddOffer: './src/js/add-offer'
     //'resources/img/': './src/resources/img/'
     //'css/style': './src/css/app.scss'
   };
@@ -224,14 +226,14 @@ module.exports = function makeWebpackConfig() {
         }),
         new HtmlWebpackPlugin({
             title: 'add-offer',
-            chunks: [],
+            chunks: ['appAddOffer'],
             template: './src/add-offer.html',
             inject: 'body',
             filename: 'add-offer.html'
         }),
         new HtmlWebpackPlugin({
           title: 'articles',
-          chunks: [],
+          chunks: ['appArticles'],
           template: './src/articles.html',
           inject: 'body',
           filename: 'articles.html'
