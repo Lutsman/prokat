@@ -1,6 +1,8 @@
 class ArticlesData {
     constructor() {
+        this.articles = [
 
+        ];
     }
 }
 

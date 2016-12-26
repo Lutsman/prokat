@@ -2257,6 +2257,18 @@ footer {
     margin-bottom: 20px;
     background-image: url("../img/product_map.jpg");
     background-size: cover;
+    cursor: pointer;
+
+    > div {
+        pointer-events: none;
+    }
+    &.active {
+        cursor: default;
+
+        > div{
+            pointer-events: auto;
+        }
+    }
 }
 
 .product__social {

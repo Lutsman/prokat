@@ -78,7 +78,7 @@
 
             <!--<div class="product__map"></div>-->
             <div map-lazy-load="https://maps.googleapis.com/maps/api/js?key=AIzaSyDH3hC07zDykGfQWp4D3xBuwpVX8nU2s9M">
-                <ng-map center="[40.74, -74.18]" class="product__map">
+                <ng-map ng-class="{'active': $ctrl.isActiveMap}" ng-click="$ctrl.isActiveMap = true" ng-mouseleave="$ctrl.isActiveMap = false" center="[40.74, -74.18]" class="product__map">
                     <marker position="[40.74, -74.18]"></marker>
                 </ng-map>
             </div>
