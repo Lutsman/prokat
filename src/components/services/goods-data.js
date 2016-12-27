@@ -19,9 +19,9 @@ class GoodsData {
                             traderTitle: '100% Спорта'
                         },
                         {
-                            name: 'Детский велокат COMMENCAL EL CAMINO',
+                            name: 'Детский велокат COMMENCAL EL...',
                             img: 'img/goods_photo_2.jpg',
-                            imgTitle: 'Детский велокат COMMENCAL EL CAMINO',
+                            imgTitle: 'Детский велокат COMMENCAL EL...',
                             price: 150,
                             currency: '8381',
                             adress: 'пр-т Шолохова, 112',
