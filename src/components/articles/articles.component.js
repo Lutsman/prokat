@@ -1,7 +1,8 @@
 class ArticlesController {
-    constructor() {
+    constructor(articlesData) {
         this.isHiddenAppNav = true;
-
+        this.articlesData = articlesData;
+        this.articles = this.articlesData.articles;
         this.bannerData = {
             title: 'title',
             img: 'img/articles-banner.jpg',

@@ -935,7 +935,7 @@ footer {
 .link-box {
     margin-bottom: 40px;
     font: 14px $dindisplay-light;
-    > div {
+    > div, .link {
         float: left;
         width: 302px;
         position: relative;
@@ -966,7 +966,7 @@ footer {
     }
     p {
         padding: 5px 20px 0;
-        font-family: $lato-light;
+        /*font-family: $lato-light;*/
     }
 
     .link-box__link-info {

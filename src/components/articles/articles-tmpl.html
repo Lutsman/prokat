@@ -28,7 +28,11 @@
                     <a href="#">Есть что рассказать?</a>
                 </div>
                 <div class="link-box">
-                    <div>
+                    <goods-card-2 class="link" data="article" ng-repeat="article in $ctrl.articles
+                    |range :0 :6
+                    "></goods-card-2>
+
+                    <!--<div>
                         <a href="javascript:void(0)">
                             <img src="img/articles-goods.jpg" alt="img">
                             <p class="title">Выбираем велосипед</p>
@@ -112,7 +116,7 @@
                                 <span class="list-icon"></span>
                             </div>
                         </a>
-                    </div>
+                    </div>-->
 
                 </div>
 
