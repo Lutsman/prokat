@@ -5,7 +5,7 @@ class ArticlesController {
     constructor(articlesData) {
         this.isHiddenAppNav = true;
         this.articlesData = articlesData;
-        this.getMoreArtStep = 3;
+        this.getMoreArtStep = 6;
         this.getMoreArtCurr = 6;
         this.articles = this.articlesData.articles.slice(0, this.getMoreArtCurr);
 
