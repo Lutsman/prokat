@@ -18,18 +18,21 @@
                 <h2>Статьи</h2>
                 <div class="goods-nav">
                     <ul class="goods-menu goods-menu___accentuated-filter">
-                        <li>ВСЕ</li>
-                        <li class="active">MTB</li>
+                        <li ng-click="$ctrl.setActiveLabelFilter('')" ng-class="{'active': $ctrl.activelabelFilter === ''}">ВСЕ</li>
+                        <li ng-repeat="labelFilter in $ctrl.labelFilters"
+                            ng-click="$ctrl.setActiveLabelFilter(labelFilter)"
+                            ng-class="{'active': $ctrl.activelabelFilter === labelFilter}">{{labelFilter.toUpperCase()}}</li>
+                        <!--<li>MTB</li>
                         <li>ROLLERS</li>
                         <li>SKATE</li>
-                        <li>LIFESTYLE</li>
-                        <li>OTHER</li>
+                        <li>LIFESTYLE</li>-->
+                        <li ng-if="$ctrl.isOtherLabelFilter && $ctrl.labelFilters.length" ng-click="$ctrl.setActiveLabelFilter('other')" ng-class="{'active': $ctrl.activelabelFilter === 'other'}">OTHER</li>
                     </ul>
                     <a href="#">Есть что рассказать?</a>
                 </div>
                 <div class="link-box">
                     <goods-card-2 class="link" data="article" ng-repeat="article in $ctrl.articles
-                    |range :0 :6
+                    |filter:$ctrl.activelabelFilter
                     "></goods-card-2>
 
                     <!--<div>
@@ -120,7 +123,7 @@
 
                 </div>
 
-                <button class="load-more-btn">Загрузить еще</button>
+                <button ng-click="$ctrl.getMoreArticles()" class="load-more-btn">Загрузить еще</button>
 
             </articles-block>
 
