@@ -91,7 +91,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    @include transition(all 0.2s ease-in-out);
+    @include transition(all 0.5s ease-in-out);
     &.hidden {
         @include transform(translate3d(0, -100%, 0));
         header > div:last-of-type {
@@ -935,7 +935,7 @@ footer {
 .link-box {
     margin-bottom: 40px;
     font: 14px $dindisplay-light;
-    > div, .link {
+    > div, .link-article {
         float: left;
         width: 302px;
         position: relative;
@@ -944,6 +944,21 @@ footer {
         margin-bottom: 5px;
         &:nth-of-type(3n) {
             margin-right: 0;
+        }
+    }
+    .link-article {
+        .description {
+            width: 300px;
+            height: 56px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        &.ng-enter {
+            animation: fade-in 0.3s linear;
+        }
+        &.ng-leave {
+            display: none;
         }
     }
     .big-link {

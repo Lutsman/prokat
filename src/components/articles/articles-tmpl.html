@@ -1,4 +1,4 @@
-<navbar is-hidden-app="$ctrl.isHiddenAppNav" class="navbar-absolute"></navbar>
+<navbar is-hidden-app="$ctrl.isHiddenAppNav" is-hidden="$ctrl.isHiddenNav" class="navbar" ng-class="{'hidden': $ctrl.isHiddenNav}" ></navbar>
 
 <section class="pageheader articles__pageheader">
     <div class="container">
@@ -31,7 +31,7 @@
                     <a href="#">Есть что рассказать?</a>
                 </div>
                 <div class="link-box">
-                    <goods-card-2 class="link" data="article" ng-repeat="article in $ctrl.articles
+                    <goods-card-2 class="link-article" data="article" ng-repeat="article in $ctrl.articles
                     |filter:$ctrl.activelabelFilter
                     "></goods-card-2>
 
