@@ -51,3 +51,21 @@
     -moz-column-count: $column-count;
     column-count: $column-count;
 }
+
+@mixin placeholderColor($options) {
+    ::-webkit-input-placeholder {
+        color: $options;
+    }
+
+    :-moz-placeholder { /* Firefox 18- */
+        color: $options;
+    }
+
+    ::-moz-placeholder {  /* Firefox 19+ */
+        color: $options;
+    }
+
+    :-ms-input-placeholder {
+        color: $options;
+    }
+}

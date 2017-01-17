@@ -1,0 +1,27 @@
+<div class="goods-info" ng-class="{'goods-info__prem': $ctrl.data.premium}">
+	<img ng-src="{{$ctrl.data.img}}" alt="goods">
+	<div>
+		<h5>{{$ctrl.data.name}}</h5>
+		<p class="adress">{{$ctrl.data.adress}}</p>
+		<p class="price">{{$ctrl.data.price}} {{$ctrl.getCurrency()}}</p>
+		<p>{{$ctrl.data.description}}</p>
+		<div class="goods-info__links">
+			<a class="more" href="#">{{$ctrl.langServiceData.more}}</a>
+			<a class="bookmarks" href="#">{{$ctrl.langServiceData.bookmarks}}</a>
+			<a href="#" class="btn hidden">{{$ctrl.langServiceData.showMap}}</a>
+			<a href="#" class="btn btn-red hidden">{{$ctrl.langServiceData.complain}}</a>
+		</div>
+	</div>
+	<div>
+		<a href="#" class="booking-btn">{{$ctrl.langServiceData.booking}}</a>
+		<p class="goods-info__contacts">
+			<span ng-show="!$ctrl.showTel">{{$ctrl.langServiceData.or}}</span>
+			<a ng-click="$ctrl.showTel = !$ctrl.showTel" ng-show="!$ctrl.showTel" href="javascript:void(0)">{{$ctrl.langServiceData.showTel}}</a>
+			<a ng-click="$ctrl.showTel = !$ctrl.showTel" ng-show="$ctrl.showTel" href="javascript:void(0)">{{$ctrl.langServiceData.hideTel}}</a>
+			<span class="goods-info__phone" ng-show="$ctrl.showTel"><a href="tel:{{$ctrl.data.phone}}">{{$ctrl.parsePhone($ctrl.data.phone)}}</a></span>
+		</p>
+
+		<img ng-src="{{$ctrl.data.traderImg}}" alt="company-logo">
+		<p class="add-time">{{$ctrl.data.addTime}}</p>
+	</div>
+</div>

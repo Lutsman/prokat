@@ -1,0 +1,17 @@
+<form class="search-form" novalidate>
+	<ul>
+		<li ng-repeat="selectGroup in $ctrl.activeSelectGroup">
+			<custom-select class="search-form__select"
+						   options="selectGroup"
+						   selected-option="$ctrl.activeSelects[$index]"
+						   custom-func="$ctrl.reInitActiveSelectGroups(newActiveSelect, index)"
+						   index="$index"
+			></custom-select>
+		</li>
+	</ul>
+	<autocomplete value="$ctrl.searchAutocomplete.value"
+				  get-similar-value="$ctrl.searchAutocomplete.getSimilarValue"
+				  holder="$ctrl.searchAutocomplete.placeholder"
+				  class="search__autocomplete"></autocomplete>
+	<button type="submit" ng-click="$ctrl.search()">Найти</button>
+</form>

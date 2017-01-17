@@ -1,3 +1,7 @@
-.service('navData', function () {
-    
-})
+class NavData {
+    constructor () {
+
+    }
+}
+
+export default NavData;

@@ -7,6 +7,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var CopyWebpackPlugin = require('copy-webpack-plugin');
 var ngAnnotatePlugin = require('ng-annotate-webpack-plugin');
+//var ngminPlugin = require('ngmin-webpack-plugin');
 var path = require('path');
 
 /**
@@ -34,8 +35,11 @@ module.exports = function makeWebpackConfig() {
    * Karma will set this when it's a test build
    */
   config.entry = isTest ? {} : {
-    appMain: './src/components/main-page/main-page',
-    appCat: './src/components/category/category'
+    appMain: './src/js/main-page',
+    appCat: './src/js/category',
+    appProd: './src/js/product',
+    appArticles: './src/js/articles',
+    appAddOffer: './src/js/add-offer'
     //'resources/img/': './src/resources/img/'
     //'css/style': './src/css/app.scss'
   };
@@ -52,15 +56,15 @@ module.exports = function makeWebpackConfig() {
     
     // Output path from the view of the page
     // Uses webpack-dev-server in development
-    publicPath: isProd ? '//lutsman.github.io/demo/prokat/' : 'http://localhost:8080/',
+    publicPath: isProd ? '/' : 'http://localhost:8080/', // /dist/ demo/prokat/
     
     // Filename for entry points
     // Only adds hash in build mode
-    filename: isProd ? 'js/[name].[hash].js' : '[name].bundle.js',
+    filename: isProd ? 'js/[name].js' : '[name].bundle.js',
     
     // Filename for non-entry points
     // Only adds hash in build mode
-    chunkFilename: isProd ? '[name].[hash].js' : '[name].bundle.js'
+    chunkFilename: isProd ? '[name].js' : '[name].bundle.js'
   };
   
   /**
@@ -106,7 +110,7 @@ module.exports = function makeWebpackConfig() {
       // Transpile .js files using babel-loader
       // Compiles ES6 and ES7 into ES5 code
       test: /\.js$/,
-      loader: 'babel-loader?presets[]=es2015&plugins[]=transform-runtime!ng-annotate',
+      loader: 'babel-loader?presets[]=es2015&plugins[]=transform-runtime',
       exclude: /node_modules/
     }, {
       // CSS LOADER
@@ -188,11 +192,13 @@ module.exports = function makeWebpackConfig() {
    * Reference: http://webpack.github.io/docs/configuration.html#plugins
    * List: http://webpack.github.io/docs/list-of-plugins.html
    */
-  /*config.plugins = [
+  config.plugins = [
     new ngAnnotatePlugin({
       add: true
     })
-  ];*/
+    //new ngminPlugin()
+
+  ];
   
   // Skip rendering index.html in test mode
   if (!isTest) {
@@ -213,11 +219,31 @@ module.exports = function makeWebpackConfig() {
           inject: 'body',
           filename: 'category.html'
         }),
-        
+        new HtmlWebpackPlugin({
+          title: 'product',
+          chunks: ['appProd'],
+          template: './src/product.html',
+          inject: 'body',
+          filename: 'product.html'
+        }),
+        new HtmlWebpackPlugin({
+            title: 'add-offer',
+            chunks: ['appAddOffer'],
+            template: './src/add-offer.html',
+            inject: 'body',
+            filename: 'add-offer.html'
+        }),
+        new HtmlWebpackPlugin({
+          title: 'articles',
+          chunks: ['appArticles'],
+          template: './src/articles.html',
+          inject: 'body',
+          filename: 'articles.html'
+        }),
         // Reference: https://github.com/webpack/extract-text-webpack-plugin
         // Extract css files
         // Disabled when in test mode or not in build mode
-        new ExtractTextPlugin('css/style.[hash].css', {disable: !isProd})
+        new ExtractTextPlugin('css/styles.css', {disable: !isProd}) //'css/style.[hash].css'
     )
   }
   
@@ -238,10 +264,10 @@ module.exports = function makeWebpackConfig() {
         
         // Copy assets from the resources folder
         // Reference: https://github.com/kevlened/copy-webpack-plugin
-        new CopyWebpackPlugin([/*{
+        new CopyWebpackPlugin([{
           from: __dirname + '/src/img',
-          to: 'resources/img'
-        }*//*,
+          to: 'img'
+        }/*,
           {
             from: __dirname + '/src/tmpl',
             to: 'resources/tmpl'
